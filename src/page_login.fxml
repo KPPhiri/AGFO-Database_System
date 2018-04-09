@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPage">
+   <children>
+      <Button layoutX="75.0" layoutY="290.0" mnemonicParsing="false" text="New Owner Registration" />
+      <Button layoutX="452.0" layoutY="290.0" mnemonicParsing="false" text="New Visitor Registration" />
+      <Button layoutX="271.0" layoutY="245.0" mnemonicParsing="false" text="Login" />
+      <PasswordField layoutX="217.0" layoutY="187.0" />
+      <TextField layoutX="217.0" layoutY="145.0" />
+      <Label layoutX="173.0" layoutY="150.0" text="Email:" />
+      <Label layoutX="146.0" layoutY="192.0" text="Password:" />
+      <Label layoutX="254.0" layoutY="54.0" text="ATL Gardens, Farms, and Orchards" />
+   </children>
+</AnchorPane>
