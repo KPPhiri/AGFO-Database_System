@@ -29,7 +29,7 @@
                         <TableColumn fx:id="colRating" prefWidth="137.0" text="Avg. Rating            " />
                     </columns>
                 </TableView>
-                <Button layoutX="340.0" layoutY="308.0" mnemonicParsing="false" text="Manage Property" />
+                <Button fx:id="manageButton" layoutX="340.0" layoutY="308.0" mnemonicParsing="false" onAction="#openManage" text="Manage Property" />
                 <Button layoutX="352.0" layoutY="348.0" mnemonicParsing="false" text="Add Property" />
                 <Button layoutX="325.0" layoutY="388.0" mnemonicParsing="false" text="View Other Properties" />
                 <Button layoutX="705.0" layoutY="427.0" mnemonicParsing="false" text="Log Out" />
