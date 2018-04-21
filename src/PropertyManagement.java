@@ -20,9 +20,23 @@ public class PropertyManagement implements Initializable {
     public Button back;
     @FXML
     public Button delete;
+    @FXML
+    public TextField name;
+    @FXML
+    public TextField address;
+    @FXML
+    public TextField city;
+    @FXML
+    public TextField zip;
+    @FXML
+    public TextField size;
+    @FXML
+    public Label id;
+
 
     @Override
     public void initialize (URL location, ResourceBundle resources) {
+        size.setText("test");
     }
 
 }

@@ -3,20 +3,13 @@
   <component name="ChangeListManager">
     <list default="true" id="507d8920-cecb-43c7-907c-4261a3805c85" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OtherOwnerProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OtherOwnerProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Test.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/other_owner_properties.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/other_owner_properties.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/page_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/page_login.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_owner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_owner.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_management.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/OtherOwnerProperties.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OtherOwnerProperties.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PropertyDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PropertyDetails.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PropertyManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PropertyManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/other_owner_properties.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/other_owner_properties.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/property_details.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/property_details.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/property_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/property_management.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -32,7 +25,7 @@
       <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
+            <state relative-caret-position="17">
               <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -54,7 +47,7 @@
         <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="1032">
-              <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+              <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -71,11 +64,20 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="User.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/User.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="187">
+              <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file leaf-file-name="OtherOwnerProperties.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OtherOwnerProperties.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-160">
-              <caret line="99" column="13" lean-forward="true" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+            <state relative-caret-position="327">
+              <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#2522#2523#0" expanded="true" />
@@ -85,25 +87,30 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PropertyDetails.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="other_owner_properties.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/other_owner_properties.fxml">
+          <provider editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+        </entry>
+      </file>
+      <file leaf-file-name="PropertyDetails.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PropertyDetails.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-10">
-              <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
+            <state relative-caret-position="153">
+              <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PropertyManagement.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="PropertyManagement.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/PropertyManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="357">
-              <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
+            <state relative-caret-position="-136">
+              <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="e#918#919#0" expanded="true" />
+                <element signature="e#948#949#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -111,7 +118,11 @@
       </file>
       <file leaf-file-name="property_management.fxml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/property_management.fxml">
-          <provider editor-type-id="text-editor" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="136">
+              <caret line="8" column="159" selection-start-line="8" selection-start-column="159" selection-end-line="8" selection-end-column="159" />
+            </state>
+          </provider>
           <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
         </entry>
       </file>
@@ -124,13 +135,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/page_login.fxml" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
-        <option value="$PROJECT_DIR$/src/OtherOwnerProperties.java" />
         <option value="$PROJECT_DIR$/src/property_details.fxml" />
         <option value="$PROJECT_DIR$/src/PropertyDetails.java" />
-        <option value="$PROJECT_DIR$/src/other_owner_properties.fxml" />
-        <option value="$PROJECT_DIR$/src/property_management.fxml" />
         <option value="$PROJECT_DIR$/src/PropertyManagement.java" />
+        <option value="$PROJECT_DIR$/src/property_management.fxml" />
+        <option value="$PROJECT_DIR$/src/other_owner_properties.fxml" />
+        <option value="$PROJECT_DIR$/src/OtherOwnerProperties.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
       </list>
     </option>
   </component>
@@ -262,11 +273,11 @@
       <window_info anchor="bottom" id="Event Log" order="11" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="8" />
       <window_info anchor="bottom" id="Version Control" order="11" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3281787" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3281787" />
       <window_info anchor="bottom" id="Terminal" order="11" />
       <window_info id="Capture Tool" order="7" />
       <window_info id="Designer" order="7" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.14754099" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.14754099" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="7" />
@@ -368,9 +379,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="28" selection-start-column="28" selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -525,7 +533,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
+        <state relative-caret-position="17">
           <caret line="22" column="13" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -564,17 +572,10 @@
     <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1032">
-          <caret line="62" column="21" lean-forward="true" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
+          <caret line="62" column="21" selection-start-line="62" selection-start-column="21" selection-end-line="62" selection-end-column="21" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
         </state>
       </provider>
     </entry>
@@ -589,14 +590,25 @@
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/other_owner_properties.fxml">
-      <provider editor-type-id="text-editor" />
+    <entry file="file://$PROJECT_DIR$/src/property_management.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="159" selection-start-line="8" selection-start-column="159" selection-end-line="8" selection-end-column="159" />
+        </state>
+      </provider>
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="15" column="5" lean-forward="true" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/OtherOwnerProperties.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-160">
-          <caret line="99" column="13" lean-forward="true" selection-start-line="99" selection-start-column="13" selection-end-line="99" selection-end-column="13" />
+        <state relative-caret-position="327">
+          <caret line="70" column="49" selection-start-line="70" selection-start-column="49" selection-end-line="70" selection-end-column="49" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#2522#2523#0" expanded="true" />
@@ -605,27 +617,33 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PropertyDetails.java">
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-10">
-          <caret line="38" column="9" lean-forward="true" selection-start-line="38" selection-start-column="9" selection-end-line="38" selection-end-column="9" />
+        <state relative-caret-position="170">
+          <caret line="14" column="84" selection-start-line="14" selection-start-column="84" selection-end-line="14" selection-end-column="84" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PropertyManagement.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-136">
+          <caret line="15" column="23" selection-start-line="15" selection-start-column="23" selection-end-line="15" selection-end-column="23" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#918#919#0" expanded="true" />
+            <element signature="e#948#949#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/property_management.fxml">
+    <entry file="file://$PROJECT_DIR$/src/other_owner_properties.fxml">
       <provider editor-type-id="text-editor" />
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PropertyManagement.java">
+    <entry file="file://$PROJECT_DIR$/src/PropertyDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="357">
-          <caret line="21" column="24" selection-start-line="21" selection-start-column="24" selection-end-line="21" selection-end-column="24" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="153">
+          <caret line="9" column="26" lean-forward="true" selection-start-line="9" selection-start-column="26" selection-end-line="9" selection-end-column="26" />
         </state>
       </provider>
     </entry>

@@ -54,6 +54,8 @@ public class OtherOwnerProperties implements Initializable {
     public ChoiceBox searchBy;
     @FXML
     public Button viewProperty;
+    @FXML
+    public Button back;
 
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> original_data;
@@ -66,6 +68,7 @@ public class OtherOwnerProperties implements Initializable {
                 "Search By", "Name", "Address", "City", "Zip", "Type", "Commercial", "ID"
         ));
         viewProperty.setOnAction(e-> viewProperty());
+        back.setOnAction(e -> backToWelcomePage());
     }
 
     private void viewProperty() {
@@ -78,6 +81,20 @@ public class OtherOwnerProperties implements Initializable {
         stage = (Stage) viewProperty.getScene().getWindow();
         try {
             root = FXMLLoader.load(getClass().getResource("property_details.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    private void backToWelcomePage() {
+        Stage stage;
+        Parent root = null;
+        stage = (Stage) back.getScene().getWindow();
+        try {
+            root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

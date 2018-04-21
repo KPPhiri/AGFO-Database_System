@@ -28,8 +28,8 @@
       </TableView>
       <TextField layoutX="8.0" layoutY="379.0" text="Search Term" />
       <Button layoutX="8.0" layoutY="425.0" mnemonicParsing="false" text="Search Properties" />
-      <Button fx:id="viewProperty" layoutX="418.0" layoutY="445.0" mnemonicParsing="false" text="View Property" />
-      <Button layoutX="418.0" layoutY="493.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Back" />
+      <Button fx:id="viewProperty" layoutX="418.0" layoutY="425.0" mnemonicParsing="false" text="View Property" />
+      <Button fx:id="back" layoutX="418.0" layoutY="473.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Back" />
       <ChoiceBox fx:id="searchBy" layoutX="8.0" layoutY="334.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
