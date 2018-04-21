@@ -5,9 +5,13 @@ import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -51,6 +55,9 @@ public class OwnerWelcome implements Initializable{
     public Button searchButton;
     @FXML
     public TextField searchField;
+    @FXML
+    public Button manageButton;
+
 
 
     //Initialize observable list to hold out database data
@@ -161,5 +168,22 @@ public class OwnerWelcome implements Initializable{
             });
         });
         table.setItems(filteredData);
+    }
+
+    public void openManage(ActionEvent actionEvent) {
+        try {
+            Parent root = FXMLLoader.load(getClass().getResource("property_management.fxml"));
+            Stage stage = (Stage) manageButton.getScene().getWindow();
+            Scene scene = new Scene(root);
+
+            stage.setScene(scene);
+            stage.show();
+
+        } catch(Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+
+        }
+
+
     }
 }

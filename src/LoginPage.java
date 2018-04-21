@@ -68,7 +68,7 @@ public class LoginPage implements Initializable{
 
                     }
                     if(user.getType().equals("VISITOR")){
-                        Parent root = FXMLLoader.load(getClass().getResource("welcome_vistor.fxml"));
+                        Parent root = FXMLLoader.load(getClass().getResource("welcome_visitor.fxml"));
                         Stage stage = (Stage) lgn_btn.getScene().getWindow();
                         Scene scene = new Scene(root);
 
