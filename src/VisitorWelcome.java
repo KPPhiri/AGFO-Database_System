@@ -5,13 +5,9 @@ import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.event.EventHandler;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
-import javafx.stage.Stage;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -21,7 +17,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
-public class OwnerWelcome implements Initializable{
+public class VisitorWelcome implements Initializable{
 
     @FXML
     public TableColumn colName;
@@ -55,15 +51,10 @@ public class OwnerWelcome implements Initializable{
     public Button searchButton;
     @FXML
     public TextField searchField;
-    @FXML
-    public Button manageButton;
-
 
 
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> data;
-
-    User user = User.getInstance();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -80,9 +71,10 @@ public class OwnerWelcome implements Initializable{
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() +"'");
+
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + "farmowner" +"'");
             while (rs.next()) {
-               int id = rs.getInt(9);
+                int id = rs.getInt(9);
                 ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
                 int pid = 0;
                 if(ra.next()) {
@@ -97,7 +89,7 @@ public class OwnerWelcome implements Initializable{
 
                 boolean isValid = rs.getBoolean(10);
                 data.add(new userPropDetails(rs.getString(1), rs.getString(2), rs.getString(3),
-                    rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
+                        rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
             }
 
 
@@ -168,37 +160,5 @@ public class OwnerWelcome implements Initializable{
             });
         });
         table.setItems(filteredData);
-    }
-
-    public void openManage(ActionEvent actionEvent) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("property_management.fxml"));
-            Stage stage = (Stage) manageButton.getScene().getWindow();
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.show();
-
-        } catch(Exception e) {
-            System.out.println("something went wrong + " + e.getMessage());
-
-        }
-
-
-    }
-
-    public void showOther(ActionEvent actionEvent) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("other_owner_properties.fxml"));
-            Stage stage = (Stage) manageButton.getScene().getWindow();
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.show();
-
-        } catch(Exception e) {
-            System.out.println("something went wrong + " + e.getMessage());
-
-        }
     }
 }
