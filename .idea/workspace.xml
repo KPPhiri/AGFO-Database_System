@@ -3,13 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="507d8920-cecb-43c7-907c-4261a3805c85" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_owner.fxml" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_owner.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" afterPath="$PROJECT_DIR$/src/LoginPage.java" />
       <change beforePath="$PROJECT_DIR$/src/OwnerWelcome.java" afterPath="$PROJECT_DIR$/src/OwnerWelcome.java" />
       <change beforePath="$PROJECT_DIR$/src/welcome_owner.fxml" afterPath="$PROJECT_DIR$/src/welcome_owner.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/welcome_visitor.fxml" afterPath="$PROJECT_DIR$/src/welcome_visitor.fxml" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -59,43 +54,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisitorWelcome.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VisitorWelcome.java">
+      <file leaf-file-name="other_owner_properties.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/other_owner_properties.fxml">
+          <provider editor-type-id="JavaFX-Scene-Builder">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="268">
-              <caret line="125" column="18" lean-forward="false" selection-start-line="125" selection-start-column="18" selection-end-line="125" selection-end-column="18" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <marker date="1524329158647" expanded="true" signature="1833:1969" ph="SELECT Name,... PROPERTY" />
-                <marker date="1524329158647" expanded="true" signature="2114:2158" ph="SELECT COUNT... VISITS" />
-                <marker date="1524329158647" expanded="true" signature="2357:2401" ph="SELECT avg(R... VISITS" />
-              </folding>
+            <state relative-caret-position="-24">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OwnerWelcome.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="OwnerWelcome.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
-              <caret line="169" column="37" lean-forward="true" selection-start-line="169" selection-start-column="37" selection-end-line="169" selection-end-column="37" />
+            <state relative-caret-position="167">
+              <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <marker date="1524331230239" expanded="true" signature="2023:2140" ph="SELECT Name,... PROPERTY" />
-                <marker date="1524331230239" expanded="true" signature="2023:2166" ph="SELECT Name,... PROPERTY" />
-                <marker date="1524331230239" expanded="true" signature="2310:2354" ph="SELECT COUNT... VISITS" />
-                <marker date="1524331230239" expanded="true" signature="2553:2597" ph="SELECT avg(R... VISITS" />
+                <marker date="1524332229612" expanded="true" signature="2023:2140" ph="SELECT Name,... PROPERTY" />
+                <marker date="1524332229612" expanded="true" signature="2023:2166" ph="SELECT Name,... PROPERTY" />
+                <marker date="1524332229612" expanded="true" signature="2310:2354" ph="SELECT COUNT... VISITS" />
+                <marker date="1524332229612" expanded="true" signature="2553:2597" ph="SELECT avg(R... VISITS" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="workspace.xml" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="417">
-              <caret line="164" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="901" selection-end-column="10" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -119,8 +102,8 @@
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="43" />
+            <state relative-caret-position="291">
+              <caret line="33" column="120" lean-forward="false" selection-start-line="33" selection-start-column="111" selection-end-line="33" selection-end-column="120" />
               <folding />
             </state>
           </provider>
@@ -196,11 +179,6 @@
             <path>
               <item name="Atlanta Gardens, Farms, and Orchards-Dabase_System" type="b2602c69:ProjectViewProjectNode" />
               <item name="Atlanta Gardens, Farms, and Orchards-Dabase_System" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="Atlanta Gardens, Farms, and Orchards-Dabase_System" type="b2602c69:ProjectViewProjectNode" />
-              <item name="Atlanta Gardens, Farms, and Orchards-Dabase_System" type="462c0819:PsiDirectoryNode" />
-              <item name=".idea" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Atlanta Gardens, Farms, and Orchards-Dabase_System" type="b2602c69:ProjectViewProjectNode" />
@@ -343,11 +321,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524330223054</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Updating Owner welcome and login">
+      <created>1524331366292</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1524331366292</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="4767000" />
+    <option name="totallyTimeSpent" value="5726000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1440" height="819" extended-state="6" />
@@ -394,16 +379,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="51">
-          <caret line="22" column="13" lean-forward="false" selection-start-line="22" selection-start-column="13" selection-end-line="22" selection-end-column="13" />
-          <folding>
-            <marker date="1524330951884" expanded="true" signature="1493:1598" ph="SELECT Usern... USER" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/userPropDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -637,14 +612,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-56">
@@ -671,14 +638,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="150">
           <caret line="12" column="20" lean-forward="false" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/userPropDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="274">
-          <caret line="75" column="5" lean-forward="false" selection-start-line="75" selection-start-column="5" selection-end-line="75" selection-end-column="5" />
           <folding />
         </state>
       </provider>
@@ -733,28 +692,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/welcome_owner.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="31" column="43" lean-forward="false" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/property_management.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-22">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
       <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
         <state />
@@ -800,25 +737,74 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
+    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="169" column="37" lean-forward="true" selection-start-line="169" selection-start-column="37" selection-end-line="169" selection-end-column="37" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <marker date="1524331230239" expanded="true" signature="2023:2140" ph="SELECT Name,... PROPERTY" />
-            <marker date="1524331230239" expanded="true" signature="2023:2166" ph="SELECT Name,... PROPERTY" />
-            <marker date="1524331230239" expanded="true" signature="2310:2354" ph="SELECT COUNT... VISITS" />
-            <marker date="1524331230239" expanded="true" signature="2553:2597" ph="SELECT avg(R... VISITS" />
-          </folding>
+        <state relative-caret-position="1731">
+          <caret line="182" column="57" lean-forward="true" selection-start-line="182" selection-start-column="57" selection-end-line="182" selection-end-column="57" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/src/userPropDetails.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="417">
-          <caret line="164" column="41" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="901" selection-end-column="10" />
+        <state relative-caret-position="120">
+          <caret line="8" column="28" lean-forward="true" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="15" column="72" lean-forward="false" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/other_owner_properties.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-24">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/welcome_owner.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="291">
+          <caret line="33" column="120" lean-forward="false" selection-start-line="33" selection-start-column="111" selection-end-line="33" selection-end-column="120" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/property_management.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-22">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="167">
+          <caret line="185" column="0" lean-forward="true" selection-start-line="185" selection-start-column="0" selection-end-line="185" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <marker date="1524332229612" expanded="true" signature="2023:2140" ph="SELECT Name,... PROPERTY" />
+            <marker date="1524332229612" expanded="true" signature="2023:2166" ph="SELECT Name,... PROPERTY" />
+            <marker date="1524332229612" expanded="true" signature="2310:2354" ph="SELECT COUNT... VISITS" />
+            <marker date="1524332229612" expanded="true" signature="2553:2597" ph="SELECT avg(R... VISITS" />
+          </folding>
         </state>
       </provider>
     </entry>
