@@ -36,7 +36,7 @@
       <TextField layoutX="8.0" layoutY="379.0" text="Search Term" />
       <Button layoutX="8.0" layoutY="425.0" mnemonicParsing="false" text="Search Properties" />
       <Button layoutX="418.0" layoutY="445.0" mnemonicParsing="false" text="View Property" />
-      <Button layoutX="418.0" layoutY="512.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="View History" />
+      <Button layoutX="410.0" layoutY="493.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="153.0" text="View History" />
       <Button layoutX="822.0" layoutY="512.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Log Out" />
    </children>
 </AnchorPane>
