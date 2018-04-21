@@ -17,7 +17,7 @@ import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
-public class OwnerWelcome implements Initializable{
+public class VisitorWelcome implements Initializable{
 
     @FXML
     public TableColumn colName;
@@ -56,8 +56,6 @@ public class OwnerWelcome implements Initializable{
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> data;
 
-    User user = User.getInstance();
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loadDataFromDatabase();
@@ -73,9 +71,10 @@ public class OwnerWelcome implements Initializable{
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() +"'");
+
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + "farmowner" +"'");
             while (rs.next()) {
-               int id = rs.getInt(9);
+                int id = rs.getInt(9);
                 ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
                 int pid = 0;
                 if(ra.next()) {
@@ -90,7 +89,7 @@ public class OwnerWelcome implements Initializable{
 
                 boolean isValid = rs.getBoolean(10);
                 data.add(new userPropDetails(rs.getString(1), rs.getString(2), rs.getString(3),
-                    rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
+                        rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
             }
 
 

@@ -5,6 +5,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -24,7 +25,7 @@ public class LoginPage implements Initializable{
     private PasswordField  password_PasswordField;
 
     @FXML
-    //private Button lgn_btn;
+    private Button lgn_btn;
 
     User user = User.getInstance();
 
@@ -49,7 +50,8 @@ public class LoginPage implements Initializable{
                 Connection server = Connect.SQLConnecter.connect();
                 ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Email FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'");
 
-
+                email = email_TextField.getText().toString();
+                password = password_PasswordField.getText().toString();
 
                 if(val.next()) {
                     user.setUsername(val.getString(1));
@@ -58,11 +60,21 @@ public class LoginPage implements Initializable{
                     user.setEmail(val.getString(3));
                     if(user.getType().equals("OWNER")){
                         Parent root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
-                        Stage stage = new Stage();
+                        Stage stage = (Stage) lgn_btn.getScene().getWindow();
                         Scene scene = new Scene(root);
 
                         stage.setScene(scene);
                         stage.show();
+
+                    }
+                    if(user.getType().equals("VISITOR")){
+                        Parent root = FXMLLoader.load(getClass().getResource("welcome_vistor.fxml"));
+                        Stage stage = (Stage) lgn_btn.getScene().getWindow();
+                        Scene scene = new Scene(root);
+
+                        stage.setScene(scene);
+                        stage.show();
+
                     }
 
                 } else {
@@ -78,6 +90,12 @@ public class LoginPage implements Initializable{
 
 
 
+    }
+
+    public void pressOwnerRegistration(ActionEvent actionEvent) {
+    }
+
+    public void pressVisitorRegistration(ActionEvent actionEvent) {
     }
 
 
