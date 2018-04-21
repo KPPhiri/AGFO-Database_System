@@ -37,5 +37,6 @@
       <ComboBox fx:id="crop" layoutX="540.0" layoutY="195.0" prefWidth="150.0" />
       <ComboBox fx:id="isPublic" layoutX="569.0" layoutY="63.0" prefWidth="150.0" />
       <ComboBox fx:id="isCommercial" layoutX="593.0" layoutY="106.0" prefWidth="150.0" />
+      <ComboBox fx:id="requestCrop" layoutX="430.0" layoutY="402.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
