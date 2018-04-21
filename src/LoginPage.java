@@ -50,8 +50,8 @@ public class LoginPage implements Initializable {
         String email = "farmerJoe@gmail.com";
         String password = "d68fae04506bde7857ff4aa40ebad49c";
         String u_type = "";
-        if (email_TextField.getText().toString().length() < 1 || password_PasswordField.getText().toString().length() < 1
-                || email_TextField.getText().toString().length() > 50 || password_PasswordField.getText().toString().length() > 30) {
+        if (email_TextField.getText().length() < 1 || password_PasswordField.getText().length() < 1
+                || email_TextField.getText().length() > 50 || password_PasswordField.getText().length() > 30) {
             wrong.setVisible(true);
 
         } else {
