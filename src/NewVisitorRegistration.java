@@ -16,11 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ResourceBundle;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class NewVisitorRegistration implements Initializable {
@@ -101,52 +98,59 @@ public class NewVisitorRegistration implements Initializable {
         }
         if (!passed) {
             try {
-                visitor_ErrorMessage.setText("1");
                 Connection server = Connect.SQLConnecter.connect();
-                if (!server.isClosed()) {
-                    visitor_ErrorMessage.setText("Successfully connected to Server");
+                if (server.isClosed()) {
+                    visitor_ErrorMessage.setText("Server is Closed or not Connected to it.");
+                    return;
                 }
-                visitor_ErrorMessage.setText("3");
-
-                ResultSet val = server.createStatement().executeQuery("SELECT Email, Username FROM USER WHERE Email = '"
+                String selectStatement = "SELECT Email, Username FROM USER WHERE Email = '"
                         + visitorRegistrationEmail.getText() + "' AND Username = '"
-                        + visitorRegistrationUser.getText() + "'");
-                visitor_ErrorMessage.setText("4");
+                        + visitorRegistrationUser.getText() + "'";
+                System.out.println(selectStatement);
+
+                ResultSet val = server.createStatement().executeQuery(selectStatement);
 
                 if (val.next()) {
-                    if (val.getString(1) == visitorRegistrationEmail.getText()) {
+                    boolean notUnique = false;
+                    if (val.getString(1).equals(visitorRegistrationEmail.getText())) {
                         visitor_ErrorMessage.setText("Email must be unique.");
+                        notUnique = true;
                     }
-                    if (val.getString(2) == visitorRegistrationUser.getText()) {
+                    if (val.getString(2).equals(visitorRegistrationUser.getText())) {
                         visitor_ErrorMessage.setText(visitor_ErrorMessage.getText()
                                 + "\n User must be unique.");
+                        notUnique = true;
                     }
-
+                    if (notUnique) {
+                        return;
+                    }
                 }
 
                 MessageDigest md = MessageDigest.getInstance("MD5");
-                md.update(visitorRegistrationPassword.getText().getBytes());
-                visitor_ErrorMessage.setText("6");
-                byte[] digest = md.digest();
-                String pass = DatatypeConverter.printHexBinary(digest);
+                byte[] bytesOfPass = visitorRegistrationPassword.getText().getBytes("UTF-8");
+                byte[] digest = md.digest(bytesOfPass);
+                String pass;
+                StringBuffer stringBuffer = new StringBuffer();
+                for (int i = 0; i < digest.length; i++) {
+                    stringBuffer.append(Integer.toString((digest[i] & 0xff) + 0x100, 16)
+                            .substring(1));
+                }
+                pass = stringBuffer.toString();
                 String email = visitorRegistrationEmail.getText();
                 String username = visitorRegistrationUser.getText();
-                String insert = "INSERT INTO USER Password, Email, Username, U_type "
-                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', \"VISITOR\")";
+                String insert = "INSERT INTO USER (Password, Email, Username, U_type) "
+                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', 'VISITOR')";
                 System.out.println(insert);
                 server.createStatement().execute(insert);
-                visitor_ErrorMessage.setText("7");
                 server.close();
 
                 registered = true;
 
             } catch (Exception e) {
-                System.out.println("Something went wrong (KAPPA)");
+                System.out.println("A SQL Statement could not be executed.");
                 return;
             }
         }
-
-
         if (registered) {
             System.out.println("Visitor Registration Successful");
             sceneChanger(visitorRegistration_registerButton, "page_login.fxml");

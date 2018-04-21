@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -19,7 +19,7 @@
       <TextField fx:id="zip" layoutX="81.0" layoutY="189.0" />
       <TextField fx:id="size" layoutX="81.0" layoutY="247.0" />
       <Label layoutX="412.0" layoutY="14.0" text="Manage Propety" />
-      <Label layoutX="593.0" layoutY="27.0" text="Type:" />
+      <Label fx:id="type" layoutX="593.0" layoutY="27.0" text="Type:" />
       <Label layoutX="507.0" layoutY="63.0" text="Public:" />
       <Label layoutX="483.0" layoutY="105.0" text="Commercial:" />
       <Label fx:id="id" layoutX="522.0" layoutY="147.0" text="ID:" />
@@ -32,9 +32,11 @@
       <Button fx:id="delete" layoutX="663.0" layoutY="524.0" mnemonicParsing="false" text="Delete Property" />
       <Button fx:id="back" layoutX="663.0" layoutY="467.0" mnemonicParsing="false" text="Back (No Save)" />
       <Button fx:id="save" layoutX="663.0" layoutY="402.0" mnemonicParsing="false" text="Save Changes" />
-      <ChoiceBox fx:id="isPublic" layoutX="574.0" layoutY="57.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="isCommerical" layoutX="600.0" layoutY="99.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="approvedCrops" layoutX="155.0" layoutY="294.0" prefWidth="150.0" />
-      <ChoiceBox fx:id="cropType" layoutX="430.0" layoutY="402.0" prefWidth="150.0" />
+      <Button layoutX="711.0" layoutY="195.0" mnemonicParsing="false" text="Delete" />
+      <ComboBox fx:id="newCrop" layoutX="162.0" layoutY="294.0" prefWidth="150.0" />
+      <ComboBox fx:id="crop" layoutX="540.0" layoutY="195.0" prefWidth="150.0" />
+      <ComboBox fx:id="isPublic" layoutX="569.0" layoutY="63.0" prefWidth="150.0" />
+      <ComboBox fx:id="isCommercial" layoutX="593.0" layoutY="106.0" prefWidth="150.0" />
+      <ComboBox fx:id="requestCrop" layoutX="430.0" layoutY="402.0" prefWidth="150.0" />
    </children>
 </AnchorPane>

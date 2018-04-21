@@ -1,4 +1,6 @@
 import Connect.SQLConnecter;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -8,7 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.stage.Stage;
 
-import javax.xml.bind.DatatypeConverter;
+import javax.swing.*;
 import java.io.IOException;
 import java.net.URL;
 import java.security.MessageDigest;
@@ -36,63 +38,93 @@ public class NewOwnerRegistration implements Initializable {
     private TextField ownerRegistrationZip;
     @FXML
     private TextField ownerRegistrationAcres;
+
+    private ObservableList<String> propType = FXCollections.observableArrayList(
+            "FARM",
+            "GARDEN",
+            "ORCHARD");
+
     @FXML
-    private MenuButton ownerRegistrationPropType = new MenuButton("Type", null,
-            new MenuItem("FARM"),
-            new MenuItem("GARDEN"),
-            new MenuItem("ORCHARD"));
+    private ComboBox ownerRegistrationPropType;
+
+    private ObservableList<String> crops = FXCollections.observableArrayList(
+            "Almond",
+            "Apple",
+            "Banana",
+            "Broccoli",
+            "Carrot",
+            "Cashew",
+            "Corn",
+            "Daffodil",
+            "Daisy",
+            "Fig",
+            "Garlic",
+            "Kiwi",
+            "Onion",
+            "Orange",
+            "Peach",
+            "Peanut",
+            "Peas",
+            "Peruvian Lily",
+            "Pineapple",
+            "Pineapple Sage",
+            "Rose",
+            "Salami");
+
     @FXML
-    private MenuButton ownerRegistrationCrop = new MenuButton("Crop", null,
-            new MenuItem("Almond"),
-            new MenuItem("Apple"),
-            new MenuItem("Banana"),
-            new MenuItem("Broccoli"),
-            new MenuItem("Carrot"),
-            new MenuItem("Cashew"),
-            new MenuItem("Corn"),
-            new MenuItem("Daffodil"),
-            new MenuItem("Daisy"),
-            new MenuItem("Fig"),
-            new MenuItem("Garlic"),
-            new MenuItem("Kiwi"),
-            new MenuItem("Onion"),
-            new MenuItem("Orange"),
-            new MenuItem("Peach"),
-            new MenuItem("Peanut"),
-            new MenuItem("Peas"),
-            new MenuItem("Peruvian Lily"),
-            new MenuItem("Pineapple"),
-            new MenuItem("Pineapple Sage"),
-            new MenuItem("Rose"),
-            new MenuItem("Salami"));
+    private ComboBox ownerRegistrationCrop;
+
     @FXML
-    private MenuButton ownerRegistrationPublic = new MenuButton("Public?", null,
-            new MenuItem("TRUE"),
-            new MenuItem("FALSE"));
+    private ComboBox ownerRegistrationPublic;
+
+    private ObservableList<String> animals = FXCollections.observableArrayList("Cheetah",
+            "Chicken",
+            "Cow",
+            "Goat",
+            "Mongoose",
+            "Monkey",
+            "Pete",
+            "Pig");
+
     @FXML
-    private MenuButton ownerRegistrationAnimal = new MenuButton("Animal", null,
-            new MenuItem("Cheetah"),
-            new MenuItem("Chicken"),
-            new MenuItem("Cow"),
-            new MenuItem("Goat"),
-            new MenuItem("Mongoose"),
-            new MenuItem("Monkey"),
-            new MenuItem("Pete"),
-            new MenuItem("Pig"));
+    private ComboBox ownerRegistrationAnimal;
+
     @FXML
-    private MenuButton ownerRegistrationCommercial = new MenuButton("Commercial?", null,
-            new MenuItem("TRUE"),
-            new MenuItem("FALSE"));;
+    private ComboBox ownerRegistrationCommercial;
     @FXML
     private Button ownerRegistrationRegisterButton;
     @FXML
     private Button ownerRegistrationCancelButton;
     @FXML
     private Label owner_ErrorMessage;
+    @FXML
+    private Label ownerRegistrationAnimalLabel;
+
+    public void createMenu() {
+        ownerRegistrationPropType.getItems().addAll(propType);
+        ownerRegistrationCrop.getItems().addAll(crops);
+        ownerRegistrationPublic.getItems().addAll(true, false);
+        ownerRegistrationAnimal.getItems().addAll(animals);
+        ownerRegistrationCommercial.getItems().addAll(true, false);
+        ownerRegistrationPropType.setValue("GARDEN");
+        ownerRegistrationAnimalLabel.setVisible(false);
+        ownerRegistrationAnimal.setVisible(false);
+    }
+
+    @FXML
+    private void selectPropertyType(ActionEvent actionEvent) throws IOException {
+        if (ownerRegistrationPropType.getValue().toString() == "FARM") {
+            ownerRegistrationAnimalLabel.setVisible(true);
+            ownerRegistrationAnimal.setVisible(true);
+        } else {
+            ownerRegistrationAnimalLabel.setVisible(false);
+            ownerRegistrationAnimal.setVisible(false);
+        }
+    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-
+        createMenu();
     }
 
     private void sceneChanger(Button button, String fxmlName) throws IOException {
@@ -165,11 +197,14 @@ public class NewOwnerRegistration implements Initializable {
                     + "\nYou must supply a Property Name.");
             passed = true;
         }
-        if (ownerRegistrationZip.getText().contains("[a-zA-Z]+") == false) {
+        try {
+            Integer.parseInt(ownerRegistrationZip.getText());
+        }catch (NumberFormatException e) {
             owner_ErrorMessage.setText(owner_ErrorMessage.getText()
                     + "\nZipcode only contains numbers.");
             passed = true;
-        } else if (ownerRegistrationZip.getText().length() == 0) {
+        }
+        if (ownerRegistrationZip.getText().length() == 0) {
             owner_ErrorMessage.setText(owner_ErrorMessage.getText()
                     + "\nYou must supply a ZipCode.");
             passed = true;
@@ -178,11 +213,14 @@ public class NewOwnerRegistration implements Initializable {
                     + "\nZipCode must be 5 digits.");
             passed = true;
         }
-        if (ownerRegistrationAcres.getText().contains("[a-zA-Z]+") == false) {
+        try {
+            Integer.parseInt(ownerRegistrationAcres.getText());
+        }catch (NumberFormatException e) {
             owner_ErrorMessage.setText(owner_ErrorMessage.getText()
                     + "\nAcres only contains numbers.");
             passed = true;
-        } else if (ownerRegistrationAcres.getText().length() == 0) {
+        }
+        if (ownerRegistrationAcres.getText().length() == 0) {
             owner_ErrorMessage.setText(owner_ErrorMessage.getText()
                     + "\nYou must supply Acres.");
             passed = true;
@@ -190,60 +228,109 @@ public class NewOwnerRegistration implements Initializable {
 
         if (!passed) {
             try {
-                owner_ErrorMessage.setText("1");
                 Connection server = SQLConnecter.connect();
                 if (!server.isClosed()) {
-                    owner_ErrorMessage.setText("Successfully connected to Server");
+                    owner_ErrorMessage.setText("Server is Closed or not Connected to it.");
                 }
-                owner_ErrorMessage.setText("3");
 
-                ResultSet val = server.createStatement().executeQuery("SELECT Email, Username FROM USER WHERE Email = '"
+                String selectStatement = "SELECT Email, Username FROM USER WHERE Email = '"
                         + ownerRegistrationEmail.getText() + "' AND Username = '"
-                        + ownerRegistrationUser.getText() + "'");
-                owner_ErrorMessage.setText("4");
+                        + ownerRegistrationUser.getText() + "'";
+                System.out.println(selectStatement);
+
+                ResultSet val = server.createStatement().executeQuery(selectStatement);
 
                 if (val.next()) {
-                    if (val.getString(1) == ownerRegistrationEmail.getText()) {
+                    boolean notUnique = false;
+                    if (val.getString(1).equals(ownerRegistrationEmail.getText())) {
                         owner_ErrorMessage.setText("Email must be unique.");
+                        notUnique = true;
                     }
-                    if (val.getString(2) == ownerRegistrationUser.getText()) {
+                    if (val.getString(2).equals(ownerRegistrationUser.getText())) {
                         owner_ErrorMessage.setText(owner_ErrorMessage.getText()
                                 + "\n User must be unique.");
+                        notUnique = true;
                     }
-
+                    if (notUnique) {
+                        return;
+                    }
                 }
 
                 MessageDigest md = MessageDigest.getInstance("MD5");
-                md.update(ownerRegistrationPassword.getText().getBytes());
-                owner_ErrorMessage.setText("6");
-                byte[] digest = md.digest();
-                String pass = DatatypeConverter.printHexBinary(digest);
+                byte[] bytesOfPass = ownerRegistrationPassword.getText().getBytes("UTF-8");
+                byte[] digest = md.digest(bytesOfPass);
+                String pass;
+                StringBuffer stringBuffer = new StringBuffer();
+                for (int i = 0; i < digest.length; i++) {
+                    stringBuffer.append(Integer.toString((digest[i] & 0xff) + 0x100, 16)
+                            .substring(1));
+                }
+                pass = stringBuffer.toString();
                 String email = ownerRegistrationEmail.getText();
                 String username = ownerRegistrationUser.getText();
-                String insert = "INSERT INTO USER Password, Email, Username, U_type,  "
-                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', \"OWNER\")";
+                String insert = "INSERT INTO USER (Password, Email, Username, U_type) "
+                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', 'OWNER')";
                 System.out.println(insert);
                 server.createStatement().execute(insert);
-                owner_ErrorMessage.setText("7");
                 val = server.createStatement().executeQuery("SELECT MAX(ID) FROM PROPERTY");
                 int propID = 0;
                 if (val.next()) {
-                    propID = val.getInt(1);
+                    propID = val.getInt(1) + 1;
                 }
-                insert = "INSERT INTO PROPERTY ID, Name, Acres, IsCommercial, IsPublic, Address, City,"
-                        + "Zip, P_type, Owner, ApprovedBy"
-                        + "VALUES(" + propID + ", '"
-                        + ownerRegistrationPropName + "', '"
-                        + ownerRegistrationAcres + "', '"
-                        + ownerRegistrationCommercial + "', '";
-                System.out.println(insert);
-                server.createStatement().execute(insert);
-                server.close();
-
-                registered = true;
+                if (ownerRegistrationPropType.getValue() != null
+                        || ownerRegistrationCrop.getValue() != null
+                        || ownerRegistrationPublic.getValue() != null
+                        || ownerRegistrationAnimal.getValue() != null
+                        || ownerRegistrationCommercial.getValue() != null) {
+                    insert = "INSERT INTO PROPERTY (ID, Name, Acres, IsCommercial, IsPublic, Address, City, "
+                            + "Zip, P_type, Owner, ApprovedBy) "
+                            + "VALUES(" + propID + ", '"
+                            + ownerRegistrationPropName.getText() + "', "
+                            + ownerRegistrationAcres.getText() + ", "
+                            + ownerRegistrationCommercial.getValue().toString().toUpperCase() + ", "
+                            + ownerRegistrationPublic.getValue().toString().toUpperCase() + ", '"
+                            + ownerRegistrationAddress.getText() + "', '"
+                            + ownerRegistrationCity.getText() + "', "
+                            + ownerRegistrationZip.getText() + ", '"
+                            + ownerRegistrationPropType.getValue().toString() + "', '"
+                            + ownerRegistrationUser.getText() + "', "
+                            + "null)";
+                    System.out.println(insert);
+                    String insert2, insert3, insert4;
+                    if (ownerRegistrationPropType.getValue().toString() == "FARM") {
+                        insert2 = "INSERT INTO HAS (P_id, Item) VALUES("
+                                + propID + ", '" + ownerRegistrationAnimal.getValue().toString()
+                                + "')";
+                        insert3 = "INSERT INTO HAS (P_id, Item) VALUES("
+                                + propID + ", '" + ownerRegistrationCrop.getValue().toString()
+                                + "')";
+                        System.out.println(insert2);
+                        System.out.println(insert3);
+                        server.createStatement().execute(insert);
+                        System.out.println("Insert User worked");
+                        server.createStatement().execute(insert2);
+                        System.out.println("Insert Animal worked");
+                        server.createStatement().execute(insert3);
+                        System.out.println("Insert Crop worked");
+                    } else {
+                        insert4 = "INSERT INTO HAS (P_id, Item) VALUES("
+                                + propID + ", '" + ownerRegistrationCrop.getValue().toString()
+                                + "')";
+                        System.out.println(insert4);
+                        server.createStatement().execute(insert);
+                        System.out.println("Insert User worked");
+                        server.createStatement().execute(insert4);
+                        System.out.println("Insert Crop worked");
+                    }
+                    server.close();
+                    registered = true;
+                } else {
+                    owner_ErrorMessage.setText(owner_ErrorMessage.getText()
+                            + "\nPlease complete all the fields.");
+                }
 
             } catch (Exception e) {
-                System.out.println("Something went wrong (KAPPA)");
+                System.out.println("A SQL Statement could not be executed.");
                 return;
             }
         }
