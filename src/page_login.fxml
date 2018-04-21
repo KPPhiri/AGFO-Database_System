@@ -8,9 +8,9 @@
 
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPage">
    <children>
-      <Button layoutX="75.0" layoutY="290.0" mnemonicParsing="false" text="New Owner Registration" />
-      <Button layoutX="384.0" layoutY="290.0" mnemonicParsing="false" text="New Visitor Registration" />
-      <Button fx:id="lgn_btn" layoutX="283.0" layoutY="244.0" mnemonicParsing="false" onAction="#pressButton" text="Login" />
+      <Button fx:id="NewOwnerRegistrationButton" layoutX="75.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressOwnerRegistration" text="New Owner Registration" />
+      <Button fx:id="NewVisitorRegistrationButton" layoutX="384.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressVisitorRegistration" text="New Visitor Registration" />
+      <Button fx:id="lgn_btn" layoutX="283.0" layoutY="244.0" mnemonicParsing="false" onAction="#pressLoginButton" text="Login" />
       <PasswordField fx:id="password_PasswordField" layoutX="217.0" layoutY="187.0" />
       <TextField fx:id="email_TextField" layoutX="217.0" layoutY="145.0" />
       <Label layoutX="173.0" layoutY="150.0" text="Email:" />

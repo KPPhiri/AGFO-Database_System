@@ -1,12 +1,17 @@
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -22,6 +27,12 @@ public class LoginPage implements Initializable{
 
     @FXML
     private Button lgn_btn;
+
+    @FXML
+    private Button NewOwnerRegistrationButton;
+
+    @FXML
+    private Button NewVisitorRegistrationButton;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -67,8 +78,22 @@ public class LoginPage implements Initializable{
         return "";
     }
 
-
-    public void pressButton(ActionEvent actionEvent) {
-        checkLogin();
+    private void sceneChanger(Button button, String fxmlName) throws IOException {
+        Stage stage;
+        Parent root;
+        stage = (Stage) button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource(fxmlName));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
-}
+
+
+    public void pressLoginButton(ActionEvent actionEvent) { checkLogin(); }
+    public void pressVisitorRegistration(ActionEvent actionEvent) throws IOException {
+        sceneChanger(NewVisitorRegistrationButton, "new_visitor_registration.fxml");
+    }
+    public void pressOwnerRegistration(ActionEvent actionEvent) throws IOException {
+        sceneChanger(NewOwnerRegistrationButton, "new_owner_registration.fxml");
+    }
+ }
