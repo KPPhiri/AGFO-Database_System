@@ -16,11 +16,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.sql.Connection;
-import java.sql.DriverManager;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ResourceBundle;
-import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
 public class NewVisitorRegistration implements Initializable {
@@ -125,14 +122,20 @@ public class NewVisitorRegistration implements Initializable {
                 }
 
                 MessageDigest md = MessageDigest.getInstance("MD5");
-                md.update(visitorRegistrationPassword.getText().getBytes());
+                byte[] bytesOfPass = visitorRegistrationPassword.getText().getBytes("UTF-8");
                 visitor_ErrorMessage.setText("6");
-                byte[] digest = md.digest();
-                String pass = DatatypeConverter.printHexBinary(digest);
+                byte[] digest = md.digest(bytesOfPass);
+                String pass;
+                StringBuffer stringBuffer = new StringBuffer();
+                for (int i = 0; i < digest.length; i++) {
+                    stringBuffer.append(Integer.toString((digest[i] & 0xff) + 0x100, 16)
+                            .substring(1));
+                }
+                pass = stringBuffer.toString();
                 String email = visitorRegistrationEmail.getText();
                 String username = visitorRegistrationUser.getText();
-                String insert = "INSERT INTO USER Password, Email, Username, U_type "
-                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', \"VISITOR\")";
+                String insert = "INSERT INTO USER (Password, Email, Username, U_type) "
+                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', 'VISITOR')";
                 System.out.println(insert);
                 server.createStatement().execute(insert);
                 visitor_ErrorMessage.setText("7");
