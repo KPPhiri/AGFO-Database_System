@@ -2,6 +2,7 @@ import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -51,7 +52,7 @@ public class OtherOwnerProperties implements Initializable {
     @FXML
     public TableView table;
     @FXML
-    public ChoiceBox searchBy;
+    public ComboBox searchBy;
     @FXML
     public Button viewProperty;
     @FXML
@@ -60,15 +61,19 @@ public class OtherOwnerProperties implements Initializable {
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> original_data;
     public static userPropDetails  selectedUser = null;
+    public TextField searchField;
 
     @Override
     public void initialize (URL location, ResourceBundle resources) {
         loadDataFromDatabase();
+        searchBy.setValue("Search By");
         searchBy.setItems(FXCollections.observableArrayList(
-                "Search By", "Name", "Address", "City", "Zip", "Type", "Commercial", "ID"
+                "Name", "Address", "City", "Zip", "Type", "ID"
         ));
+        searchField.setText("");
         viewProperty.setOnAction(e-> viewProperty());
         back.setOnAction(e -> backToWelcomePage());
+        filtering();
     }
 
     private void viewProperty() {
@@ -146,5 +151,47 @@ public class OtherOwnerProperties implements Initializable {
         System.out.println("Should be adding");
         System.out.println(original_data.size());
         table.setItems(original_data);
+    }
+
+    public void filtering() {
+        FilteredList<userPropDetails> filteredData = new FilteredList<>(original_data, p -> true);
+
+        // 2. Set the filter Predicate whenever the filter changes.
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(tuple -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                if (tuple.getPropName().toLowerCase().contains(newValue.toLowerCase())
+                        && searchBy.getValue().toString().equals("Name")) {
+                    return true;
+                } else if (tuple.getCity().toLowerCase().contains(newValue.toLowerCase())
+                        && searchBy.getValue().toString().equals("City")) {
+                    return true;
+                } else if (tuple.getType().toLowerCase().contains(newValue.toLowerCase())
+                        && searchBy.getValue().toString().equals("Type")) {
+                    return true;
+                } else if ((tuple.getVisits() + "").contains(newValue)
+                        && searchBy.getValue().toString().equals("Visits")) {
+                    return true;
+                } else if ((tuple.getRating() + "").contains(newValue)
+                        && searchBy.getValue().toString().equals("Avg. Rating")) {
+                    return true;
+                } else if ((tuple.getZip() + "").contains(newValue)
+                        && searchBy.getValue().toString().equals("Zip")) {
+                    return true;
+                }  else if ((tuple.getAddress() + "").toLowerCase().contains(newValue.toLowerCase())
+                        && searchBy.getValue().toString().equals("Address")) {
+                    return true;
+                }   else if ((tuple.getId() + "").contains(newValue)
+                        && searchBy.getValue().toString().equals("ID")) {
+                    return true;
+                }
+                return false; // Does not match.
+            });
+        });
+        table.setItems(filteredData);
     }
 }
