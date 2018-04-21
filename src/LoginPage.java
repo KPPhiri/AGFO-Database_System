@@ -42,8 +42,8 @@ public class LoginPage implements Initializable{
         String email = "farmerJoe@gmail.com";
         String password = "d68fae04506bde7857ff4aa40ebad49c";
         String u_type = "";
-        if(email_TextField.getText().toString().length() < 1 || password_PasswordField.getText().toString().length()< 1
-                || email_TextField.getText().toString().length() > 50 || password_PasswordField.getText().toString().length() > 30) {
+        if(email_TextField.getText().length() < 1 || password_PasswordField.getText().length()< 1
+                || email_TextField.getText().length() > 50 || password_PasswordField.getText().length() > 30) {
             wrong.setVisible(true);
 
         } else {
@@ -53,7 +53,6 @@ public class LoginPage implements Initializable{
                 // This is the MD5 hash function for the inserted password.
                 // TODO: you need to replace the Select SQL statement's password variable in the WHERE portion to pass variable.
                 // TODO: This will be done when you can actually sign in.
-                    email = email_TextField.getText().toString();
                     MessageDigest md = MessageDigest.getInstance("MD5");
                     byte[] bytesOfPass = password_PasswordField.getText().getBytes("UTF-8");
                     byte[] digest = md.digest(bytesOfPass);
@@ -66,8 +65,6 @@ public class LoginPage implements Initializable{
                     pass = stringBuffer.toString();
 
                 ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Email FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'");
-
-                password = password_PasswordField.getText().toString();
 
                 if(val.next()) {
                     user.setUsername(val.getString(1));
