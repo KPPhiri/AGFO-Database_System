@@ -49,7 +49,6 @@ public class LoginPage implements Initializable{
         } else {
             try {
                 Connection server = Connect.SQLConnecter.connect();
-                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Email FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'");
 
                 // This is the MD5 hash function for the inserted password.
                 // TODO: you need to replace the Select SQL statement's password variable in the WHERE portion to pass variable.
@@ -65,6 +64,8 @@ public class LoginPage implements Initializable{
                                 .substring(1));
                     }
                     pass = stringBuffer.toString();
+
+                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Email FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'");
 
                 password = password_PasswordField.getText().toString();
 
