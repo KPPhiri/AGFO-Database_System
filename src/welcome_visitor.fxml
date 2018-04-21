@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OwnerWelcome">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VisitorWelcome">
 
     <children>
         <AnchorPane layoutX="41.0" layoutY="-12.0" prefHeight="495.0" prefWidth="784.0">
@@ -35,8 +35,8 @@
                 <Button layoutX="705.0" layoutY="427.0" mnemonicParsing="false" text="Log Out" />
                 <TextField fx:id="searchField" layoutX="-27.0" layoutY="361.0" />
                 <ComboBox fx:id="searchMenu" layoutX="-19.0" layoutY="321.0" prefWidth="150.0" promptText="Search By.." />
-                <Label layoutX="-3.0" layoutY="68.0" text="Your Properties:" />
-                <Label layoutX="350.0" layoutY="40.0" text="Welcome Owner " />
+            <Label layoutX="-3.0" layoutY="68.0" text="Your Properties:" />
+            <Label layoutX="350.0" layoutY="40.0" text="Welcome Visitor " />
             </children></AnchorPane>
     </children>
 </AnchorPane>
