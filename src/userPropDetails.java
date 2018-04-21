@@ -32,6 +32,25 @@ public class userPropDetails {
         this.rating = rating;
     }
 
+    //No valid entry field Constructor
+    public userPropDetails(String propName, String address, String city
+            , String zip, String size, String type, boolean ipublic
+            , boolean commercial, int id, int visits, double rating) {
+
+        this.propName = propName;
+        this.address = address;
+        this.city = city;
+        this.zip = zip;
+        this.size = size;
+        this.type = type;
+        this.ipublic = ipublic;
+        this.commercial = commercial;
+        this.id = id;
+        this.visits = visits;
+        this.valid = false;
+        this.rating = rating;
+    }
+
     public String getPropName() {
         return propName;
     }

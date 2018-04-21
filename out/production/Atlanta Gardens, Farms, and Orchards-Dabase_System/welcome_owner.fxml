@@ -31,7 +31,7 @@
                 </TableView>
                 <Button fx:id="manageButton" layoutX="340.0" layoutY="308.0" mnemonicParsing="false" onAction="#openManage" text="Manage Property" />
                 <Button layoutX="352.0" layoutY="348.0" mnemonicParsing="false" text="Add Property" />
-                <Button layoutX="325.0" layoutY="388.0" mnemonicParsing="false" text="View Other Properties" />
+                <Button fx:id="otherButton" layoutX="325.0" layoutY="388.0" mnemonicParsing="false" onAction="#showOther" text="View Other Properties" />
                 <Button layoutX="705.0" layoutY="427.0" mnemonicParsing="false" text="Log Out" />
                 <TextField fx:id="searchField" layoutX="-27.0" layoutY="361.0" />
                 <ComboBox fx:id="searchMenu" layoutX="-19.0" layoutY="321.0" prefWidth="150.0" promptText="Search By.." />

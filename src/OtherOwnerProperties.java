@@ -72,7 +72,7 @@ public class OtherOwnerProperties implements Initializable {
                 "Name", "Address", "City", "Zip", "Type", "ID"
         ));
         searchField.setText("");
-        viewProperty.setOnAction(e-> viewProperty());
+        viewProperty.setOnAction(e -> viewProperty());
         back.setOnAction(e -> backToWelcomePage());
         filtering();
     }
@@ -122,10 +122,23 @@ public class OtherOwnerProperties implements Initializable {
 
             ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID FROM PROPERTY WHERE ApprovedBy != '" + "NULL" + "' AND Owner != '" + user.getUsername() + "'");
             while (rs.next()) {
+                int id = rs.getInt(9);
+                ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
+                int visits = 0;
+                if(ra.next()) {
+                    visits = ra.getInt(1);
+                }
+
+                ResultSet rb = server.createStatement().executeQuery("SELECT avg(Rating) FROM VISITS WHERE P_id = " + id);
+                double avgRating = 0.0;
+                if(rb.next()) {
+                    avgRating = Math.round((rb.getDouble(1)) * 10.0) / 10.0;
+                }
+
                 original_data.add(new userPropDetails(rs.getString(1), rs.getString(2),
                         rs.getString(3), rs.getString(4), rs.getString(5),
                         rs.getString(6), rs.getBoolean(7), rs.getBoolean(8),
-                        rs.getInt(9), true, 9, 0.0));
+                        rs.getInt(9), visits, avgRating));
             }
 
 
@@ -145,7 +158,7 @@ public class OtherOwnerProperties implements Initializable {
         colPublic.setCellValueFactory(new PropertyValueFactory<>("ipublic"));
         colCommercial.setCellValueFactory(new PropertyValueFactory<>("commercial"));
         colID.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colVisits.setCellValueFactory(new PropertyValueFactory<>("valid"));
+        colVisits.setCellValueFactory(new PropertyValueFactory<>("visits"));
         colRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
 
         table.setItems(null);

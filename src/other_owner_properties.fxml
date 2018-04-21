@@ -11,7 +11,7 @@
 <AnchorPane prefHeight="603.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OtherOwnerProperties">
    <children>
       <Label layoutX="7.0" layoutY="7.0" text="All Other Valid Properties" />
-      <TableView fx:id="table" layoutX="8.0" layoutY="28.0" prefHeight="293.0" prefWidth="957.0">
+      <TableView fx:id="table" layoutX="8.0" layoutY="28.0" prefHeight="381.0" prefWidth="957.0">
         <columns>
           <TableColumn id="colName" fx:id="colName" prefWidth="75.0" text="Name" />
           <TableColumn fx:id="colAddress" prefWidth="100.0" text="Address" />
@@ -29,9 +29,9 @@
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
          </columnResizePolicy>
       </TableView>
-      <TextField fx:id="searchField" layoutX="8.0" layoutY="379.0" text="Search Term" />
-      <Button fx:id="viewProperty" layoutX="418.0" layoutY="425.0" mnemonicParsing="false" text="View Property" />
-      <Button fx:id="back" layoutX="418.0" layoutY="473.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Back" />
-      <ComboBox fx:id="searchBy" layoutX="8.0" layoutY="334.0" prefWidth="150.0" promptText="Search By" />
+      <TextField fx:id="searchField" layoutX="8.0" layoutY="465.0" text="Search Term" />
+      <Button fx:id="viewProperty" layoutX="419.0" layoutY="504.0" mnemonicParsing="false" text="View Property" />
+      <Button fx:id="back" layoutX="418.0" layoutY="550.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Back" />
+      <ComboBox fx:id="searchBy" layoutX="8.0" layoutY="418.0" prefWidth="150.0" promptText="Search By" />
    </children>
 </AnchorPane>

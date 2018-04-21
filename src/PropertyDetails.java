@@ -59,6 +59,8 @@ public class PropertyDetails implements Initializable{
     @Override
     public void initialize (URL location, ResourceBundle resources) {
         loadPropertyDetails();
+        getOwnerInfo();
+        getCropAndAnimal();
         back.setOnAction(e -> back());
     }
 
@@ -70,10 +72,61 @@ public class PropertyDetails implements Initializable{
         city.setText("City: " + temp.getCity());
         zip.setText("Zip: " + temp.getZip());
         size.setText("Size: " + temp.getSize());
+        visit.setText("Visits : " + temp.getVisits());
+        rate.setText("Avg. Rating: " + temp.getRating());
         type.setText("Type: " + temp.getType());
         isPublic.setText("Public: " + temp.getIpublic());
         isCommercial.setText("Commercial: " + temp.getCommercial());
         id.setText("ID: " + temp.getId());
+    }
+
+    public void getOwnerInfo() {
+        try {
+            System.out.println("WORKING");
+            Connection server = Connect.SQLConnecter.connect();
+
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Owner, Email FROM USER, PROPERTY WHERE USER.Username = PROPERTY.Owner AND Name = '" + OtherOwnerProperties.getSelectedUser().getPropName() + "'");
+            if (rs.next()) {
+                owner.setText("Owner: " + rs.getString("Owner"));
+                email.setText("Owner Email: " + rs.getString("Email"));
+            }
+        } catch (Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+
+        }
+    }
+
+    public void getCropAndAnimal() {
+        try {
+            System.out.println("WORKING");
+            Connection server = Connect.SQLConnecter.connect();
+
+            String crops = "";
+            ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type != 'ANIMAL'");
+            while (rs.next() && !crops.contains(rs.getString("Item"))) {
+                crops += rs.getString("Item") + ", ";
+            }
+            crop.setText("Crop: " + crops);
+
+        } catch (Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+        }
+
+        if ("FARM".equalsIgnoreCase(OtherOwnerProperties.getSelectedUser().getType())) {
+            try {
+                System.out.println("WORKING");
+                Connection server = Connect.SQLConnecter.connect();
+
+                String animals = "";
+                ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type = 'ANIMAL'");
+                while (rs.next() && !animals.contains(rs.getString("Item"))) {
+                    animals += rs.getString("Item") + ", ";
+                }
+                animal.setText("Animals: " + animals);
+            } catch (Exception e) {
+                System.out.println("something went wrong + " + e.getMessage());
+            }
+        }
     }
 
     private void back() {
