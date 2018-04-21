@@ -71,6 +71,9 @@ public class userPropDetails {
     public int getVisits() {
         return visits;
     }
+    public boolean getValid() {
+        return valid;
+    }
 
     public double getRating() {
         return rating;

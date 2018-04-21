@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="571.0" prefWidth="866.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PropertyManagement">
+   <children>
+      <Label layoutX="29.0" layoutY="49.0" text="Name:" />
+      <Label layoutX="31.0" layoutY="98.0" text="Address:" />
+      <Label layoutX="30.0" layoutY="147.0" text="City:" />
+      <Label layoutX="33.0" layoutY="195.0" text="Zip:" />
+      <Label layoutX="30.0" layoutY="253.0" text="Size:" />
+      <TextField fx:id="name" layoutX="88.0" layoutY="43.0" />
+      <TextField fx:id="address" layoutX="107.0" layoutY="92.0" />
+      <TextField fx:id="city" layoutX="81.0" layoutY="141.0" />
+      <TextField fx:id="zip" layoutX="81.0" layoutY="189.0" />
+      <TextField fx:id="size" layoutX="81.0" layoutY="247.0" />
+      <Label layoutX="412.0" layoutY="14.0" text="Manage Propety" />
+      <Label layoutX="593.0" layoutY="27.0" text="Type:" />
+      <Label layoutX="507.0" layoutY="63.0" text="Public:" />
+      <Label layoutX="483.0" layoutY="105.0" text="Commercial:" />
+      <Label fx:id="id" layoutX="522.0" layoutY="147.0" text="ID:" />
+      <Label layoutX="30.0" layoutY="300.0" text="Add New Crop:" />
+      <Button fx:id="addApproved" layoutX="27.0" layoutY="333.0" mnemonicParsing="false" text="Add" />
+      <Label layoutX="483.0" layoutY="201.0" text="Crop:" />
+      <Label layoutX="28.0" layoutY="408.0" text="Request New Crop:" />
+      <TextField fx:id="cropName" layoutX="193.0" layoutY="402.0" />
+      <Button fx:id="submit" layoutX="27.0" layoutY="435.0" mnemonicParsing="false" text="Submit Request" />
+      <Button fx:id="delete" layoutX="663.0" layoutY="524.0" mnemonicParsing="false" text="Delete Property" />
+      <Button fx:id="back" layoutX="663.0" layoutY="467.0" mnemonicParsing="false" text="Back (No Save)" />
+      <Button fx:id="save" layoutX="663.0" layoutY="402.0" mnemonicParsing="false" text="Save Changes" />
+      <ChoiceBox fx:id="isPublic" layoutX="574.0" layoutY="57.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="isCommerical" layoutX="600.0" layoutY="99.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="approvedCrops" layoutX="155.0" layoutY="294.0" prefWidth="150.0" />
+      <ChoiceBox fx:id="cropType" layoutX="430.0" layoutY="402.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

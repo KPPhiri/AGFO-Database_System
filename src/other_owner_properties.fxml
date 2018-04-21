@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="603.0" prefWidth="971.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OtherOwnerProperties">
+   <children>
+      <Label layoutX="7.0" layoutY="7.0" text="All Other Valid Properties" />
+      <TableView fx:id="table" layoutX="8.0" layoutY="28.0" prefHeight="293.0" prefWidth="957.0">
+        <columns>
+          <TableColumn id="colName" fx:id="colName" prefWidth="75.0" text="Name" />
+          <TableColumn fx:id="colAddress" prefWidth="100.0" text="Address" />
+            <TableColumn fx:id="colCity" prefWidth="63.0" text="City" />
+            <TableColumn fx:id="colZip" prefWidth="74.0" text="Zip" />
+            <TableColumn fx:id="colSize" prefWidth="74.0" text="Size" />
+            <TableColumn fx:id="colType" prefWidth="64.0" text="Type" />
+            <TableColumn fx:id="colPublic" prefWidth="94.0" text="Public" />
+            <TableColumn fx:id="colCommercial" prefWidth="112.0" text="Commercial" />
+            <TableColumn fx:id="colID" minWidth="0.0" prefWidth="102.0" text="ID" />
+            <TableColumn fx:id="colVisits" prefWidth="94.0" text="Visits" />
+            <TableColumn fx:id="colRating" prefWidth="104.0" text="Avg Rate" />
+        </columns>
+      </TableView>
+      <TextField layoutX="8.0" layoutY="379.0" text="Search Term" />
+      <Button layoutX="8.0" layoutY="425.0" mnemonicParsing="false" text="Search Properties" />
+      <Button fx:id="viewProperty" layoutX="418.0" layoutY="425.0" mnemonicParsing="false" text="View Property" />
+      <Button fx:id="back" layoutX="418.0" layoutY="473.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Back" />
+      <ChoiceBox fx:id="searchBy" layoutX="8.0" layoutY="334.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
