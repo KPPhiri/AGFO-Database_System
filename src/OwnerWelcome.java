@@ -1,7 +1,9 @@
 
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.collections.transformation.FilteredList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
@@ -11,6 +13,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 
@@ -42,6 +45,12 @@ public class OwnerWelcome implements Initializable{
     public TableColumn colRating;
     @FXML
     public TableView table;
+    @FXML
+    public ComboBox searchMenu;
+    @FXML
+    public Button searchButton;
+    @FXML
+    public TextField searchField;
 
 
     //Initialize observable list to hold out database data
@@ -50,6 +59,9 @@ public class OwnerWelcome implements Initializable{
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         loadDataFromDatabase();
+        createMenu();
+        filtering();
+
 
     }
 
@@ -60,15 +72,24 @@ public class OwnerWelcome implements Initializable{
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID FROM PROPERTY WHERE Owner = '" + "farmowner" +"'");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + "farmowner" +"'");
             while (rs.next()) {
                int id = rs.getInt(9);
-               //ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = 5");
-                 //System.out.println("GETTTINGGG" + ra.getInt(1));
+                ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
+                int pid = 0;
+                if(ra.next()) {
+                    pid = ra.getInt(1);
+                }
 
+                ResultSet rb = server.createStatement().executeQuery("SELECT avg(Rating) FROM VISITS WHERE P_id = " + id);
+                double avgRating = 0.0;
+                if(rb.next()) {
+                    avgRating = Math.round((rb.getDouble(1)) * 10.0) / 10.0;
+                }
 
+                String isValid = ((rs.getString(10)) != "NULL") ? "True": "False";
                 data.add(new userPropDetails(rs.getString(1), rs.getString(2), rs.getString(3),
-                    rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),true, 9,  0.0));
+                    rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
             }
 
 
@@ -87,8 +108,8 @@ public class OwnerWelcome implements Initializable{
         colPublic.setCellValueFactory(new PropertyValueFactory<>("ipublic"));
         colCommercial.setCellValueFactory(new PropertyValueFactory<>("commercial"));
         colID.setCellValueFactory(new PropertyValueFactory<>("id"));
-        colIsValid.setCellValueFactory(new PropertyValueFactory<>("visits"));
-        colVisits.setCellValueFactory(new PropertyValueFactory<>("valid"));
+        colVisits.setCellValueFactory(new PropertyValueFactory<>("visits"));
+        colIsValid.setCellValueFactory(new PropertyValueFactory<>("valid"));
         colRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
 
 
@@ -99,5 +120,58 @@ public class OwnerWelcome implements Initializable{
 
     }
 
+    public void createMenu() {
+        searchMenu.setValue("Search by..");
+//        MenuItem mName = new MenuItem("Name");
+//        mName.setId("propName");
+//        MenuItem mAdd = new MenuItem("Address");
+//        mName.setId("address");
+//        MenuItem mCity = new MenuItem("City");
+//        mName.setId("city");
+//        MenuItem mType = new MenuItem("Type");
+//        mName.setId("type");
+//        MenuItem mVisits= new MenuItem("Visits");
+//        mName.setId("visits");
+//        MenuItem mRating = new MenuItem("Avg. Rating");
+//        mName.setId("rating");
+//
+//        searchMenu.getItems().addAll(mName, mAdd, mCity, mType, mVisits, mRating);
+        searchMenu.getItems().addAll("Name", "City", "Type", "Visits", "Avg. Rating");
 
+    }
+
+
+    public void filtering() {
+        FilteredList<userPropDetails> filteredData = new FilteredList<>(data, p -> true);
+
+        // 2. Set the filter Predicate whenever the filter changes.
+        searchField.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(tuple -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                if (tuple.getPropName().toLowerCase().contains(newValue.toLowerCase())
+                        && searchMenu.getValue().toString().equals("Name")) {
+
+                    return true;
+                } else if (tuple.getCity().toLowerCase().contains(newValue.toLowerCase())
+                        && searchMenu.getValue().toString().equals("City")) {
+                    return true;
+                } else if (tuple.getType().toLowerCase().contains(newValue.toLowerCase())
+                        && searchMenu.getValue().toString().equals("Type")) {
+                    return true;
+                } else if ((tuple.getVisits() + "").contains(newValue)
+                        && searchMenu.getValue().toString().equals("Visits")) {
+                    return true;
+                } else if ((tuple.getRating() + "").contains(newValue)
+                        && searchMenu.getValue().toString().equals("Avg. Rating")) {
+                    return true;
+                }
+                return false; // Does not match.
+            });
+        });
+        table.setItems(filteredData);
+    }
 }

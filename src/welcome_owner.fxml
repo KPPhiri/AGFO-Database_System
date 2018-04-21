@@ -1,8 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
 <AnchorPane prefHeight="483.0" prefWidth="887.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OwnerWelcome">
@@ -11,8 +13,8 @@
          <children>
             <TableView fx:id="table" layoutX="-28.0" layoutY="48.0" prefHeight="200.0" prefWidth="859.0">
               <columns>
-                <TableColumn fx:id="colName" prefWidth="50.000030517578125" text="Name" />
-                <TableColumn fx:id="colAddress" prefWidth="82.99998474121094" text="Address" />
+                <TableColumn fx:id="colName" prefWidth="83.0" text="Name" />
+                <TableColumn fx:id="colAddress" prefWidth="51.0" text="Address" />
                   <TableColumn fx:id="colCity" prefWidth="41.0" text="City" />
                   <TableColumn fx:id="colZip" prefWidth="58.0" text="Zip" />
                   <TableColumn fx:id="colSize" prefWidth="66.0" text="Size" />
@@ -25,11 +27,12 @@
                   <TableColumn fx:id="colRating" prefWidth="137.0" text="Avg. Rating            " />
               </columns>
             </TableView>
-            <Button layoutX="-15.0" layoutY="416.0" mnemonicParsing="false" text="Search Properties" />
             <Button layoutX="339.0" layoutY="282.0" mnemonicParsing="false" text="Manage Property" />
             <Button layoutX="351.0" layoutY="333.0" mnemonicParsing="false" text="Add Property" />
             <Button layoutX="325.0" layoutY="389.0" mnemonicParsing="false" text="View Other Properties" />
             <Button layoutX="705.0" layoutY="427.0" mnemonicParsing="false" text="Log Out" />
+            <TextField fx:id="searchField" layoutX="-26.0" layoutY="347.0" />
+            <ComboBox fx:id="searchMenu" layoutX="-26.0" layoutY="309.0" prefWidth="150.0" promptText="Search By.." />
          </children></AnchorPane>
    </children>
 </AnchorPane>

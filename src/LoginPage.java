@@ -5,17 +5,13 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
-
-import javax.swing.*;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
-import java.sql.Statement;
 import java.util.ResourceBundle;
 
 public class LoginPage implements Initializable{
@@ -28,9 +24,9 @@ public class LoginPage implements Initializable{
     private PasswordField  password_PasswordField;
 
     @FXML
-    private Button lgn_btn;
+    //private Button lgn_btn;
 
-    User user;
+    User user = User.getInstance();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -51,18 +47,16 @@ public class LoginPage implements Initializable{
         } else {
             try {
                 Connection server = Connect.SQLConnecter.connect();
-                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'");
+                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Email FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'");
 
 
-    //            Statement statement = server.createStatement();
-    //            String select = "SELECT Username, U_type FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'";  //put sql statement
-    //            ResultSet val = statement.executeQuery(select);
 
                 if(val.next()) {
-                    System.out.println("Successful Login.");
-                    user = new User(val.getString(1), val.getString(2));
+                    user.setUsername(val.getString(1));
+                    user.setType(val.getString(2));
+                    System.out.println(user.getType());
+                    user.setEmail(val.getString(3));
                     if(user.getType().equals("OWNER")){
-
                         Parent root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
                         Stage stage = new Stage();
                         Scene scene = new Scene(root);
