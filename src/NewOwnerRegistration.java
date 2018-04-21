@@ -229,32 +229,36 @@ public class NewOwnerRegistration implements Initializable {
 
         if (!passed) {
             try {
-                owner_ErrorMessage.setText("1");
                 Connection server = SQLConnecter.connect();
                 if (!server.isClosed()) {
-                    owner_ErrorMessage.setText("Successfully connected to Server");
+                    owner_ErrorMessage.setText("Server is Closed or not Connected to it.");
                 }
-                owner_ErrorMessage.setText("3");
 
-                ResultSet val = server.createStatement().executeQuery("SELECT Email, Username FROM USER WHERE Email = '"
+                String selectStatement = "SELECT Email, Username FROM USER WHERE Email = '"
                         + ownerRegistrationEmail.getText() + "' AND Username = '"
-                        + ownerRegistrationUser.getText() + "'");
-                owner_ErrorMessage.setText("4");
+                        + ownerRegistrationUser.getText() + "'";
+                System.out.println(selectStatement);
+
+                ResultSet val = server.createStatement().executeQuery(selectStatement);
 
                 if (val.next()) {
-                    if (val.getString(1) == ownerRegistrationEmail.getText()) {
+                    boolean notUnique = false;
+                    if (val.getString(1).equals(ownerRegistrationEmail.getText())) {
                         owner_ErrorMessage.setText("Email must be unique.");
+                        notUnique = true;
                     }
-                    if (val.getString(2) == ownerRegistrationUser.getText()) {
+                    if (val.getString(2).equals(ownerRegistrationUser.getText())) {
                         owner_ErrorMessage.setText(owner_ErrorMessage.getText()
                                 + "\n User must be unique.");
+                        notUnique = true;
                     }
-
+                    if (notUnique) {
+                        return;
+                    }
                 }
 
                 MessageDigest md = MessageDigest.getInstance("MD5");
                 byte[] bytesOfPass = ownerRegistrationPassword.getText().getBytes("UTF-8");
-                owner_ErrorMessage.setText("6");
                 byte[] digest = md.digest(bytesOfPass);
                 String pass;
                 StringBuffer stringBuffer = new StringBuffer();
@@ -269,7 +273,6 @@ public class NewOwnerRegistration implements Initializable {
                         + "VALUES('" + pass + "', '" + email + "', '" + username + "', 'OWNER')";
                 System.out.println(insert);
                 server.createStatement().execute(insert);
-                owner_ErrorMessage.setText("7");
                 val = server.createStatement().executeQuery("SELECT MAX(ID) FROM PROPERTY");
                 int propID = 0;
                 if (val.next()) {
@@ -328,7 +331,7 @@ public class NewOwnerRegistration implements Initializable {
                 }
 
             } catch (Exception e) {
-                System.out.println("Something went wrong (KAPPA)");
+                System.out.println("A SQL Statement could not be executed.");
                 return;
             }
         }
