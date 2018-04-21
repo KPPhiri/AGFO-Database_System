@@ -13,7 +13,7 @@ public class Test extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        Parent root = FXMLLoader.load(getClass().getResource("page_login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("other_owner_properties.fxml"));
 
         Scene scene = new Scene(root);
 

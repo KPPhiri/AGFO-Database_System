@@ -62,6 +62,7 @@ public class OtherOwnerProperties implements Initializable {
     private ObservableList<userPropDetails> original_data;
     public static userPropDetails  selectedUser = null;
     public TextField searchField;
+    User user = User.getInstance();
 
     @Override
     public void initialize (URL location, ResourceBundle resources) {
@@ -119,7 +120,7 @@ public class OtherOwnerProperties implements Initializable {
             Connection server = Connect.SQLConnecter.connect();
             original_data = FXCollections.observableArrayList();
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID FROM PROPERTY WHERE ApprovedBy != '" + "NULL" + "'");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID FROM PROPERTY WHERE ApprovedBy != '" + "NULL" + "' AND Owner != '" + user.getUsername() + "'");
             while (rs.next()) {
                 original_data.add(new userPropDetails(rs.getString(1), rs.getString(2),
                         rs.getString(3), rs.getString(4), rs.getString(5),
