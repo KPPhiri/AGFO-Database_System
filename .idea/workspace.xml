@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="507d8920-cecb-43c7-907c-4261a3805c85" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewOwnerRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewOwnerRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/NewVisitorRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewVisitorRegistration.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -26,7 +24,7 @@
             <entry file="file://$PROJECT_DIR$/src/Test.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="255">
-                  <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+                  <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -37,10 +35,9 @@
           <file leaf-file-name="NewOwnerRegistration.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="454">
-                  <caret line="333" column="74" selection-start-line="333" selection-start-column="74" selection-end-line="333" selection-end-column="74" />
+                <state relative-caret-position="221">
+                  <caret line="13" selection-start-line="13" selection-end-line="13" />
                   <folding>
-                    <element signature="imports" expanded="true" />
                     <element signature="e#3180#3181#0" expanded="true" />
                     <element signature="e#3208#3209#0" expanded="true" />
                   </folding>
@@ -64,7 +61,7 @@
       </split-first>
       <split-second>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="new_owner_registration.fxml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="new_owner_registration.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/new_owner_registration.fxml">
               <provider editor-type-id="text-editor">
                 <state relative-caret-position="-204" />
@@ -72,16 +69,26 @@
               <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
             </entry>
           </file>
-          <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="933">
-                  <caret line="84" column="79" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
+                <state relative-caret-position="272">
+                  <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="page_login.fxml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
+              <provider editor-type-id="text-editor">
+                <state relative-caret-position="187">
+                  <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
+                </state>
+              </provider>
+              <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
             </entry>
           </file>
         </leaf>
@@ -110,11 +117,11 @@
       <list>
         <option value="$PROJECT_DIR$/src/new_owner_registration_farm.fxml" />
         <option value="$PROJECT_DIR$/src/new_visitor_registration.fxml" />
-        <option value="$PROJECT_DIR$/src/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/page_login.fxml" />
         <option value="$PROJECT_DIR$/src/new_owner_registration.fxml" />
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/NewVisitorRegistration.java" />
+        <option value="$PROJECT_DIR$/src/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/NewOwnerRegistration.java" />
       </list>
     </option>
@@ -265,12 +272,12 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2678002" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.2678002" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.49492016" visible="true" weight="0.08177083" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.49492016" visible="true" weight="0.08177083" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="2" />
@@ -332,7 +339,6 @@
         <state relative-caret-position="3740">
           <caret line="237" column="53" selection-start-line="237" selection-start-column="53" selection-end-line="237" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#3180#3181#0" expanded="true" />
             <element signature="e#3208#3209#0" expanded="true" />
           </folding>
@@ -388,14 +394,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
-        </state>
-      </provider>
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="933">
@@ -405,12 +403,6 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/new_owner_registration.fxml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="-204" />
-      </provider>
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Connect/SQLConnecter.java">
       <provider selected="true" editor-type-id="text-editor">
@@ -437,7 +429,6 @@
         <state relative-caret-position="-342">
           <caret line="291" column="68" lean-forward="true" selection-start-line="291" selection-start-column="68" selection-end-line="291" selection-end-column="68" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#3180#3181#0" expanded="true" />
             <element signature="e#3208#3209#0" expanded="true" />
           </folding>
@@ -469,7 +460,6 @@
         <state relative-caret-position="3740">
           <caret line="237" column="53" selection-start-line="237" selection-start-column="53" selection-end-line="237" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#3180#3181#0" expanded="true" />
             <element signature="e#3208#3209#0" expanded="true" />
           </folding>
@@ -525,16 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="933">
-          <caret line="84" column="79" selection-start-line="84" selection-start-column="79" selection-end-line="84" selection-end-column="79" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Connect/SQLConnecter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="17">
@@ -545,7 +525,7 @@
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
-          <caret line="15" column="73" selection-start-line="15" selection-start-column="73" selection-end-line="15" selection-end-column="73" />
+          <caret line="15" column="71" selection-start-line="15" selection-start-column="71" selection-end-line="15" selection-end-column="71" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -562,14 +542,37 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/new_owner_registration.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="-204" />
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="187">
+          <caret line="11" column="106" selection-start-line="11" selection-start-column="106" selection-end-line="11" selection-end-column="106" />
+        </state>
+      </provider>
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="333" column="74" selection-start-line="333" selection-start-column="74" selection-end-line="333" selection-end-column="74" />
+        <state relative-caret-position="221">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
           <folding>
-            <element signature="imports" expanded="true" />
             <element signature="e#3180#3181#0" expanded="true" />
             <element signature="e#3208#3209#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="16" column="32" lean-forward="true" selection-start-line="16" selection-start-column="32" selection-end-line="16" selection-end-column="32" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
