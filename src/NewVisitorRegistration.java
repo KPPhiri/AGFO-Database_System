@@ -102,40 +102,24 @@ public class NewVisitorRegistration implements Initializable {
         if (!passed) {
             try {
                 visitor_ErrorMessage.setText("1");
-                Class.forName("com.mysql.jdbc.Driver").newInstance();
-                Connection server = DriverManager.getConnection("jdbc:mysql://academic-"
-                        + "mysql.cc.gatech.edu/cs4400_team_14", "cs4400_team_14", "zmaGa96X");
+                Connection server = Connect.SQLConnecter.connect();
                 if (!server.isClosed()) {
                     visitor_ErrorMessage.setText("Successfully connected to Server");
                 }
-
-                Statement statement = server.createStatement();
                 visitor_ErrorMessage.setText("3");
 
-                String contains = "SELECT COUNT(`Email`) FROM `USER` WHERE `Email` IN (\'"
-                        + visitorRegistrationEmail.getText() + "\');";
-
-                ResultSet val = statement.executeQuery(contains);
+                ResultSet val = server.createStatement().executeQuery("SELECT Email, Username FROM USER WHERE Email = '"
+                        + visitorRegistrationEmail.getText() + "' AND Username = '"
+                        + visitorRegistrationUser.getText() + "'");
                 visitor_ErrorMessage.setText("4");
-                System.out.println(val.getInt("COUNT(`Email`)"));
 
                 if (val.next()) {
-                    if (val.getInt("COUNT(`Email`)") != 0) {
+                    if (val.getString(1) == visitorRegistrationEmail.getText()) {
                         visitor_ErrorMessage.setText("Email must be unique.");
                     }
-
-                }
-
-                contains = "SELECT COUNT(`Username`) FROM `USER` WHERE `Username` IN ('"
-                        + visitorRegistrationUser.getText() + "');";
-
-                val = statement.executeQuery(contains);
-                visitor_ErrorMessage.setText("5");
-                System.out.println(val.getInt("COUNT(`Username`)"));
-
-                if (val.next()) {
-                    if (val.getInt("COUNT(`Username`)") != 0) {
-                        visitor_ErrorMessage.setText("Username must be unique.");
+                    if (val.getString(2) == visitorRegistrationUser.getText()) {
+                        visitor_ErrorMessage.setText(visitor_ErrorMessage.getText()
+                                + "\n User must be unique.");
                     }
 
                 }
@@ -147,10 +131,10 @@ public class NewVisitorRegistration implements Initializable {
                 String pass = DatatypeConverter.printHexBinary(digest);
                 String email = visitorRegistrationEmail.getText();
                 String username = visitorRegistrationUser.getText();
-                String insert = "INSERT INTO USER (Password, Email, Username, U_Type)"
-                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', \"VISITOR\");";
+                String insert = "INSERT INTO USER Password, Email, Username, U_type "
+                        + "VALUES('" + pass + "', '" + email + "', '" + username + "', \"VISITOR\")";
                 System.out.println(insert);
-                val = statement.executeQuery(insert);
+                server.createStatement().execute(insert);
                 visitor_ErrorMessage.setText("7");
                 server.close();
 

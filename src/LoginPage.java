@@ -57,7 +57,8 @@ public class LoginPage implements Initializable {
         } else {
             try {
                 Connection server = Connect.SQLConnecter.connect();
-                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type FROM USER WHERE Email = '" + email + "' AND Password = '" + password + "'");
+                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type FROM USER WHERE Email = '"
+                        + email + "' AND Password = '" + password + "'");
 
 
                 //            Statement statement = server.createStatement();
