@@ -224,6 +224,7 @@ public class PropertyFarmManagement implements Initializable {
             }
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ name.getText() +"', Address = '" + address.getText() + "', City = '" + city.getText() + "', Zip = '" + zip.getText() + "',  Acres = '" + size.getText() + "', IsPublic = " + isPublic.getValue() + ", IsCommercial = " + isCommercial.getValue() + ", ApprovedBy = null WHERE ID = "+ current.getId() + "");
+            backToWelcomePage();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
