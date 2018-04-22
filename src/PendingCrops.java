@@ -77,6 +77,7 @@ public class PendingCrops implements Initializable {
                         Connection server = Connect.SQLConnecter.connect();
 
                         server.createStatement().executeUpdate("DELETE FROM FARM_ITEM WHERE Name = '"+ currentSelection +"'");
+                        server.close();
                         loadDataFromDatabase();
                     } catch(Exception e) {}
                 }
@@ -96,6 +97,7 @@ public class PendingCrops implements Initializable {
                         System.out.print(currentSelection);
 
                         server.createStatement().executeUpdate("Update FARM_ITEM set isApproved = '1' WHERE Name = '" + currentSelection + "'");
+                        server.close();
                         loadDataFromDatabase();
                     } catch(Exception e) {}
                 }
@@ -154,7 +156,7 @@ public class PendingCrops implements Initializable {
 
             }
 
-
+            server.close();
         } catch (Exception e) {
 
             System.out.println("something went wrong + " + e.getMessage());

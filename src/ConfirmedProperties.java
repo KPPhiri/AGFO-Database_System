@@ -85,7 +85,7 @@ public class ConfirmedProperties implements Initializable {
                         rs.getBoolean(8),rs.getString(9),rs.getString(10),rs.getDouble(11));
                 data.add(a);
             }
-
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }

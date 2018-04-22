@@ -226,7 +226,7 @@ public class OwnerWelcome implements Initializable{
 
 
 
-
+            server.close();
         } catch(Exception e) {
 
             System.out.println("something went wrong + " + e.getMessage());
