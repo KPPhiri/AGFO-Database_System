@@ -54,6 +54,10 @@ public class VisitPropPage implements Initializable{
     public Label animal;
     @FXML
     public Button back;
+    @FXML
+    public TextField textRating;
+    @FXML
+    public Button logVisit_button;
 
 
     @Override
@@ -65,6 +69,7 @@ public class VisitPropPage implements Initializable{
     }
 
     private void loadPropertyDetails() {
+
         userPropDetails temp = OtherOwnerProperties.getSelectedUser();
         title.setText(temp.getPropName() + " Details");
         name.setText("Name: " + temp.getPropName());
@@ -145,5 +150,19 @@ public class VisitPropPage implements Initializable{
     }
 
     public void logVisit(ActionEvent actionEvent) {
+        try {
+            Connection server = Connect.SQLConnecter.connect();
+            userPropDetails tempb = OtherOwnerProperties.getSelectedUser();
+            User tempa = User.getInstance();
+            String uname = tempa.getUsername();
+            int id = tempb.getId();
+            String insert= "INSERT INTO VISITS (Username, P_id, Date, Rating) VALUES " + uname + " " + id + " " + id;
+
+            server.createStatement().execute(insert);
+        } catch (Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+
+        }
+
     }
 }

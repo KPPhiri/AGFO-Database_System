@@ -63,7 +63,7 @@ public TableColumn colName;
     @FXML
     public Button manageButton;
 
-    public static userPropDetails  selectedUser1 = null;
+    public static userPropDetails  selectedUser = null;
 
 
 
@@ -238,7 +238,9 @@ public TableColumn colName;
         if (table.getSelectionModel().getSelectedItem() == null) {
             return;
         }
-        selectedUser1 = (userPropDetails) table.getSelectionModel().getSelectedItem();
+        OtherOwnerProperties ab = new OtherOwnerProperties();
+        ab.selectedUser =  (userPropDetails) table.getSelectionModel().getSelectedItem();
+        System.out.println(ab.selectedUser.getPropName());
         Stage stage;
         Parent root = null;
         stage = (Stage) viewProperty1.getScene().getWindow();
