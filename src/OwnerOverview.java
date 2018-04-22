@@ -12,11 +12,11 @@ import javafx.collections.transformation.FilteredList;
 
 public class OwnerOverview implements Initializable {
     @FXML
-    public TableColumn usernamecol;
+    private TableColumn usernamecol;
     @FXML
-    public TableColumn emailcol;
+    private TableColumn emailcol;
     @FXML
-    public TableColumn numpropcol;
+    private TableColumn numpropcol;
     @FXML
     private Button deletebut;
     @FXML
@@ -34,7 +34,6 @@ public class OwnerOverview implements Initializable {
         loadDataFromDatabase();
         createMenu();
         filtering();
-
     }
 
     @FXML
