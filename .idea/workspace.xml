@@ -4,12 +4,9 @@
     <list default="true" id="794eb2bf-f191-4f63-8c35-db3ec5bbdff2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_owner.fxml" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_owner.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/OwnerWelcome.java" afterPath="$PROJECT_DIR$/src/OwnerWelcome.java" />
-      <change beforePath="$PROJECT_DIR$/src/VisitPropPage.java" afterPath="$PROJECT_DIR$/src/VisitPropPage.java" />
-      <change beforePath="$PROJECT_DIR$/src/VisitorWelcome.java" afterPath="$PROJECT_DIR$/src/VisitorWelcome.java" />
-      <change beforePath="$PROJECT_DIR$/src/welcome_owner.fxml" afterPath="$PROJECT_DIR$/src/welcome_owner.fxml" />
-      <change beforePath="$PROJECT_DIR$/src/welcome_visitor.fxml" afterPath="$PROJECT_DIR$/src/welcome_visitor.fxml" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_management.fxml" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_management.fxml" />
+      <change beforePath="$PROJECT_DIR$/src/page_visitorProp.fxml" afterPath="$PROJECT_DIR$/src/page_visitorProp.fxml" />
     </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -32,23 +29,23 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="page_visitorProp.fxml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="page_visitorProp.fxml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/page_visitorProp.fxml">
-          <provider editor-type-id="JavaFX-Scene-Builder">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
             <state />
           </provider>
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="466">
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="299">
               <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="36" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisitorWelcome.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VisitorWelcome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VisitorWelcome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="138">
+            <state relative-caret-position="131">
               <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
               <folding>
                 <marker date="1524371416587" expanded="true" signature="2275:2394" ph="SELECT Name,... PROPERTY" />
@@ -84,11 +81,7 @@
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="391">
               <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
-              <folding>
-                <marker date="1524371407135" expanded="true" signature="2223:2366" ph="SELECT Name,... PROPERTY" />
-                <marker date="1524371407135" expanded="true" signature="2510:2554" ph="SELECT COUNT... VISITS" />
-                <marker date="1524371407135" expanded="true" signature="2753:2797" ph="SELECT avg(R... VISITS" />
-              </folding>
+              <folding />
             </state>
           </provider>
         </entry>
@@ -197,12 +190,12 @@
         <option value="$PROJECT_DIR$/src/LoginPage.java" />
         <option value="$PROJECT_DIR$/src/page_login.fxml" />
         <option value="$PROJECT_DIR$/src/OtherOwnerProperties.java" />
-        <option value="$PROJECT_DIR$/src/page_visitorProp.fxml" />
         <option value="$PROJECT_DIR$/src/VisitPropPage.java" />
         <option value="$PROJECT_DIR$/src/welcome_owner.fxml" />
         <option value="$PROJECT_DIR$/src/OwnerWelcome.java" />
         <option value="$PROJECT_DIR$/src/welcome_visitor.fxml" />
         <option value="$PROJECT_DIR$/src/VisitorWelcome.java" />
+        <option value="$PROJECT_DIR$/src/page_visitorProp.fxml" />
       </list>
     </option>
   </component>
@@ -405,11 +398,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524368718794</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="creating Visitor welcome">
+      <created>1524371629012</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1524371629012</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7700000" />
+    <option name="totallyTimeSpent" value="8876000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="29" width="1440" height="817" extended-state="6" />
@@ -882,28 +882,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/property_details.fxml">
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="690">
-          <caret line="46" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page_visitorProp.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="466">
-          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VisitPropPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="626">
@@ -921,26 +899,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/welcome_owner.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="378">
-          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="391">
           <caret line="76" column="30" lean-forward="true" selection-start-line="76" selection-start-column="30" selection-end-line="76" selection-end-column="30" />
-          <folding>
-            <marker date="1524371407135" expanded="true" signature="2223:2366" ph="SELECT Name,... PROPERTY" />
-            <marker date="1524371407135" expanded="true" signature="2510:2554" ph="SELECT COUNT... VISITS" />
-            <marker date="1524371407135" expanded="true" signature="2753:2797" ph="SELECT avg(R... VISITS" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -957,7 +920,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/VisitorWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="138">
+        <state relative-caret-position="131">
           <caret line="78" column="33" lean-forward="false" selection-start-line="78" selection-start-column="33" selection-end-line="78" selection-end-column="33" />
           <folding>
             <marker date="1524371416587" expanded="true" signature="2275:2394" ph="SELECT Name,... PROPERTY" />
@@ -965,6 +928,39 @@
             <marker date="1524371416587" expanded="true" signature="2540:2584" ph="SELECT COUNT... VISITS" />
             <marker date="1524371416587" expanded="true" signature="2783:2827" ph="SELECT avg(R... VISITS" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/welcome_owner.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="378">
+          <caret line="38" column="34" lean-forward="false" selection-start-line="38" selection-start-column="30" selection-end-line="38" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/property_details.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="690">
+          <caret line="46" column="14" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page_visitorProp.fxml">
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="47" column="36" lean-forward="false" selection-start-line="47" selection-start-column="21" selection-end-line="47" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
