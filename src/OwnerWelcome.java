@@ -80,8 +80,8 @@ public class OwnerWelcome implements Initializable{
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + "orchardowner" +"'");
-            while (rs.next()) {                                                                                                                                                                //user.getUsername()
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() +"'");
+            while (rs.next()) {
                int id = rs.getInt(9);
                 ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
                 int pid = 0;

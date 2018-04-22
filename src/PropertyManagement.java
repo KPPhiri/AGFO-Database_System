@@ -64,7 +64,6 @@ public class PropertyManagement implements Initializable {
     private ArrayList<String> farmItems = new ArrayList<>();
     private ArrayList<String> approvedItems = new ArrayList<>();
 
-
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         createSpinners();
