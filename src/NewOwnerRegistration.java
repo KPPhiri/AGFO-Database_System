@@ -69,7 +69,58 @@ public class NewOwnerRegistration implements Initializable {
             "Pineapple",
             "Pineapple Sage",
             "Rose",
-            "Salami");
+            "Salami",
+            "Sunflower");
+
+    private ObservableList<String> farmlist = FXCollections.observableArrayList(
+            "Almond",
+            "Apple",
+            "Banana",
+            "Broccoli",
+            "Carrot",
+            "Cashew",
+            "Corn",
+            "Daffodil",
+            "Daisy",
+            "Fig",
+            "Garlic",
+            "Kiwi",
+            "Onion",
+            "Orange",
+            "Peach",
+            "Peanut",
+            "Peas",
+            "Peruvian Lily",
+            "Pineapple",
+            "Pineapple Sage",
+            "Rose",
+            "Salami",
+            "Sunflower");
+
+    private ObservableList<String> orchardlist = FXCollections.observableArrayList(
+            "Apple",
+            "Banana",
+            "Cashew",
+            "Kiwi",
+            "Orange",
+            "Peach",
+            "Peanut",
+            "Pineapple");
+
+    private ObservableList<String> gardenlist = FXCollections.observableArrayList(
+            "Broccoli",
+            "Carrot",
+            "Corn",
+            "Daffodil",
+            "Daisy",
+            "Garlic",
+            "Onion",
+            "Peas",
+            "Peruvian Lily",
+            "Pineapple Sage",
+            "Rose",
+            "Salami",
+            "Sunflower");
 
     @FXML
     private ComboBox ownerRegistrationCrop;
@@ -77,7 +128,8 @@ public class NewOwnerRegistration implements Initializable {
     @FXML
     private ComboBox ownerRegistrationPublic;
 
-    private ObservableList<String> animals = FXCollections.observableArrayList("Cheetah",
+    private ObservableList<String> animals = FXCollections.observableArrayList(
+            "Cheetah",
             "Chicken",
             "Cow",
             "Goat",
@@ -101,24 +153,33 @@ public class NewOwnerRegistration implements Initializable {
     private Label ownerRegistrationAnimalLabel;
 
     public void createMenu() {
+        ownerRegistrationPropType.setValue("GARDEN");
+        ownerRegistrationAnimalLabel.setVisible(false);
+        ownerRegistrationAnimal.setVisible(false);
         ownerRegistrationPropType.getItems().addAll(propType);
         ownerRegistrationCrop.getItems().addAll(crops);
         ownerRegistrationPublic.getItems().addAll(true, false);
         ownerRegistrationAnimal.getItems().addAll(animals);
         ownerRegistrationCommercial.getItems().addAll(true, false);
-        ownerRegistrationPropType.setValue("GARDEN");
-        ownerRegistrationAnimalLabel.setVisible(false);
-        ownerRegistrationAnimal.setVisible(false);
     }
 
     @FXML
-    private void selectPropertyType(ActionEvent actionEvent) throws IOException {
-        if (ownerRegistrationPropType.getValue().toString() == "FARM") {
+    private void selectPropertyType(ActionEvent actionEvent) {
+        if (ownerRegistrationPropType.getValue().toString().equals("FARM")) {
             ownerRegistrationAnimalLabel.setVisible(true);
             ownerRegistrationAnimal.setVisible(true);
+            ownerRegistrationCrop.getItems().clear();
+            ownerRegistrationCrop.getItems().addAll(farmlist);
+        } else if (ownerRegistrationPropType.getValue().toString().equals("ORCHARD")){
+            ownerRegistrationAnimalLabel.setVisible(false);
+            ownerRegistrationAnimal.setVisible(false);
+            ownerRegistrationCrop.getItems().clear();
+            ownerRegistrationCrop.getItems().addAll(orchardlist);
         } else {
             ownerRegistrationAnimalLabel.setVisible(false);
             ownerRegistrationAnimal.setVisible(false);
+            ownerRegistrationCrop.getItems().clear();
+            ownerRegistrationCrop.getItems().addAll(gardenlist);
         }
     }
 
