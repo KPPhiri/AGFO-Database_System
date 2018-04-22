@@ -108,6 +108,7 @@ public class AddNewProperty implements Initializable {
         while (val.next() && !list.contains(val.getString("Name"))) {
             list.add(val.getString("Name"));
         }
+        server.close();
         return list;
     }
 
@@ -123,6 +124,7 @@ public class AddNewProperty implements Initializable {
         while (val.next() && !list.contains(val.getString("Name"))) {
             list.add(val.getString("Name"));
         }
+        server.close();
         return list;
     }
 

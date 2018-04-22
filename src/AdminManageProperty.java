@@ -180,6 +180,7 @@ public class AdminManageProperty implements Initializable {
                 approvedCropItems.add(rs.getString("Name"));
             }
             selectcropcombo.setItems(FXCollections.observableArrayList(approvedCropItems));
+            server.close();
         }
         catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
@@ -197,6 +198,7 @@ public class AdminManageProperty implements Initializable {
                 approvedAnimalItems.add(rs.getString("Name"));
             }
             selectanimalcombo.setItems(FXCollections.observableArrayList(approvedAnimalItems));
+            server.close();
         }
         catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
@@ -213,6 +215,7 @@ public class AdminManageProperty implements Initializable {
                 hasCroplItems.add(rs.getString("Item"));
             }
             cropcombo.setItems(FXCollections.observableArrayList(hasCroplItems));
+            server.close();
         }
         catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
@@ -229,6 +232,7 @@ public class AdminManageProperty implements Initializable {
                 hasAnimalItems.add(rs.getString("Item"));
             }
             animalcombo.setItems(FXCollections.observableArrayList(hasAnimalItems));
+            server.close();
         }
         catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
@@ -268,6 +272,7 @@ public class AdminManageProperty implements Initializable {
             System.out.println("Deleting Property");
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("DELETE FROM PROPERTY WHERE ID= '" + propId + "'");
+            server.close();
             backfromwheretheycame();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
@@ -323,6 +328,7 @@ public class AdminManageProperty implements Initializable {
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ namefield.getText() +"', Address = '" + addressfield.getText() + "', City = '" + cityfield.getText() + "', Zip = '" + zipfield.getText() + "',  Acres = '" + sizefield.getText() + "', IsPublic = " + publiccombo.getValue() + ", IsCommercial = " + commercialcombo.getValue() + " WHERE ID = "+ propId + "");
             server.createStatement().executeUpdate("UPDATE PROPERTY SET ApprovedBy = '" + currentUser.getUsername() + "' WHERE ID = "+ propId + "");
+            server.close();
             goToConfirmed();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());

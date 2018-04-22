@@ -54,9 +54,8 @@ public class OwnerOverview implements Initializable {
                 "FROM USER JOIN PROPERTY WHERE U_type='OWNER' AND Username=Owner GROUP BY USERNAME");
          while (rs.next()) {
         data.add(new ownerPropDetails(rs.getString(1), rs.getString(2),  rs.getInt(3)));
-                            }
-
-
+        }
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
 
@@ -113,6 +112,7 @@ public class OwnerOverview implements Initializable {
             ownerPropDetails selectedOwner = (ownerPropDetails) ownertable.getSelectionModel().getSelectedItem();
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("DELETE FROM USER WHERE Email= '"+ selectedOwner.getEmail() +"'");
+            server.close();
             loadDataFromDatabase();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());

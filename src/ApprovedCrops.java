@@ -142,6 +142,7 @@ public class ApprovedCrops implements Initializable {
 
                         //ResultSet rs = server.createStatement().executeQuery("Delete Name, Type FROM FARM_ITEM WHERE Name = " + currentSelect);
                         loadDataFromDatabase();
+                        server.close();
                     } catch(Exception e) {System.out.println("Error");}
                 }
             }
@@ -224,8 +225,7 @@ public class ApprovedCrops implements Initializable {
                 data.add(new approvedCropDetails(rs.getString(1), rs.getString(2)));
 
             }
-
-
+            server.close();
         } catch (Exception e) {
 
             System.out.println("something went wrong + " + e.getMessage());
