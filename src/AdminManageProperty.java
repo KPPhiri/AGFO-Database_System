@@ -314,6 +314,10 @@ public class AdminManageProperty implements Initializable {
     }
 
     public void saveProperty() {
+        if (hasAnimalItems.size() < 1 && proptype.equals("FARM")) {
+            System.out.println("Must have at least 1 animal. Cannot save valid farm");
+            return;
+        }
         try {
             System.out.println("Saving Property");
             Connection server = Connect.SQLConnecter.connect();
@@ -328,6 +332,7 @@ public class AdminManageProperty implements Initializable {
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ namefield.getText() +"', Address = '" + addressfield.getText() + "', City = '" + cityfield.getText() + "', Zip = '" + zipfield.getText() + "',  Acres = '" + sizefield.getText() + "', IsPublic = " + publiccombo.getValue() + ", IsCommercial = " + commercialcombo.getValue() + " WHERE ID = "+ propId + "");
             server.createStatement().executeUpdate("UPDATE PROPERTY SET ApprovedBy = '" + currentUser.getUsername() + "' WHERE ID = "+ propId + "");
+            server.createStatement().executeUpdate("DELETE FROM VISITS WHERE P_id= '" + propId + "'");
             server.close();
             goToConfirmed();
         } catch (Exception e) {

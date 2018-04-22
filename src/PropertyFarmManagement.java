@@ -219,6 +219,10 @@ public class PropertyFarmManagement implements Initializable {
     }
 
     private void saveProperty() {
+        if (farmItems.size() < 2) {
+            System.out.println("Not enough farm items to be valid.");
+            return;
+        }
         try {
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
@@ -229,6 +233,7 @@ public class PropertyFarmManagement implements Initializable {
             }
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ name.getText() +"', Address = '" + address.getText() + "', City = '" + city.getText() + "', Zip = '" + zip.getText() + "',  Acres = '" + size.getText() + "', IsPublic = " + isPublic.getValue() + ", IsCommercial = " + isCommercial.getValue() + ", ApprovedBy = null WHERE ID = "+ current.getId() + "");
+            server.createStatement().executeUpdate("DELETE FROM VISITS WHERE P_id= '" + current.getId() + "'");
             backToWelcomePage();
             server.close();
         } catch (Exception e) {

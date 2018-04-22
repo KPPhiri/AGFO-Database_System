@@ -212,6 +212,7 @@ public class PropertyManagement implements Initializable {
             }
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ name.getText() +"', Address = '" + address.getText() + "', City = '" + city.getText() + "', Zip = '" + zip.getText() + "',  Acres = '" + size.getText() + "', IsPublic = " + isPublic.getValue() + ", IsCommercial = " + isCommercial.getValue() + ", ApprovedBy = null WHERE ID = "+ current.getId() + "");
+            server.createStatement().executeUpdate("DELETE FROM VISITS WHERE P_id= '" + current.getId() + "'");
             backToWelcomePage();
             server.close();
         } catch (Exception e) {
