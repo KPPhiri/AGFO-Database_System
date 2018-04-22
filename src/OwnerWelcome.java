@@ -1,5 +1,6 @@
 
 
+
 import javafx.collections.FXCollections;
 
 import javafx.collections.ObservableList;
@@ -178,7 +179,7 @@ public class OwnerWelcome implements Initializable{
 
             data = FXCollections.observableArrayList();
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() +"'");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() + "'");
 
             while (rs.next()) {
 
@@ -188,7 +189,7 @@ public class OwnerWelcome implements Initializable{
 
                 int pid = 0;
 
-                if(ra.next()) {
+                if (ra.next()) {
 
                     pid = ra.getInt(1);
 
@@ -200,7 +201,7 @@ public class OwnerWelcome implements Initializable{
 
                 double avgRating = 0.0;
 
-                if(rb.next()) {
+                if (rb.next()) {
 
                     avgRating = Math.round((rb.getDouble(1)) * 10.0) / 10.0;
 
@@ -208,7 +209,13 @@ public class OwnerWelcome implements Initializable{
 
 
 
-                boolean isValid = rs.getBoolean(10);
+                boolean isValid = true;
+
+                if (rs.getString("ApprovedBy") == null) {
+
+                    isValid = false;
+
+                }
 
                 data.add(new userPropDetails(rs.getString(1), rs.getString(2), rs.getString(3),
 
@@ -378,9 +385,19 @@ public class OwnerWelcome implements Initializable{
 
 
 
+
+
             selectedOwnerProp = (userPropDetails) table.getSelectionModel().getSelectedItem();
 
-            Parent root = FXMLLoader.load(getClass().getResource("property_management.fxml"));
+            String fxml = "property_management.fxml";
+
+            if (selectedOwnerProp.getType().equals("FARM")) {
+
+                fxml = "property_farm_management.fxml";
+
+            }
+
+            Parent root = FXMLLoader.load(getClass().getResource(fxml));
 
             Stage stage = (Stage) manageButton.getScene().getWindow();
 
