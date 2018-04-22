@@ -2,27 +2,24 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4d6581c-107b-44c6-b54a-c5026f601dec" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_46.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/ApprovedCrops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/PendingCrops.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/VisitorHistory.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/approvedCropDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/approved_crops.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pendingCropDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pending_crops.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/userPropDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitorHitoryDetails.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/visitor_history.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/OwnerWelcome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/OwnerWelcome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/welcome_owner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/welcome_owner.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OwnerWelcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OwnerWelcome.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$1.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$2.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$5.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops$4.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops$4.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory$3.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ApprovedCrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/ApprovedCrops.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/PendingCrops.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PendingCrops.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/welcome_owner.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/welcome_owner.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VisitorHistory.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VisitorHistory.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/approvedCropDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/approvedCropDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/approved_crops.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/approved_crops.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/pendingCropDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/pendingCropDetails.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -32,13 +29,27 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+            <state relative-caret-position="209">
+              <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -46,8 +57,8 @@
       <file leaf-file-name="VisitorHistory.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/VisitorHistory.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="107">
-              <caret line="139" column="189" lean-forward="true" selection-start-line="139" selection-start-column="65" selection-end-line="139" selection-end-column="189" />
+            <state relative-caret-position="209">
+              <caret line="112" column="16" lean-forward="true" selection-start-line="112" selection-start-column="16" selection-end-line="116" selection-end-column="45" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -80,13 +91,47 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApprovedCrops.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="ApprovedCrops.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ApprovedCrops.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="185">
-              <caret line="169" column="26" selection-start-line="169" selection-start-column="26" selection-end-line="169" selection-end-column="26" />
+            <state relative-caret-position="162">
+              <caret line="140" column="24" lean-forward="true" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="123" />
               <folding>
                 <element signature="imports" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pendingCropDetails.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/pendingCropDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="238">
+              <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+              <folding>
+                <element signature="e#399#400#0" expanded="true" />
+                <element signature="e#434#435#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="approvedCropDetails.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/approvedCropDetails.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret lean-forward="true" />
+              <folding>
+                <element signature="e#89#90#0" expanded="true" />
+                <element signature="e#116#117#0" expanded="true" />
+                <element signature="e#156#157#0" expanded="true" />
+                <element signature="e#188#189#0" expanded="true" />
+                <element signature="e#219#220#0" expanded="true" />
+                <element signature="e#246#247#0" expanded="true" />
+                <element signature="e#286#287#0" expanded="true" />
+                <element signature="e#318#319#0" expanded="true" />
+                <element signature="e#499#500#0" expanded="true" />
+                <element signature="e#526#527#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -97,7 +142,7 @@
           <provider editor-type-id="JavaFX-Scene-Builder" />
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="156">
-              <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
+              <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
             </state>
           </provider>
         </entry>
@@ -114,11 +159,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PendingCrops.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="PendingCrops.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PendingCrops.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="161">
-              <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="97" selection-end-column="47" />
+            <state relative-caret-position="253">
+              <caret line="97" column="63" lean-forward="true" selection-start-line="97" selection-start-column="63" selection-end-line="97" selection-end-column="63" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -140,6 +185,7 @@
     <findStrings>
       <find>int</find>
       <find>select</find>
+      <find>Type</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -155,14 +201,14 @@
         <option value="$PROJECT_DIR$/src/Connect/SQLConnecter.java" />
         <option value="$PROJECT_DIR$/src/userPropDetails.java" />
         <option value="$PROJECT_DIR$/src/visitor_history.fxml" />
-        <option value="$PROJECT_DIR$/src/pendingCropDetails.java" />
-        <option value="$PROJECT_DIR$/src/approvedCropDetails.java" />
         <option value="$PROJECT_DIR$/src/approved_crops.fxml" />
         <option value="$PROJECT_DIR$/src/visitorHitoryDetails.java" />
         <option value="$PROJECT_DIR$/src/VisitorHistory.java" />
-        <option value="$PROJECT_DIR$/src/PendingCrops.java" />
-        <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/approvedCropDetails.java" />
+        <option value="$PROJECT_DIR$/src/pendingCropDetails.java" />
         <option value="$PROJECT_DIR$/src/ApprovedCrops.java" />
+        <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/PendingCrops.java" />
       </list>
     </option>
   </component>
@@ -308,12 +354,12 @@
       <workItem from="1524253308482" duration="1483000" />
       <workItem from="1524254844397" duration="8747000" />
       <workItem from="1524268420548" duration="10249000" />
-      <workItem from="1524349380632" duration="3987000" />
+      <workItem from="1524349380632" duration="9495000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="24466000" />
+    <option name="totallyTimeSpent" value="29974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -331,7 +377,7 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49932885" weight="0.32905984" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49731544" weight="0.32905984" />
-      <window_info anchor="right" id="Palette&#9;" order="8" />
+      <window_info anchor="right" id="Palette&#9;" order="7" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5026846" side_tool="true" weight="0.32905984" />
@@ -342,8 +388,8 @@
       <window_info anchor="bottom" id="Terminal" order="9" sideWeight="0.49731544" weight="0.32905984" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" weight="0.25973153" />
-      <window_info anchor="right" id="Database" order="7" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.2590604" />
+      <window_info anchor="right" id="Database" order="8" weight="0.3295302" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -640,32 +686,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/pendingCropDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="18" />
-          <folding>
-            <element signature="e#338#339#0" expanded="true" />
-            <element signature="e#365#366#0" expanded="true" />
-            <element signature="e#396#397#0" expanded="true" />
-            <element signature="e#423#424#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/approvedCropDetails.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="30" selection-start-line="4" selection-start-column="30" selection-end-line="4" selection-end-column="30" />
-          <folding>
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#293#294#0" expanded="true" />
-            <element signature="e#328#329#0" expanded="true" />
-            <element signature="e#363#364#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="374">
@@ -694,31 +714,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Test.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/approved_crops.fxml">
-      <provider editor-type-id="JavaFX-Scene-Builder" />
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="21" column="18" lean-forward="true" selection-start-line="21" selection-start-column="18" selection-end-line="21" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/PendingCrops.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="161">
-          <caret line="92" column="24" lean-forward="true" selection-start-line="92" selection-start-column="24" selection-end-line="97" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="535">
@@ -729,20 +724,75 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/approved_crops.fxml">
+      <provider editor-type-id="JavaFX-Scene-Builder" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="20" column="18" lean-forward="true" selection-start-line="20" selection-start-column="18" selection-end-line="20" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/VisitorHistory.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="107">
-          <caret line="139" column="189" lean-forward="true" selection-start-line="139" selection-start-column="65" selection-end-line="139" selection-end-column="189" />
+        <state relative-caret-position="209">
+          <caret line="112" column="16" lean-forward="true" selection-start-line="112" selection-start-column="16" selection-end-line="116" selection-end-column="45" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/approvedCropDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret lean-forward="true" />
+          <folding>
+            <element signature="e#89#90#0" expanded="true" />
+            <element signature="e#116#117#0" expanded="true" />
+            <element signature="e#156#157#0" expanded="true" />
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#219#220#0" expanded="true" />
+            <element signature="e#246#247#0" expanded="true" />
+            <element signature="e#286#287#0" expanded="true" />
+            <element signature="e#318#319#0" expanded="true" />
+            <element signature="e#499#500#0" expanded="true" />
+            <element signature="e#526#527#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Test.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="24" column="13" lean-forward="true" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/pendingCropDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="18" column="24" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
+          <folding>
+            <element signature="e#399#400#0" expanded="true" />
+            <element signature="e#434#435#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/ApprovedCrops.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="185">
-          <caret line="169" column="26" selection-start-line="169" selection-start-column="26" selection-end-line="169" selection-end-column="26" />
+        <state relative-caret-position="162">
+          <caret line="140" column="24" lean-forward="true" selection-start-line="140" selection-start-column="24" selection-end-line="140" selection-end-column="123" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/PendingCrops.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="97" column="63" lean-forward="true" selection-start-line="97" selection-start-column="63" selection-end-line="97" selection-end-column="63" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

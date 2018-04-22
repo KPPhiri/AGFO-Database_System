@@ -12,6 +12,17 @@ import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
+import javafx.fxml.FXML;
+import javafx.scene.control.*;
+import javafx.scene.control.cell.PropertyValueFactory;
+import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
+import java.util.ResourceBundle;
+import javafx.fxml.Initializable;
+import javafx.collections.transformation.FilteredList;
 
 import java.net.URL;
 import java.sql.Connection;
@@ -31,8 +42,7 @@ public class ApprovedCrops implements Initializable {
     @FXML
     public Button Back_Button;
 
-    @FXML
-    public Button Search_Button;
+
 
     @FXML
     public Button Add_Button;
@@ -61,7 +71,7 @@ public class ApprovedCrops implements Initializable {
 
     private String SearchTerm = null;
 
-    private String Type = null;
+    private String Types = null;
 
     private String CropName = null;
 
@@ -74,9 +84,11 @@ public class ApprovedCrops implements Initializable {
 
         loadDataFromDatabase();
 
+        filtering();
+
         Type_Menu.setValue("Type");
 
-        Type_Menu.getItems().addAll("Animal","Fruit","Vegetable", "Flower");
+        Type_Menu.getItems().addAll("ANIMAL","FRUIT", "VEGETABLE", "FLOWER");
 
         Search_Menu.setValue("Search by..");
 
@@ -123,12 +135,14 @@ public class ApprovedCrops implements Initializable {
 
                         Connection server = Connect.SQLConnecter.connect();
 
+                        System.out.println(currentSelect);
 
-                        server.createStatement().executeUpdate("DELETE FROM FARM_ITEM WHERE Name = '"+ currentSelect.toString() +"'");
+
+                        server.createStatement().executeUpdate("DELETE FROM FARM_ITEM WHERE Name = '"+ currentSelect +"'");
 
                         //ResultSet rs = server.createStatement().executeQuery("Delete Name, Type FROM FARM_ITEM WHERE Name = " + currentSelect);
                         loadDataFromDatabase();
-                    } catch(Exception e) {}
+                    } catch(Exception e) {System.out.println("Error");}
                 }
             }
         });
@@ -136,10 +150,10 @@ public class ApprovedCrops implements Initializable {
         Add_Button.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                Type = Type_Menu.getValue().toString();
+                Types = Type_Menu.getValue().toString();
                 CropName = Name_Bar.getText();
-                System.out.println(Type + " " + CropName);
-                if (Type == null || Type.equals("Type") || CropName == null || CropName.equals("SearchBy..")) {
+                System.out.println(Types + " " + CropName);
+                if (Types == null || Types.equals("Type") || CropName == null || CropName.equals("SearchBy..")) {
                     return;
                 } else {
                     try {
@@ -147,7 +161,7 @@ public class ApprovedCrops implements Initializable {
 
                         Connection server = Connect.SQLConnecter.connect();
 
-                        ResultSet rs = server.createStatement().executeQuery("INSERT INTO FARM_ITEM (Name, isApproved, Type) VALUES(Type, 1, CropName)");
+                        server.createStatement().executeUpdate("INSERT INTO FARM_ITEM (Name, isApproved, Type) VALUES('" + CropName + "', 1, '" + Types + "')");
                         loadDataFromDatabase();
                     } catch(Exception e) {}
                 }
@@ -155,41 +169,7 @@ public class ApprovedCrops implements Initializable {
             }
         });
 
-        Search_Button.setOnAction(new EventHandler<ActionEvent>() {
-            @Override
-            public void handle(ActionEvent event) {
-                SearchBy = Search_Menu.getValue().toString();
-                SearchTerm = Search_Bar.getText();
-                if (SearchBy == null || SearchTerm == null || SearchBy.equals("SearchBy") || SearchTerm.equals("Search Term") ) {
-                    return;
-                } else if (SearchBy.equals("Name")){
-                    try {
-                        data = FXCollections.observableArrayList();
 
-                        Connection server = Connect.SQLConnecter.connect();
-                        //System.out.println(SearchBy + " " + SearchTerm);
-
-
-                        server.createStatement().executeUpdate("SELECT Name,  Type FROM FARM_ITEM WHERE isApproved == 1 && Name = '" + SearchTerm + "'");
-
-                        //ResultSet rs = server.createStatement().executeQuery("Delete Name, Type FROM FARM_ITEM WHERE Name = " + currentSelect);
-                        loadDataFromDatabase();
-                    } catch(Exception e) {}
-                } else if (SearchBy.equals("Type")) {
-                    try {
-                        data = FXCollections.observableArrayList();
-
-                        Connection server = Connect.SQLConnecter.connect();
-
-
-                        server.createStatement().executeUpdate("SELECT Name,  Type FROM FARM_ITEM WHERE isApproved == 1 && Type = '" + SearchTerm + "'");
-
-                        //ResultSet rs = server.createStatement().executeQuery("Delete Name, Type FROM FARM_ITEM WHERE Name = " + currentSelect);
-                        loadDataFromDatabase();
-                    } catch(Exception e) {}
-                }
-            }
-        });
 
 
 
@@ -206,9 +186,12 @@ public class ApprovedCrops implements Initializable {
                     String first_Column = selectedItems.toString().split(",")[0];
                     //System.out.println(first_Column);
                     currentSelect = first_Column;
+                    System.out.println(currentSelect);
                 }
             }
         });
+
+
 
     }
 
@@ -226,7 +209,7 @@ public class ApprovedCrops implements Initializable {
             data = FXCollections.observableArrayList();
 
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Type FROM FARM_ITEM WHERE isApproved = 1");
+            ResultSet rs = server.createStatement().executeQuery("SELECT FARM_ITEM.Name, Type FROM FARM_ITEM WHERE isApproved = 1");
 
             while (rs.next()) {
 
@@ -268,6 +251,33 @@ public class ApprovedCrops implements Initializable {
 
 
     }
+
+    public void filtering() {
+        FilteredList<approvedCropDetails> filteredData = new FilteredList(data, p -> true);
+
+        // 2. Set the filter Predicate whenever the filter changes.
+        Search_Bar.textProperty().addListener((observable, oldValue, newValue) -> {
+            filteredData.setPredicate(tuple -> {
+                // If filter text is empty, display all persons.
+                if (newValue == null || newValue.isEmpty()) {
+                    return true;
+                }
+
+                if (Search_Menu.getValue().toString().equals("Type")
+                        && tuple.getType().toLowerCase().contains(newValue.toLowerCase())
+                       ) {
+
+                    return true;
+                } else if (tuple.getName().toLowerCase().contains(newValue.toLowerCase())
+                        && Search_Menu.getValue().toString().equals("Name")) {
+                    return true;
+                }
+                return false; // Does not match.
+            });
+        });
+        CropTable.setItems(filteredData);
+    }
+
 
 //    public void pressButton(ActionEvent actionEvent) {
 //        try {

@@ -114,6 +114,7 @@ public class VisitorHistory implements Initializable {
                 String first_Column = selectedItems.toString().split(",")[0];
                 //System.out.println(first_Column);
                 selected = first_Column;
+                System.out.println(selected);
             }
         }
     });

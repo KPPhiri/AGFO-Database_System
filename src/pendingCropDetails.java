@@ -15,4 +15,8 @@ public class pendingCropDetails {
             return type;
         }
 
+        public String toString() {
+            return name;
+        }
+
 }

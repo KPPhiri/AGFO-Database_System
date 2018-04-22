@@ -13,7 +13,6 @@
       <Label layoutX="236.0" layoutY="14.0" text="Appoved Animals/Crops" />
       <Button fx:id="Back_Button" layoutX="280.0" layoutY="344.0" mnemonicParsing="false" text="Back" />
       <Button fx:id="Delete_Selection" layoutX="249.0" layoutY="306.0" mnemonicParsing="false" text="Delete Selection" />
-      <Button fx:id="Search_Button" layoutX="468.0" layoutY="280.0" mnemonicParsing="false" text="Search" />
       <Button fx:id="Add_Button" layoutX="43.0" layoutY="280.0" mnemonicParsing="false" text="Add to Appproved List" />
       <TableView fx:id="CropTable" layoutX="200.0" layoutY="42.0" prefHeight="200.0" prefWidth="200.0">
         <columns>

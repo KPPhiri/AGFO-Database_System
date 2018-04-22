@@ -76,7 +76,7 @@ public class PendingCrops implements Initializable {
 
                         Connection server = Connect.SQLConnecter.connect();
 
-                        server.createStatement().executeQuery("Delete Name, Type FROM FARM_ITEM WHERE Name = '"+ currentSelection.toString() +"'");
+                        server.createStatement().executeUpdate("DELETE FROM FARM_ITEM WHERE Name = '"+ currentSelection +"'");
                         loadDataFromDatabase();
                     } catch(Exception e) {}
                 }
@@ -93,8 +93,9 @@ public class PendingCrops implements Initializable {
                         data = FXCollections.observableArrayList();
 
                         Connection server = Connect.SQLConnecter.connect();
+                        System.out.print(currentSelection);
 
-                        ResultSet rs = server.createStatement().executeQuery("Update FARM_ITEM set isAppoved = 1 WHERE Name = '" + currentSelection + "'");
+                        server.createStatement().executeUpdate("Update FARM_ITEM set isApproved = '1' WHERE Name = '" + currentSelection + "'");
                         loadDataFromDatabase();
                     } catch(Exception e) {}
                 }
@@ -116,6 +117,7 @@ public class PendingCrops implements Initializable {
                     String first_Column = selectedItems.toString().split(",")[0];
                     //System.out.println(first_Column);
                     currentSelection = first_Column;
+                    System.out.println(currentSelection);
                 }
             }
         });
