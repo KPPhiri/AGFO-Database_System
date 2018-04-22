@@ -49,31 +49,6 @@ public class NewOwnerRegistration implements Initializable {
     @FXML
     private ComboBox ownerRegistrationPropType;
 
-    private ObservableList<String> crops = FXCollections.observableArrayList(
-            "Almond",
-            "Apple",
-            "Banana",
-            "Broccoli",
-            "Carrot",
-            "Cashew",
-            "Corn",
-            "Daffodil",
-            "Daisy",
-            "Fig",
-            "Garlic",
-            "Kiwi",
-            "Onion",
-            "Orange",
-            "Peach",
-            "Peanut",
-            "Peas",
-            "Peruvian Lily",
-            "Pineapple",
-            "Pineapple Sage",
-            "Rose",
-            "Salami",
-            "Sunflower");
-
     private ObservableList<String> farmlist = FXCollections.observableArrayList(createCropList("FARM"));
 
     private ObservableList<String> orchardlist = FXCollections.observableArrayList(createCropList("ORCHARD"));
@@ -110,7 +85,7 @@ public class NewOwnerRegistration implements Initializable {
         ownerRegistrationAnimalLabel.setVisible(false);
         ownerRegistrationAnimal.setVisible(false);
         ownerRegistrationPropType.getItems().addAll(propType);
-        ownerRegistrationCrop.getItems().addAll(crops);
+        ownerRegistrationCrop.getItems().addAll(gardenlist);
         ownerRegistrationPublic.getItems().addAll(true, false);
         ownerRegistrationAnimal.getItems().addAll(animals);
         ownerRegistrationCommercial.getItems().addAll(true, false);

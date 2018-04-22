@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d4d6581c-107b-44c6-b54a-c5026f601dec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/AdminManageProperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/AdminManageProperty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/AdminWelcome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/AdminWelcome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/ApprovedCrops$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/ApprovedCrops$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PendingCrops$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PendingCrops$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyFarmManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyFarmManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VisitDetails.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/VisitDetails.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/NewOwnerRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewOwnerRegistration.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,66 +13,35 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="VisitDetails.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/VisitDetails.java">
+    <leaf>
+      <file leaf-file-name="NewOwnerRegistration.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="249">
-              <caret line="224" column="27" selection-start-line="224" selection-start-column="27" selection-end-line="224" selection-end-column="27" />
+            <state relative-caret-position="223">
+              <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+              <folding>
+                <element signature="e#6519#6520#0" expanded="true" />
+                <element signature="e#6547#6548#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
+      <file leaf-file-name="AddNewProperty.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/AddNewProperty.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="419">
-              <caret line="156" selection-start-line="156" selection-end-line="156" />
+            <state relative-caret-position="1615">
+              <caret line="116" column="37" lean-forward="true" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisitorHistory.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VisitorHistory.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="151">
-              <caret line="95" selection-start-line="95" selection-end-line="95" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OtherOwnerProperties.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OtherOwnerProperties.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1023">
-              <caret line="131" column="68" selection-start-line="131" selection-start-column="68" selection-end-line="131" selection-end-column="122" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="OwnerOverview.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/OwnerOverview.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-6">
-              <caret line="114" column="50" selection-start-line="114" selection-start-column="50" selection-end-line="114" selection-end-column="117" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ownerPropDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ownerPropDetails.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="13" selection-start-column="13" selection-end-column="13" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VisitPropPage.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/VisitPropPage.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1708">
-              <caret line="31" column="23" selection-start-line="31" selection-start-column="23" selection-end-line="31" selection-end-column="23" />
+      <file leaf-file-name="add_new_property.fxml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/add_new_property.fxml">
+          <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+          <provider editor-type-id="text-editor">
+            <state relative-caret-position="386">
+              <caret line="33" column="20" selection-start-line="33" selection-start-column="20" selection-end-line="33" selection-end-column="20" />
             </state>
           </provider>
         </entry>
@@ -87,28 +49,19 @@
       <file leaf-file-name="OwnerWelcome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="323">
-              <caret line="199" column="68" selection-start-line="199" selection-start-column="68" selection-end-line="199" selection-end-column="122" />
+            <state relative-caret-position="189">
+              <caret line="481" selection-start-line="481" selection-end-line="481" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="pendingCropDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/pendingCropDetails.java">
+      <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Test.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-              <folding>
-                <element signature="e#399#400#0" expanded="true" />
-                <element signature="e#434#435#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="323">
+              <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
             </state>
           </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="visitorHitoryDetails.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/visitorHitoryDetails.java">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -123,6 +76,7 @@
         <option value="$PROJECT_DIR$/src/VisitPropPage.java" />
         <option value="$PROJECT_DIR$/Atlanta Gardens, Farms, and Orchards-Dabase_System.iml" />
         <option value="$PROJECT_DIR$/src/VisitDetails.java" />
+        <option value="$PROJECT_DIR$/src/NewOwnerRegistration.java" />
       </list>
     </option>
   </component>
@@ -148,8 +102,6 @@
     </navigator>
     <panes>
       <pane id="AndroidView" />
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -166,6 +118,8 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="RunDashboard">
@@ -266,31 +220,29 @@
     <option name="totallyTimeSpent" value="518000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info anchor="right" id="Palette" order="4" />
+      <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Messages" order="10" weight="0.3220339" />
-      <window_info anchor="right" id="Palette&#9;" order="14" />
-      <window_info id="Image Layers" order="6" />
-      <window_info anchor="right" id="Capture Analysis" order="10" />
+      <window_info anchor="bottom" id="Messages" weight="0.32897604" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
-      <window_info anchor="right" id="Maven Projects" order="7" weight="0.3295302" />
-      <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.37534627" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.2881356" />
-      <window_info anchor="bottom" id="Terminal" order="9" />
+      <window_info anchor="right" id="Maven Projects" order="3" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32897604" />
+      <window_info anchor="bottom" id="Version Control" order="7" />
+      <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
-      <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.26040268" />
-      <window_info anchor="right" id="Database" order="8" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25266525" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info id="UI Designer" order="4" />
-      <window_info anchor="right" id="Theme Preview" order="12" />
-      <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Palette" order="4" />
       <window_info id="Designer" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="3" weight="0.25" />
@@ -324,28 +276,28 @@
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="right" id="Capture Analysis" order="6" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.28947368" />
       <window_info anchor="right" id="Theme Preview" order="7" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+      <window_info anchor="bottom" id="Message" order="0" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2536913" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Commander" order="0" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Version Control" order="8" weight="0.37534627" />
       <window_info id="Image Layers" order="6" />
       <window_info id="Designer" order="3" />
       <window_info id="UI Designer" order="4" />
-      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Database" order="5" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="11" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" weight="0.37534627" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.39889196" />
       <window_info id="Capture Tool" order="2" />
-      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3233618" />
       <window_info anchor="right" id="Maven Projects" order="4" />
       <window_info id="Favorites" order="5" side_tool="true" />
@@ -358,6 +310,13 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/AddNewProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="308">
+          <caret line="116" column="37" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/VisitPropPage.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="323">
@@ -461,27 +420,9 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/AGFO-Database_System.iml" />
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/com/sun/javafx/property/PropertyReference.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="762">
-          <caret line="170" column="68" lean-forward="true" selection-start-line="170" selection-start-column="68" selection-end-line="170" selection-end-column="68" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/cell/PropertyValueFactory.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1616">
-          <caret line="78" column="38" lean-forward="true" selection-start-line="78" selection-start-column="38" selection-end-line="78" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="12295">
-          <caret line="927" selection-start-line="927" selection-end-line="927" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.base/com/sun/javafx/property/PropertyReference.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.controls/javafx/scene/control/cell/PropertyValueFactory.java" />
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.fxml/javafx/fxml/FXMLLoader.java" />
     <entry file="file://$PROJECT_DIR$/src/Connect/SQLConnecter.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="141">
@@ -489,21 +430,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.sql/java/sql/ResultSet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="148">
-          <caret line="148" column="17" selection-start-line="148" selection-start-column="17" selection-end-line="148" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/java.sql/java/sql/ResultSet.java" />
     <entry file="file://$PROJECT_DIR$/src/propertyDetails2.java" />
-    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/application/Application.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="158">
-          <caret line="350" column="25" selection-start-line="350" selection-start-column="25" selection-end-line="350" selection-end-column="25" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="jar://C:/Program Files/Java/jdk-9.0.4/lib/src.zip!/javafx.graphics/javafx/application/Application.java" />
     <entry file="file://$PROJECT_DIR$/src/OtherOwnerProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-1023">
@@ -515,10 +444,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="18" column="24" lean-forward="true" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="24" />
-          <folding>
-            <element signature="e#399#400#0" expanded="true" />
-            <element signature="e#434#435#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -562,8 +487,8 @@
     <entry file="file://$PROJECT_DIR$/src/PendingCrops.java" />
     <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="199" column="68" selection-start-line="199" selection-start-column="68" selection-end-line="199" selection-end-column="122" />
+        <state relative-caret-position="189">
+          <caret line="481" selection-start-line="481" selection-end-line="481" />
         </state>
       </provider>
     </entry>
@@ -576,15 +501,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="24" selection-start-line="24" selection-end-line="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AddNewProperty.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4624">
-          <caret line="291" column="34" selection-start-line="291" selection-start-column="34" selection-end-line="293" selection-end-column="39" />
+        <state relative-caret-position="323">
+          <caret line="27" column="18" selection-start-line="27" selection-start-column="18" selection-end-line="27" selection-end-column="18" />
         </state>
       </provider>
     </entry>
@@ -616,20 +534,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/visitorHitoryDetails.java">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ConfirmedProperties.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="79" column="64" selection-start-line="79" selection-start-column="64" selection-end-line="79" selection-end-column="248" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="43">
-          <caret line="376" column="34" selection-start-line="376" selection-start-column="34" selection-end-line="378" selection-end-column="39" />
         </state>
       </provider>
     </entry>
@@ -658,6 +566,24 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="249">
           <caret line="224" column="27" selection-start-line="224" selection-start-column="27" selection-end-line="224" selection-end-column="27" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/AddNewProperty.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1615">
+          <caret line="116" column="37" lean-forward="true" selection-start-line="116" selection-start-column="37" selection-end-line="116" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="223">
+          <caret line="49" column="47" selection-start-line="49" selection-start-column="47" selection-end-line="49" selection-end-column="47" />
+          <folding>
+            <element signature="e#6519#6520#0" expanded="true" />
+            <element signature="e#6547#6548#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
