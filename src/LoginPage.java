@@ -65,10 +65,7 @@ public class LoginPage implements Initializable{
                     + "\nPassword must be 8 characters or longer.");
             passed = true;
         }
-
-//        String email = "farmerJoe@gmail.com";
-//        String password = "d68fae04506bde7857ff4aa40ebad49c";
-//        String u_type = "";
+        
         if (!passed) {
             try {
                 Connection server = SQLConnecter.connect();
@@ -76,9 +73,6 @@ public class LoginPage implements Initializable{
                     login_ErrorMessage.setText("Server is Closed or not Connected to it.");
                     return;
                 }
-                // This is the MD5 hash function for the inserted password.
-                // TODO: you need to replace the Select SQL statement's password variable in the WHERE portion to pass variable.
-                // TODO: This will be done when you can actually sign in.
                 MessageDigest md = MessageDigest.getInstance("MD5");
                 byte[] bytesOfPass = password_PasswordField.getText().getBytes("UTF-8");
                 byte[] digest = md.digest(bytesOfPass);
@@ -116,19 +110,14 @@ public class LoginPage implements Initializable{
                             stage.show();
                         }
                     }
-
                 } else {
                     wrong.setVisible(true);
                 }
-
             } catch (Exception e) {
                 System.out.println("something went wrong + " + e.getMessage());
 
             }
         }
-
-
-
     }
 
     private void sceneChanger(Button button, String fxmlName) throws IOException {
