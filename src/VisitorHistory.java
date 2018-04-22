@@ -14,6 +14,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -46,12 +47,15 @@ public class VisitorHistory implements Initializable {
 
 
 
+    public static int pid;
 
 
     String selected = null;
 
     private ObservableList<visitorHitoryDetails> data;
-
+    User user = User.getInstance();
+    public static String userst;
+    //String
 
 
     @Override
@@ -67,7 +71,7 @@ public class VisitorHistory implements Initializable {
                     Stage stage;
                     Parent root;
                     stage = (Stage) Back_Button.getScene().getWindow();
-                    root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
+                    root = FXMLLoader.load(getClass().getResource("welcome_visitor.fxml"));
                     Scene scene = new Scene(root);
                     stage.setScene(scene);
                     stage.show();
@@ -81,13 +85,15 @@ public class VisitorHistory implements Initializable {
         Property_Details.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
-                if (selected == null) {
-                } else {
+                if (History_Table.getSelectionModel().getSelectedItem() == null) {
+                    return;
+                }
                     try {
+                        //pid
                         Stage stage;
                         Parent root;
-                        stage = (Stage) Back_Button.getScene().getWindow();
-                        root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
+                        stage = (Stage) Property_Details.getScene().getWindow();
+                        root = FXMLLoader.load(getClass().getResource("visit_details.fxml"));
                         Scene scene = new Scene(root);
                         stage.setScene(scene);
                         stage.show();
@@ -95,7 +101,22 @@ public class VisitorHistory implements Initializable {
                         System.out.println("wrong");
                     }
                 }
-            }
+
+//                OtherOwnerProperties ab = new OtherOwnerProperties();
+//                ab.selectedUser =  (userPropDetails) History_Table.getSelectionModel().getSelectedItem();
+//                System.out.println(ab.selectedUser.getPropName());
+//                Stage stage;
+//                Parent root = null;
+//                stage = (Stage) Property_Details.getScene().getWindow();
+//                try {
+//                    root = FXMLLoader.load(getClass().getResource("visit_details.fxml"));
+//                } catch (IOException e) {
+//                    e.printStackTrace();
+//                }
+//                Scene scene = new Scene(root);
+//                stage.setScene(scene);
+//                stage.show();
+//            }
         });
 
         //MAKE SURE TO CONNECT TO VIEW PROPERTY DETAILS WITH SELECTED PULLED UP
@@ -108,6 +129,7 @@ public class VisitorHistory implements Initializable {
             if(History_Table.getSelectionModel().getSelectedItem() != null)
             {
                 TableView.TableViewSelectionModel selectionModel = History_Table.getSelectionModel();
+                Connection server = Connect.SQLConnecter.connect();
 
 
                 Object selectedItems = History_Table.getSelectionModel().getSelectedItems().get(0);
@@ -115,6 +137,26 @@ public class VisitorHistory implements Initializable {
                 //System.out.println(first_Column);
                 selected = first_Column;
                 System.out.println(selected);
+
+
+                //pid = selected;
+                try {
+                    ResultSet result2 = server.createStatement().executeQuery("SELECT ID FROM PROPERTY WHERE Name = '" + selected + "'");
+                    if (result2.next()) {
+                        selected = result2.getString(1);
+                    }
+
+
+                    ResultSet result = server.createStatement().executeQuery("SELECT P_id FROM VISITS WHERE  VISITS.P_id = '" + selected + "'");
+                    if (result.next()) {
+                        pid = result.getInt(1);
+                    }
+                    System.out.println(pid);
+                } catch (Exception e) {e.printStackTrace();}
+
+
+
+
             }
         }
     });
@@ -138,8 +180,9 @@ public class VisitorHistory implements Initializable {
 
             data = FXCollections.observableArrayList();
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT PROPERTY.Name,  VISITS.Date, VISITS.Rating FROM PROPERTY, VISITS WHERE Rating >= 0 && PROPERTY.Name = VISITS.P_id");
-
+            ResultSet rs = server.createStatement().executeQuery("SELECT PROPERTY.Name,  VISITS.Date, VISITS.Rating FROM PROPERTY, VISITS WHERE VISITS.Rating >= 0 && PROPERTY.id = VISITS.P_id AND VISITS.Username =  '" + user.getUsername() + "'");
+            userst = user.getUsername();
+            //ResultSet result = server.createStatement().executeQuery("SELECT P_id FROM VISITS WHERE VISITS.Rating >= 0 && PROPERTY.id = VISITS.P_id AND VISITS.Username =  '" + user.getUsername() + "'");
             while (rs.next()) {
 
                 int id = rs.getInt(3);

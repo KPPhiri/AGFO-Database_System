@@ -19,6 +19,7 @@ import javafx.stage.Stage;
  */
 
 public class Test extends Application {
+    public static User user;
 
 
 
@@ -26,7 +27,7 @@ public class Test extends Application {
 
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("pending_crops.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("page_login.fxml"));
 
 
 
