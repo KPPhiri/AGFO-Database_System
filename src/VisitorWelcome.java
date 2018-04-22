@@ -285,6 +285,7 @@ public TableColumn colName;
             else{
                 root = FXMLLoader.load(getClass().getResource("page_visitorProp.fxml"));
         }
+        server.close();
 
         } catch (Exception e) {
             e.printStackTrace();
