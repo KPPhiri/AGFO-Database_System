@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="340" />
+    <option name="y" value="50" />
+    <option name="width" value="1440" />
+    <option name="height" value="820" />
+  </component>
   <component name="RunManager">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
