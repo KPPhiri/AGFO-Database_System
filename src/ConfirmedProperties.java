@@ -82,7 +82,7 @@ public class ConfirmedProperties implements Initializable {
             while (rs.next()) {
                 confirmedPropDetails a =  new confirmedPropDetails(rs.getString(1),rs.getString(2),rs.getString(3),
                         rs.getString(4),rs.getDouble(5),rs.getString(6),rs.getBoolean(7),
-                        rs.getBoolean(8),rs.getString(9),rs.getString(10),rs.getDouble(11));
+                        rs.getBoolean(8),Integer.toString(Integer.parseInt(rs.getString(9)) + 100000),rs.getString(10),rs.getDouble(11));
                 data.add(a);
             }
             server.close();

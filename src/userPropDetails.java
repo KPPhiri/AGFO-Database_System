@@ -9,7 +9,7 @@ public class userPropDetails {
     private String type;
     private boolean ipublic;
     private boolean commercial;
-    private int id;
+    private String id;
     private int visits;
     private boolean valid;
     private double rating;
@@ -17,7 +17,7 @@ public class userPropDetails {
     //Default constructor
     public userPropDetails(String propName, String address, String city
             , String zip, String size, String type, boolean ipublic
-            , boolean commercial, int id, boolean valid, int visits, double rating) {
+            , boolean commercial, String id, boolean valid, int visits, double rating) {
 
         this.propName = propName;
         this.address = address;
@@ -36,7 +36,7 @@ public class userPropDetails {
     //No valid entry field Constructor
     public userPropDetails(String propName, String address, String city
             , String zip, String size, String type, boolean ipublic
-            , boolean commercial, int id, int visits, double rating) {
+            , boolean commercial, String id, int visits, double rating) {
 
         this.propName = propName;
         this.address = address;
@@ -84,7 +84,7 @@ public class userPropDetails {
         return commercial;
     }
 
-    public int getId() {
+    public String getId() {
         return id;
     }
 

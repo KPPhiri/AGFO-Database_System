@@ -218,7 +218,7 @@ public class VisitDetails implements Initializable{
 
                 boolean isValid = rs.getBoolean(10);
                 data.add(new userPropDetails(rs.getString(1), rs.getString(2), rs.getString(3),
-                        rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
+                        rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),Integer.toString(rs.getInt(9) + 100000).substring(1),isValid, pid,  avgRating));
 
             }
 
@@ -253,7 +253,7 @@ public class VisitDetails implements Initializable{
         } else {
             isCommercial.setText("Public: " + "false");
         }
-        id.setText("ID: " + Integer.toString((data.get(0)).getId()));
+        id.setText("ID: " + data.get(0));
         crop.setText("Crop: " + cropstring);
         animal.setText("Animals: " + animalstring);
         rate.setText("Avg. Rating: " + Double.toString(data.get(0).getRating()));

@@ -115,7 +115,7 @@ public TableColumn colName;
                 ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
                 int pid = 0;
                 if(ra.next()) {
-                    pid = ra.getInt(1);
+                    pid = (ra.getInt(1));
                 }
 
                 ResultSet rb = server.createStatement().executeQuery("SELECT avg(Rating) FROM VISITS WHERE P_id = " + id);
@@ -126,7 +126,7 @@ public TableColumn colName;
 
                 boolean isValid = rs.getBoolean(10);
                 data.add(new userPropDetails(rs.getString(1), rs.getString(2), rs.getString(3),
-                        rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
+                        rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),Integer.toString(rs.getInt(9) + 100000).substring(1),isValid, pid,  avgRating));
             }
 
             server.close();

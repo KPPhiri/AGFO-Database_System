@@ -77,7 +77,7 @@ public class UnconfirmedProperties implements Initializable {
             while (rs.next()) {
                 unconfirmedPropDetails a =  new unconfirmedPropDetails(rs.getString(1),rs.getString(2),rs.getString(3),
                         rs.getString(4),rs.getString(5),rs.getString(6),rs.getBoolean(7),
-                        rs.getBoolean(8),rs.getString(9),rs.getString(10));
+                        rs.getBoolean(8),Integer.toString(Integer.parseInt(rs.getString(9)) + 100000).substring(1),rs.getString(10));
                 System.out.println(rs.getString(10));
                 data.add(a);
             }

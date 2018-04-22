@@ -138,7 +138,7 @@ public class OtherOwnerProperties implements Initializable {
                 original_data.add(new userPropDetails(rs.getString(1), rs.getString(2),
                         rs.getString(3), rs.getString(4), rs.getString(5),
                         rs.getString(6), rs.getBoolean(7), rs.getBoolean(8),
-                        rs.getInt(9), visits, avgRating));
+                        Integer.toString(rs.getInt(9) + 100000).substring(1), visits, avgRating));
             }
             server.close();
         } catch (Exception e) {

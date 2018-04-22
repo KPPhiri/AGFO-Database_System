@@ -96,7 +96,7 @@ public class VisitPropPage2 implements Initializable{
         isPublic.setText("Public: " + temp.getIpublic());
         isCommercial.setText("Commercial: " + temp.getCommercial());
         id.setText("ID: " + temp.getId());
-        propide = (temp.getId());
+        propide = Integer.parseInt(temp.getId());
     }
 
     public void getOwnerInfo() {

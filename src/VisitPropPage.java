@@ -108,7 +108,7 @@ public class VisitPropPage implements Initializable{
         isPublic.setText("Public: " + temp.getIpublic());
         isCommercial.setText("Commercial: " + temp.getCommercial());
         id.setText("ID: " + temp.getId());
-        propide = (temp.getId());
+        propide = Integer.parseInt(temp.getId());
     }
 
     public void getOwnerInfo() {
@@ -183,7 +183,7 @@ public class VisitPropPage implements Initializable{
             userPropDetails tempb = OtherOwnerProperties.getSelectedUser();
             User tempa = User.getInstance();
             String uname = tempa.getUsername();
-            int id = tempb.getId();
+            int id = Integer.parseInt(tempb.getId());
             String insert= "INSERT INTO VISITS (Username, P_id, Date, Rating) VALUES " + uname + " " + id + " " + id;
 
             server.createStatement().execute(insert);
