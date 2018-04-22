@@ -29,7 +29,10 @@ public class AdminWelcome implements Initializable {
     @FXML
     private Label welcomelabel;
 
+    User currentUser = User.getInstance();
+
     public void initialize(URL location, ResourceBundle resources) {
+        welcomelabel.setText("Welcome " + currentUser.getUsername());
         //establish();
     }
     public void goToConfirmed(){
