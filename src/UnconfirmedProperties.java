@@ -81,7 +81,7 @@ public class UnconfirmedProperties implements Initializable {
                 System.out.println(rs.getString(10));
                 data.add(a);
             }
-
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }

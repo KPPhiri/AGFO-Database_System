@@ -129,7 +129,7 @@ public TableColumn colName;
                         rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),rs.getInt(9),isValid, pid,  avgRating));
             }
 
-
+            server.close();
         } catch(Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
 

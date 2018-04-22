@@ -152,6 +152,7 @@ public class VisitorHistory implements Initializable {
                         pid = result.getInt(1);
                     }
                     System.out.println(pid);
+                    server.close();
                 } catch (Exception e) {e.printStackTrace();}
 
 
@@ -204,7 +205,7 @@ public class VisitorHistory implements Initializable {
 
 
 
-
+            server.close();
         } catch(Exception e) {
 
             System.out.println("something went wrong + " + e.getMessage());

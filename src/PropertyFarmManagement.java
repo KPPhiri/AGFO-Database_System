@@ -134,6 +134,7 @@ public class PropertyFarmManagement implements Initializable {
                 farmItems.add(rs.getString("Item"));
             }
             items.setItems(FXCollections.observableArrayList(farmItems));
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -148,6 +149,7 @@ public class PropertyFarmManagement implements Initializable {
                 approvedItems.add(rs.getString("Name"));
             }
             newCrop.setItems(FXCollections.observableArrayList(approvedItems));
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -160,6 +162,7 @@ public class PropertyFarmManagement implements Initializable {
                 approvedAnimals.add(rs.getString("Name"));
             }
             newAnimal.setItems(FXCollections.observableArrayList(approvedAnimals));
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -197,6 +200,7 @@ public class PropertyFarmManagement implements Initializable {
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("INSERT INTO FARM_ITEM (Name, isApproved, Type) VALUES('" + cropName.getText() + "', '0', '" + cropType.toUpperCase() + "')");
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -208,6 +212,7 @@ public class PropertyFarmManagement implements Initializable {
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("DELETE FROM PROPERTY WHERE ID= '"+ current.getId() +"'");
             backToWelcomePage();
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -225,6 +230,7 @@ public class PropertyFarmManagement implements Initializable {
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ name.getText() +"', Address = '" + address.getText() + "', City = '" + city.getText() + "', Zip = '" + zip.getText() + "',  Acres = '" + size.getText() + "', IsPublic = " + isPublic.getValue() + ", IsCommercial = " + isCommercial.getValue() + ", ApprovedBy = null WHERE ID = "+ current.getId() + "");
             backToWelcomePage();
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }

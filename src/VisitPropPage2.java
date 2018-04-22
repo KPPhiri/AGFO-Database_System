@@ -109,6 +109,7 @@ public class VisitPropPage2 implements Initializable{
                 owner.setText("Owner: " + rs.getString("Owner"));
                 email.setText("Owner Email: " + rs.getString("Email"));
             }
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
 
@@ -126,7 +127,7 @@ public class VisitPropPage2 implements Initializable{
                 crops += rs.getString("Item") + ", ";
             }
             crop.setText("Crop: " + crops);
-
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -142,6 +143,7 @@ public class VisitPropPage2 implements Initializable{
                     animals += rs.getString("Item") + ", ";
                 }
                 animal.setText("Animals: " + animals);
+                server.close();
             } catch (Exception e) {
                 System.out.println("something went wrong + " + e.getMessage());
             }
@@ -198,7 +200,7 @@ public class VisitPropPage2 implements Initializable{
 
 
 
-
+            server.close();
         } catch (Exception e) {
 
             System.out.println("something went wrong + " + e.getMessage());

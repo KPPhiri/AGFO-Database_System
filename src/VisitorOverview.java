@@ -65,7 +65,7 @@ public class VisitorOverview implements Initializable {
                 data1.add(a);
                 System.out.println(a.getLoggedvisit());
             }
-
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -114,6 +114,7 @@ public class VisitorOverview implements Initializable {
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("DELETE FROM USER WHERE Email= '"+ selectedOwner.getEmail1() +"'");
             loadDataFromDatabase();
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -128,6 +129,7 @@ public class VisitorOverview implements Initializable {
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("DELETE FROM VISITS WHERE Username= '"+ selectedOwner.getUsername1() +"'");
             loadDataFromDatabase();
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }

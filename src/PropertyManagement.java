@@ -131,6 +131,7 @@ public class PropertyManagement implements Initializable {
                 farmItems.add(rs.getString("Item"));
             }
             items.setItems(FXCollections.observableArrayList(farmItems));
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -152,6 +153,7 @@ public class PropertyManagement implements Initializable {
                 approvedItems.add(rs.getString("Name"));
             }
             newCrop.setItems(FXCollections.observableArrayList(approvedItems));
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -181,6 +183,7 @@ public class PropertyManagement implements Initializable {
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("INSERT INTO FARM_ITEM (Name, isApproved, Type) VALUES('" + cropName.getText() + "', '0', '" + cropType.toUpperCase() + "')");
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -192,6 +195,7 @@ public class PropertyManagement implements Initializable {
             Connection server = Connect.SQLConnecter.connect();
             server.createStatement().executeUpdate("DELETE FROM PROPERTY WHERE ID= '"+ current.getId() +"'");
             backToWelcomePage();
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
@@ -209,6 +213,7 @@ public class PropertyManagement implements Initializable {
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ name.getText() +"', Address = '" + address.getText() + "', City = '" + city.getText() + "', Zip = '" + zip.getText() + "',  Acres = '" + size.getText() + "', IsPublic = " + isPublic.getValue() + ", IsCommercial = " + isCommercial.getValue() + ", ApprovedBy = null WHERE ID = "+ current.getId() + "");
             backToWelcomePage();
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
