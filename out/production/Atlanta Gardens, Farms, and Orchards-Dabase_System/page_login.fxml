@@ -13,8 +13,8 @@
          <Button fx:id="newVisitorRegistrationButton" layoutX="384.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressVisitorRegistration" text="New Visitor Registration" />
          <Button fx:id="lgn_btn" layoutX="283.0" layoutY="244.0" mnemonicParsing="false" onAction="#checkLogin" text="Login" />
          <PasswordField fx:id="password_PasswordField" layoutX="217.0" layoutY="187.0" />
-         <TextField fx:id="username_TextField" layoutX="217.0" layoutY="145.0" />
-         <Label layoutX="145.0" layoutY="149.0" text="Username:" />
+         <TextField fx:id="email_TextField" layoutX="217.0" layoutY="145.0" />
+         <Label layoutX="168.0" layoutY="149.0" text="Email:" />
          <Label layoutX="146.0" layoutY="192.0" text="Password:" />
          <Label layoutX="201.0" layoutY="57.0" text="ATL Gardens, Farms, and Orchards" />
       <Label fx:id="wrong" layoutX="216.0" layoutY="218.0" text="Incorrect email or password. Please try again." textFill="#dd2c2c" visible="false" />

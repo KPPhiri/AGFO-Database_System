@@ -13,6 +13,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -53,6 +54,8 @@ public class OwnerWelcome implements Initializable{
     public ComboBox searchMenu;
     @FXML
     public Button searchButton;
+    @FXML
+    private Button welcomeOwnerAdd;
     @FXML
     public TextField searchField;
     @FXML
@@ -200,5 +203,19 @@ public class OwnerWelcome implements Initializable{
             System.out.println("something went wrong + " + e.getMessage());
 
         }
+    }
+
+    private void sceneChanger(Button button, String fxmlName) throws IOException {
+        Stage stage;
+        Parent root;
+        stage = (Stage) button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource(fxmlName));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+    public void pressAddProperty (ActionEvent actionEvent) throws IOException {
+        sceneChanger(welcomeOwnerAdd, "add_new_property.fxml");
     }
 }

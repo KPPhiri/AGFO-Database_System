@@ -90,13 +90,14 @@ public class LoginPage implements Initializable{
                 }
                 pass = stringBuffer.toString();
 
-                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Password FROM USER WHERE Username = '"
+                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Password, Email FROM USER WHERE Email = '"
                         + email_TextField.getText() + "' AND Password = '" + pass + "'");
 
                 if (val.next()) {
                     if (val.getString(3).equals(pass)) {
                         user.setUsername(val.getString(1));
                         user.setType(val.getString(2));
+                        user.setEmail(val.getString(4));
                         System.out.println(user.getType());
                         if (user.getType().equals("OWNER")) {
                             Parent root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
