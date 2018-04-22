@@ -12,6 +12,7 @@ import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -156,6 +157,20 @@ public class UnconfirmedProperties implements Initializable {
 
     public static unconfirmedPropDetails getselectedOwnerPropUnconfirmed() {
         return selectedOwnerPropUnconfirmed;
+    }
+
+    public void gobacktoOwnerWelcome(){
+        Stage stage;
+        Parent root = null;
+        stage = (Stage) backbut.getScene().getWindow();
+        try {
+            root = FXMLLoader.load(getClass().getResource("admin_welcome.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
 }

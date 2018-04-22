@@ -189,5 +189,19 @@ public class ConfirmedProperties implements Initializable {
         return selectedOwnerPropConfirmed;
     }
 
+    public void gobacktoOwnerWelcome(){
+        Stage stage;
+        Parent root = null;
+        stage = (Stage) backbut.getScene().getWindow();
+        try {
+            root = FXMLLoader.load(getClass().getResource("admin_welcome.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
 
 }

@@ -2,10 +2,15 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
@@ -127,5 +132,20 @@ public class VisitorOverview implements Initializable {
             System.out.println("something went wrong + " + e.getMessage());
         }
     }
+    public void gobacktoOwnerWelcome(){
+        Stage stage;
+        Parent root = null;
+        stage = (Stage) backbut.getScene().getWindow();
+        try {
+            root = FXMLLoader.load(getClass().getResource("admin_welcome.fxml"));
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
+    }
+
+
 
 }
