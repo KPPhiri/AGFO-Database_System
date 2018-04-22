@@ -17,6 +17,8 @@ import java.io.IOException;
 import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class AddNewProperty implements Initializable {
@@ -26,65 +28,13 @@ public class AddNewProperty implements Initializable {
             "GARDEN",
             "ORCHARD");
 
-    private ObservableList<String> animals = FXCollections.observableArrayList(
-            "Cheetah",
-            "Chicken",
-            "Cow",
-            "Goat",
-            "Mongoose",
-            "Monkey",
-            "Pete",
-            "Pig");
+    private ObservableList<String> animals = FXCollections.observableArrayList(createAnimalList());
 
-    private ObservableList<String> farmlist = FXCollections.observableArrayList(
-            "Almond",
-            "Apple",
-            "Banana",
-            "Broccoli",
-            "Carrot",
-            "Cashew",
-            "Corn",
-            "Daffodil",
-            "Daisy",
-            "Fig",
-            "Garlic",
-            "Kiwi",
-            "Onion",
-            "Orange",
-            "Peach",
-            "Peanut",
-            "Peas",
-            "Peruvian Lily",
-            "Pineapple",
-            "Pineapple Sage",
-            "Rose",
-            "Salami",
-            "Sunflower");
+    private ObservableList<String> farmlist = FXCollections.observableArrayList(createCropList("FARM"));
 
-    private ObservableList<String> orchardlist = FXCollections.observableArrayList(
-            "Apple",
-            "Banana",
-            "Cashew",
-            "Kiwi",
-            "Orange",
-            "Peach",
-            "Peanut",
-            "Pineapple");
+    private ObservableList<String> orchardlist = FXCollections.observableArrayList(createCropList("ORCHARD"));
 
-    private ObservableList<String> gardenlist = FXCollections.observableArrayList(
-            "Broccoli",
-            "Carrot",
-            "Corn",
-            "Daffodil",
-            "Daisy",
-            "Garlic",
-            "Onion",
-            "Peas",
-            "Peruvian Lily",
-            "Pineapple Sage",
-            "Rose",
-            "Salami",
-            "Sunflower");
+    private ObservableList<String> gardenlist = FXCollections.observableArrayList(createCropList("GARDEN"));
 
     @FXML
     private TextField newPropName;
@@ -124,7 +74,8 @@ public class AddNewProperty implements Initializable {
     @FXML
     private Label newProp_ErrorMessage;
 
-    private String userName = "rpatel1";
+    public AddNewProperty() throws SQLException {
+    }
 
     public void createMenu() {
         newPropType.setValue("GARDEN");
@@ -135,6 +86,44 @@ public class AddNewProperty implements Initializable {
         newPropPublic.getItems().addAll(true, false);
         newPropAnimal.getItems().addAll(animals);
         newPropCommercial.getItems().addAll(true, false);
+    }
+
+    private ArrayList<String> createCropList(String farmtype) throws SQLException {
+        ArrayList<String> list = new ArrayList<>();
+        Connection server = SQLConnecter.connect();
+        String selectStatementCrop;
+        if (farmtype.equals("GARDEN")) {
+            selectStatementCrop = "SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND (Type = 'FLOWER' OR Type = 'VEGETABLE')";
+            System.out.println(selectStatementCrop);
+        } else if (farmtype.equals("ORCHARD")) {
+            selectStatementCrop = "SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND (Type = 'FRUIT' OR Type = 'NUT')";
+            System.out.println(selectStatementCrop);
+        } else {
+            selectStatementCrop = "SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND Type != 'ANIMAL'";
+            System.out.println(selectStatementCrop);
+        }
+
+        ResultSet val = server.createStatement().executeQuery(selectStatementCrop);
+
+        while (val.next() && !list.contains(val.getString("Name"))) {
+            list.add(val.getString("Name"));
+        }
+        return list;
+    }
+
+    private ArrayList<String> createAnimalList() throws SQLException {
+        ArrayList<String> list = new ArrayList<>();
+        Connection server = SQLConnecter.connect();
+        String selectStatementAnimal;
+        selectStatementAnimal = "SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND Type = 'ANIMAL'";
+        System.out.println(selectStatementAnimal);
+
+        ResultSet val = server.createStatement().executeQuery(selectStatementAnimal);
+
+        while (val.next() && !list.contains(val.getString("Name"))) {
+            list.add(val.getString("Name"));
+        }
+        return list;
     }
 
     @Override
