@@ -35,6 +35,8 @@ public class PropertyFarmManagement implements Initializable {
     @FXML
     public TextField size;
     @FXML
+    public TextField cropName;
+    @FXML
     public Label type;
     @FXML
     public ComboBox isPublic;
@@ -52,27 +54,52 @@ public class PropertyFarmManagement implements Initializable {
     public Button addApproved;
     @FXML
     public Button submit;
+    @FXML
+    public ComboBox newAnimal;
+    @FXML
+    public Button addApprovedAnimal;
+    @FXML
+    public Button removeFarmItem;
 
     public userPropDetails current = OwnerWelcome.getSelectedOwnerProp();
     private ArrayList<String> farmItems = new ArrayList<>();
     private ArrayList<String> approvedItems = new ArrayList<>();
+    private ArrayList<String> approvedAnimals = new ArrayList<>();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         createSpinners();
         loadDataFields();
 
+
+
         getCropAndAnimal();
-        items.setValue(farmItems.get(0));
+        if (farmItems.size() > 0) {
+            items.setValue(farmItems.get(0));
+        }
+
 
         createFarmSpinner();
         requestCrop.setValue("Animal");
 
+
         loadApprovedCrops();
-        newCrop.setValue(approvedItems.get(0));
+        if (approvedAnimals.size() > 0) {
+            newAnimal.setValue(approvedAnimals.get(0));
+        }
+        if (approvedItems.size() > 0 ) {
+            newCrop.setValue(approvedItems.get(0));
+        }
 
+
+        cropName.setText("");
+        submit.setOnAction(e -> requestItem());
+        addApproved.setOnAction(e -> addApprovedItem());
+        addApprovedAnimal.setOnAction(e -> addApprovedAnimal());
         back.setOnAction(e -> backToWelcomePage());
-
+        delete.setOnAction(e -> deleteProperty());
+        save.setOnAction(e -> saveProperty());
+        removeFarmItem.setOnAction(e -> deleteFarmItem());
     }
 
     public void loadDataFields() {
@@ -102,7 +129,7 @@ public class PropertyFarmManagement implements Initializable {
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OwnerWelcome.getSelectedOwnerProp().getId() + "' AND FARM_ITEM.Type != 'ANIMAL'");
+            ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OwnerWelcome.getSelectedOwnerProp().getId() + "'");
             while (rs.next() && !farmItems.contains(rs.getString("Item"))) {
                 farmItems.add(rs.getString("Item"));
             }
@@ -110,28 +137,13 @@ public class PropertyFarmManagement implements Initializable {
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
-
-        if ("FARM".equalsIgnoreCase(OtherOwnerProperties.getSelectedUser().getType())) {
-            try {
-                System.out.println("WORKING");
-                Connection server = Connect.SQLConnecter.connect();
-
-                ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type = 'ANIMAL'");
-                while (rs.next() && !farmItems.contains(rs.getString("Item"))) {
-                    farmItems.add(rs.getString("Item"));
-                }
-                items.setItems(FXCollections.observableArrayList(farmItems));
-            } catch (Exception e) {
-                System.out.println("something went wrong + " + e.getMessage());
-            }
-        }
     }
 
     private void loadApprovedCrops() {
         try {
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name FROM FARM_ITEM WHERE isApproved = 1");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND Type != 'ANIMAL'");
             while (rs.next() && !approvedItems.contains(rs.getString("Name"))) {
                 approvedItems.add(rs.getString("Name"));
             }
@@ -139,22 +151,82 @@ public class PropertyFarmManagement implements Initializable {
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
+
+        try {
+            System.out.println("WORKING");
+            Connection server = Connect.SQLConnecter.connect();
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND Type = 'ANIMAL'");
+            while (rs.next() && !approvedAnimals.contains(rs.getString("Name"))) {
+                approvedAnimals.add(rs.getString("Name"));
+            }
+            newAnimal.setItems(FXCollections.observableArrayList(approvedAnimals));
+        } catch (Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+        }
     }
 
     private void addApprovedItem() {
+        if (farmItems.contains((newCrop.getValue()))) {
+            return;
+        }
+        farmItems.add((String)newCrop.getValue());
+        items.getItems().add((String) newCrop.getValue());
+    }
 
+    private void addApprovedAnimal() {
+        if (farmItems.contains((newAnimal.getValue()))) {
+            return;
+        }
+        farmItems.add((String)newAnimal.getValue());
+        items.getItems().add((String) newAnimal.getValue());
+    }
+
+    private void deleteFarmItem() {
+        farmItems.remove(items.getValue());
+        items.getItems().remove(items.getValue());
     }
 
     private void requestItem() {
+        if (cropName.getText().equals("") || cropName.getText() == null) {
+            return;
+        }
+        String cropType = (String) requestCrop.getValue();
+        cropName.getText();
 
+        try {
+            System.out.println("WORKING");
+            Connection server = Connect.SQLConnecter.connect();
+            server.createStatement().executeUpdate("INSERT INTO FARM_ITEM (Name, isApproved, Type) VALUES('" + cropName.getText() + "', '0', '" + cropType.toUpperCase() + "')");
+        } catch (Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+        }
     }
 
     private void deleteProperty() {
-
+        try {
+            System.out.println("WORKING");
+            Connection server = Connect.SQLConnecter.connect();
+            server.createStatement().executeUpdate("DELETE FROM PROPERTY WHERE ID= '"+ current.getId() +"'");
+            backToWelcomePage();
+        } catch (Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+        }
     }
 
     private void saveProperty() {
+        try {
+            System.out.println("WORKING");
+            Connection server = Connect.SQLConnecter.connect();
+            server.createStatement().executeUpdate("DELETE FROM HAS WHERE P_id= '"+ current.getId() +"'");
 
+            for (String s: farmItems) {
+                server.createStatement().executeUpdate("INSERT INTO HAS (P_id, Item) VALUES(" + current.getId() + ", '" + s + "')");
+            }
+
+            server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ name.getText() +"', Address = '" + address.getText() + "', City = '" + city.getText() + "', Zip = '" + zip.getText() + "',  Acres = '" + size.getText() + "', IsPublic = " + isPublic.getValue() + ", IsCommercial = " + isCommercial.getValue() + ", ApprovedBy = null WHERE ID = "+ current.getId() + "");
+        } catch (Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+        }
     }
 
     private void backToWelcomePage() {

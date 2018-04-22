@@ -24,19 +24,22 @@
       <Label layoutX="483.0" layoutY="105.0" text="Commercial:" />
       <Label fx:id="id" layoutX="514.0" layoutY="153.0" text="ID:" />
       <Label layoutX="30.0" layoutY="300.0" text="Add New Crop:" />
-      <Button fx:id="addApproved" layoutX="27.0" layoutY="333.0" mnemonicParsing="false" text="Add" />
+      <Button fx:id="addApproved" layoutX="27.0" layoutY="342.0" mnemonicParsing="false" text="Add" />
       <Label layoutX="437.0" layoutY="201.0" text="Farm Items:" />
-      <Label layoutX="28.0" layoutY="408.0" text="Request New Item:" />
-      <TextField fx:id="cropName" layoutX="193.0" layoutY="402.0" />
-      <Button fx:id="submit" layoutX="27.0" layoutY="435.0" mnemonicParsing="false" text="Submit Request" />
+      <Label layoutX="28.0" layoutY="454.0" text="Request New Item:" />
+      <TextField fx:id="cropName" layoutX="193.0" layoutY="448.0" />
+      <Button fx:id="submit" layoutX="28.0" layoutY="487.0" mnemonicParsing="false" text="Submit Request" />
       <Button fx:id="delete" layoutX="663.0" layoutY="524.0" mnemonicParsing="false" text="Delete Property" />
       <Button fx:id="back" layoutX="663.0" layoutY="467.0" mnemonicParsing="false" text="Back (No Save)" />
       <Button fx:id="save" layoutX="663.0" layoutY="402.0" mnemonicParsing="false" text="Save Changes" />
-      <Button layoutX="711.0" layoutY="195.0" mnemonicParsing="false" text="Delete" />
+      <Button fx:id="removeFarmItem" layoutX="711.0" layoutY="195.0" mnemonicParsing="false" text="Delete" />
       <ComboBox fx:id="newCrop" layoutX="162.0" layoutY="294.0" prefWidth="150.0" />
       <ComboBox fx:id="items" layoutX="540.0" layoutY="195.0" prefWidth="150.0" />
       <ComboBox fx:id="isPublic" layoutX="588.0" layoutY="63.0" prefWidth="150.0" />
       <ComboBox fx:id="isCommercial" layoutX="588.0" layoutY="106.0" prefWidth="150.0" />
-      <ComboBox fx:id="requestCrop" layoutX="430.0" layoutY="402.0" prefWidth="150.0" />
+      <ComboBox fx:id="requestCrop" layoutX="431.0" layoutY="448.0" prefWidth="150.0" />
+      <Button fx:id="addApprovedAnimal" layoutX="331.0" layoutY="342.0" mnemonicParsing="false" text="Add" />
+      <Label layoutX="331.0" layoutY="300.0" text="Add New Animal:" />
+      <ComboBox fx:id="newAnimal" layoutX="476.0" layoutY="294.0" prefWidth="150.0" />
    </children>
 </AnchorPane>
