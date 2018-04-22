@@ -48,6 +48,6 @@
       <Button fx:id="logVisit_button" layoutX="209.0" layoutY="353.0" mnemonicParsing="false" onAction="#logVisit" text="Log Visit" />
       <Label layoutX="26.0" layoutY="336.0" text="Rate your visit: " />
       <TextField fx:id="textRating" layoutX="26.0" layoutY="353.0" />
-      <Label layoutX="26.0" layoutY="378.0" text="(Valid Rating: 1-5)" textFill="#d71515" />
+      <Label layoutX="26.0" layoutY="378.0" text="Invalid Rating (valid: 1-5)" textFill="#d71515" />
     </children>
 </AnchorPane>
