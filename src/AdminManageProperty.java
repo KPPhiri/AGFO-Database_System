@@ -90,6 +90,12 @@ public class AdminManageProperty implements Initializable {
         loadDataFields();
         hideDataFields();
         populatecropsandanimals();
+        if (hasCroplItems.size() > 0) {
+            cropcombo.setValue(hasCroplItems.get(0));
+        }
+        if (hasAnimalItems.size() > 0) {
+            animalcombo.setValue(hasAnimalItems.get(0));
+        }
     }
 
     public void createSpinners() {
@@ -248,21 +254,13 @@ public class AdminManageProperty implements Initializable {
     }
     public void removeApprovedCrop() {
         System.out.println("You Clicked the Crop Delete Button");
-        if ( !(hasCroplItems.contains((selectcropcombo.getValue()))) ) {
-            System.out.println("no Bueno");
-            return;
-        }
-        hasCroplItems.remove((String)selectcropcombo.getValue());
-        cropcombo.getItems().remove((String)selectcropcombo.getValue());
+        hasCroplItems.remove(cropcombo.getValue());
+        cropcombo.getItems().remove(cropcombo.getValue());
     }
     public void removeApprovedAnimal() {
         System.out.println("You Clicked the Animal Delete Button");
-        if ( !(hasAnimalItems.contains((selectanimalcombo.getValue()))) ) {
-            System.out.println("no Bueno");
-            return;
-        }
-        hasAnimalItems.remove((String)selectanimalcombo.getValue());
-        animalcombo.getItems().remove((String)selectanimalcombo.getValue());
+        hasAnimalItems.remove(animalcombo.getValue());
+        animalcombo.getItems().remove(animalcombo.getValue());
     }
 
     public void deleteProperty() {
