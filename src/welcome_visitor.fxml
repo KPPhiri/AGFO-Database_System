@@ -35,7 +35,7 @@
                 <TextField fx:id="searchField" layoutX="-27.0" layoutY="361.0" />
                 <ComboBox fx:id="searchMenu" layoutX="-19.0" layoutY="321.0" prefWidth="150.0" promptText="Search By.." />
                 <Label layoutX="-3.0" layoutY="68.0" text="Your Properties:" />
-                <Label layoutX="350.0" layoutY="40.0" text="Welcome Visitor " />
+                <Label fx:id="welV" layoutX="350.0" layoutY="40.0" text="Welcome Visitor " />
             </children></AnchorPane>
     </children>
 </AnchorPane>

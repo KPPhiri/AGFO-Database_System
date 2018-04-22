@@ -55,6 +55,10 @@ public class OwnerWelcome implements Initializable{
     @FXML
     public Button searchButton;
     @FXML
+    public Button logo_btn;
+    @FXML
+    public Label welO;
+    @FXML
     private Button welcomeOwnerAdd;
     @FXML
     public TextField searchField;
@@ -70,6 +74,7 @@ public class OwnerWelcome implements Initializable{
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        welO.setText("Welcome " + user.getUsername());
         loadDataFromDatabase();
         createMenu();
         filtering();
@@ -217,5 +222,18 @@ public class OwnerWelcome implements Initializable{
 
     public void pressAddProperty (ActionEvent actionEvent) throws IOException {
         sceneChanger(welcomeOwnerAdd, "add_new_property.fxml");
+    }
+
+    public void logOut(ActionEvent actionEvent) {
+        try {
+            sceneChanger(logo_btn, "page_login.fxml");
+            user.setType(null);
+            user.setUsername(null);
+            user.setEmail(null);
+
+        } catch(Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+
+        }
     }
 }
