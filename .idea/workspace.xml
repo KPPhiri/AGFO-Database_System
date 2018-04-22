@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="794eb2bf-f191-4f63-8c35-db3ec5bbdff2" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_management.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PropertyFarmManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PropertyFarmManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/PropertyManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PropertyManagement.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/property_farm_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/property_farm_management.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/property_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/property_management.fxml" afterDir="false" />
@@ -38,8 +36,8 @@
       <file leaf-file-name="PropertyManagement.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/PropertyManagement.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="195" column="5" lean-forward="true" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
+            <state relative-caret-position="341">
+              <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#3199#3200#0" expanded="true" />
@@ -90,14 +88,14 @@
       <list>
         <option value="$PROJECT_DIR$/src/Test.java" />
         <option value="$PROJECT_DIR$/src/OwnerWelcome.java" />
-        <option value="$PROJECT_DIR$/src/property_farm_management.fxml" />
         <option value="$PROJECT_DIR$/src/PropertyFarmManagement.java" />
+        <option value="$PROJECT_DIR$/src/property_farm_management.fxml" />
         <option value="$PROJECT_DIR$/src/property_management.fxml" />
         <option value="$PROJECT_DIR$/src/PropertyManagement.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="-12" />
     <option name="y" value="-12" />
     <option name="width" value="1440" />
@@ -232,7 +230,7 @@
       <window_info anchor="right" id="Capture Analysis" order="3" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5003903" side_tool="true" weight="0.3298969" />
       <window_info anchor="right" id="Maven Projects" order="3" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" sideWeight="0.49960968" visible="true" weight="0.3298969" />
+      <window_info anchor="bottom" id="Run" order="2" sideWeight="0.49960968" weight="0.3298969" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
       <window_info id="Capture Tool" order="2" />
@@ -648,8 +646,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/PropertyManagement.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="195" column="5" lean-forward="true" selection-start-line="195" selection-start-column="5" selection-end-line="195" selection-end-column="5" />
+        <state relative-caret-position="341">
+          <caret line="99" column="57" selection-start-line="99" selection-start-column="57" selection-end-line="99" selection-end-column="57" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#3199#3200#0" expanded="true" />

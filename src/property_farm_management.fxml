@@ -18,7 +18,7 @@
       <TextField fx:id="city" layoutX="81.0" layoutY="141.0" />
       <TextField fx:id="zip" layoutX="81.0" layoutY="189.0" />
       <TextField fx:id="size" layoutX="81.0" layoutY="241.0" />
-      <Label layoutX="368.0" layoutY="14.0" text="Manage Property" />
+      <Label fx:id="title" layoutX="368.0" layoutY="14.0" text="Manage Property" />
       <Label fx:id="type" layoutX="633.0" layoutY="153.0" text="Type:" />
       <Label layoutX="514.0" layoutY="69.0" text="Public:" />
       <Label layoutX="483.0" layoutY="105.0" text="Commercial:" />

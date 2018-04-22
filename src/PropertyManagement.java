@@ -50,6 +50,8 @@ public class PropertyManagement implements Initializable {
     @FXML
     public Label id;
     @FXML
+    public Label title;
+    @FXML
     public TextField cropName;
     @FXML
     public Button addApproved;
@@ -95,6 +97,7 @@ public class PropertyManagement implements Initializable {
     }
 
     public void loadDataFields() {
+        title.setText("Manage " + current.getPropName());
         name.setText(current.getPropName());
         address.setText(current.getAddress());
         city.setText(current.getCity());
@@ -202,10 +205,10 @@ public class PropertyManagement implements Initializable {
             server.createStatement().executeUpdate("DELETE FROM HAS WHERE P_id= '"+ current.getId() +"'");
 
             for (String s: farmItems) {
-                server.createStatement().executeUpdate("INSERT INTO HAS (P_id, Item) VALUES(3, '" + s + "')");
+                server.createStatement().executeUpdate("INSERT INTO HAS (P_id, Item) VALUES(" + current.getId() + ", '" + s + "')");
             }
 
-            //server.createStatement().executeUpdate();
+            server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ name.getText() +"', Address = '" + address.getText() + "', City = '" + city.getText() + "', Zip = '" + zip.getText() + "',  Acres = '" + size.getText() + "', IsPublic = " + isPublic.getValue() + ", IsCommercial = " + isCommercial.getValue() + " WHERE ID = "+ current.getId() + "");
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
         }
