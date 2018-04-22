@@ -32,7 +32,7 @@
       <Button fx:id="delete" layoutX="663.0" layoutY="524.0" mnemonicParsing="false" text="Delete Property" />
       <Button fx:id="back" layoutX="663.0" layoutY="467.0" mnemonicParsing="false" text="Back (No Save)" />
       <Button fx:id="save" layoutX="663.0" layoutY="402.0" mnemonicParsing="false" text="Save Changes" />
-      <Button layoutX="711.0" layoutY="195.0" mnemonicParsing="false" text="Delete" />
+      <Button fx:id="deleteItem" layoutX="711.0" layoutY="195.0" mnemonicParsing="false" text="Delete" />
       <ComboBox fx:id="newCrop" layoutX="162.0" layoutY="294.0" prefWidth="150.0" />
       <ComboBox fx:id="items" layoutX="540.0" layoutY="195.0" prefWidth="150.0" />
       <ComboBox fx:id="isPublic" layoutX="588.0" layoutY="63.0" prefWidth="150.0" />

@@ -48,6 +48,10 @@ public class PropertyFarmManagement implements Initializable {
     public ComboBox requestCrop;
     @FXML
     public Label id;
+    @FXML
+    public Button addApproved;
+    @FXML
+    public Button submit;
 
     public userPropDetails current = OwnerWelcome.getSelectedOwnerProp();
     private ArrayList<String> farmItems = new ArrayList<>();
@@ -57,15 +61,12 @@ public class PropertyFarmManagement implements Initializable {
     public void initialize(URL location, ResourceBundle resources) {
         createSpinners();
         loadDataFields();
-        if ("GARDEN".equals(current.getType())) {
-            createGardenSpinner();
-            requestCrop.setValue("Flower");
-        } else if ("ORCHARD".equals(current.getType())) {
-            createOrchardSpinner();
-            requestCrop.setValue("Fruit");
-        }
+
         getCropAndAnimal();
         items.setValue(farmItems.get(0));
+
+        createFarmSpinner();
+        requestCrop.setValue("Animal");
 
         loadApprovedCrops();
         newCrop.setValue(approvedItems.get(0));
@@ -91,13 +92,10 @@ public class PropertyFarmManagement implements Initializable {
         isCommercial.getItems().addAll(true, false);
     }
 
-    private void createGardenSpinner() {
-        requestCrop.getItems().addAll("Flower", "Vegetable");
+    private void createFarmSpinner() {
+        requestCrop.getItems().addAll("Animal", "Flower", "Vegetable", "Fruit", "Nut");
     }
 
-    private void createOrchardSpinner() {
-        requestCrop.getItems().addAll("Fruit", "Nut");
-    }
 
     private void getCropAndAnimal() {
         try {
@@ -113,35 +111,27 @@ public class PropertyFarmManagement implements Initializable {
             System.out.println("something went wrong + " + e.getMessage());
         }
 
-//        if ("FARM".equalsIgnoreCase(OtherOwnerProperties.getSelectedUser().getType())) {
-//            try {
-//                System.out.println("WORKING");
-//                Connection server = Connect.SQLConnecter.connect();
-//
-//                String animals = "";
-//                ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type = 'ANIMAL'");
-//                while (rs.next() && !animals.contains(rs.getString("Item"))) {
-//                    animals += rs.getString("Item") + ", ";
-//                }
-//                animal.setText("Animals: " + animals);
-//            } catch (Exception e) {
-//                System.out.println("something went wrong + " + e.getMessage());
-//            }
-//        }
+        if ("FARM".equalsIgnoreCase(OtherOwnerProperties.getSelectedUser().getType())) {
+            try {
+                System.out.println("WORKING");
+                Connection server = Connect.SQLConnecter.connect();
+
+                ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type = 'ANIMAL'");
+                while (rs.next() && !farmItems.contains(rs.getString("Item"))) {
+                    farmItems.add(rs.getString("Item"));
+                }
+                items.setItems(FXCollections.observableArrayList(farmItems));
+            } catch (Exception e) {
+                System.out.println("something went wrong + " + e.getMessage());
+            }
+        }
     }
 
     private void loadApprovedCrops() {
         try {
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
-            String query = "";
-            if ("GARDEN".equals(OwnerWelcome.getSelectedOwnerProp().getType())) {
-                query = "SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND (Type = 'FLOWER' OR Type = 'VEGETABLE')";
-            }
-            if ("ORCHARD".equals(OwnerWelcome.getSelectedOwnerProp().getType())) {
-                query = "SELECT Name FROM FARM_ITEM WHERE isApproved = 1 AND (Type = 'FRUIT' OR Type = 'NUT')";
-            }
-            ResultSet rs = server.createStatement().executeQuery(query);
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name FROM FARM_ITEM WHERE isApproved = 1");
             while (rs.next() && !approvedItems.contains(rs.getString("Name"))) {
                 approvedItems.add(rs.getString("Name"));
             }
@@ -151,6 +141,21 @@ public class PropertyFarmManagement implements Initializable {
         }
     }
 
+    private void addApprovedItem() {
+
+    }
+
+    private void requestItem() {
+
+    }
+
+    private void deleteProperty() {
+
+    }
+
+    private void saveProperty() {
+
+    }
 
     private void backToWelcomePage() {
         Stage stage;
