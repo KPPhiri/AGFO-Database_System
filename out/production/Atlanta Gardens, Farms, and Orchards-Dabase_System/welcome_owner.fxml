@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<?import javafx.scene.control.Button?>
+
+<?import javafx.scene.control.ComboBox?>
+
+<?import javafx.scene.control.Label?>
+
+<?import javafx.scene.control.TableColumn?>
+
+<?import javafx.scene.control.TableView?>
+
+<?import javafx.scene.control.TextField?>
+
+<?import javafx.scene.layout.AnchorPane?>
+
+
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="OwnerWelcome">
+
+
+
+    <children>
+
+        <AnchorPane layoutX="41.0" layoutY="-12.0" prefHeight="495.0" prefWidth="784.0">
+
+            <children>
+
+                <TableView fx:id="table" layoutX="-28.0" layoutY="94.0" prefHeight="200.0" prefWidth="859.0">
+
+                    <columns>
+
+                        <TableColumn fx:id="colName" prefWidth="83.0" text="Name" />
+
+                        <TableColumn fx:id="colAddress" prefWidth="51.0" text="Address" />
+
+                        <TableColumn fx:id="colCity" prefWidth="41.0" text="City" />
+
+                        <TableColumn fx:id="colZip" prefWidth="58.0" text="Zip" />
+
+                        <TableColumn fx:id="colSize" prefWidth="66.0" text="Size" />
+
+                        <TableColumn fx:id="colType" prefWidth="84.0" text="Type" />
+
+                        <TableColumn fx:id="colPublic" prefWidth="64.0" text="Public" />
+
+                        <TableColumn fx:id="colCommercial" prefWidth="100.0" text="Commercial" />
+
+                        <TableColumn fx:id="colID" minWidth="0.0" prefWidth="76.0" text="ID" />
+
+                        <TableColumn fx:id="colIsValid" prefWidth="78.0" text="isValid" />
+
+                        <TableColumn fx:id="colVisits" minWidth="0.0" prefWidth="64.0" text="Visits" />
+
+                        <TableColumn fx:id="colRating" prefWidth="137.0" text="Avg. Rating            " />
+
+                    </columns>
+
+                </TableView>
+
+                <Button fx:id="manageButton" layoutX="340.0" layoutY="308.0" mnemonicParsing="false" onAction="#openManage" text="Manage Property" />
+
+                <Button fx:id="welcomeOwnerAdd" layoutX="352.0" layoutY="348.0" mnemonicParsing="false" onAction="#pressAddProperty" text="Add Property" />
+
+                <Button fx:id="otherButton" layoutX="325.0" layoutY="388.0" mnemonicParsing="false" onAction="#showOther" text="View Other Properties" />
+
+                <Button fx:id="logo_btn" layoutX="705.0" layoutY="427.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
+
+                <TextField fx:id="searchField" layoutX="-27.0" layoutY="361.0" />
+
+                <ComboBox fx:id="searchMenu" layoutX="-19.0" layoutY="321.0" prefWidth="150.0" promptText="Search By.." />
+
+                <Label layoutX="-3.0" layoutY="68.0" text="Your Properties:" />
+
+                <Label fx:id="welO" layoutX="350.0" layoutY="40.0" text="Welcome Owner " />
+
+            </children></AnchorPane>
+
+    </children>
+
+</AnchorPane>
