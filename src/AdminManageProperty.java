@@ -64,6 +64,8 @@ public class AdminManageProperty implements Initializable {
     @FXML
     private Button backbut;
 
+    User currentUser = User.getInstance();
+
     private ArrayList<String> approvedCropItems = new ArrayList<>();
     private ArrayList<String> approvedAnimalItems = new ArrayList<>();
     private ArrayList<String> hasAnimalItems = new ArrayList<>();
@@ -322,7 +324,7 @@ public class AdminManageProperty implements Initializable {
             }
 
             server.createStatement().executeUpdate("UPDATE PROPERTY SET Name = '"+ namefield.getText() +"', Address = '" + addressfield.getText() + "', City = '" + cityfield.getText() + "', Zip = '" + zipfield.getText() + "',  Acres = '" + sizefield.getText() + "', IsPublic = " + publiccombo.getValue() + ", IsCommercial = " + commercialcombo.getValue() + " WHERE ID = "+ propId + "");
-            //server.createStatement().executeUpdate("UPDATE PROPERTY SET ApprovedBy = 'thisisaplaceholder' WHERE ID = "+ propId + "");
+            server.createStatement().executeUpdate("UPDATE PROPERTY SET ApprovedBy = '" + currentUser.getUsername() + "' WHERE ID = "+ propId + "");
             goToConfirmed();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());

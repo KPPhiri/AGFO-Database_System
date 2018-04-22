@@ -116,6 +116,15 @@ public class LoginPage implements Initializable{
                             stage.setScene(scene);
                             stage.show();
                         }
+                        if (user.getType().equals("ADMIN")) {
+                            Parent root = FXMLLoader.load(getClass().getResource("admin_welcome.fxml"));
+                            Stage stage = (Stage) lgn_btn.getScene().getWindow();
+                            Scene scene = new Scene(root);
+
+                            stage.setScene(scene);
+                            stage.show();
+
+                        }
                     }
                 } else {
                     wrong.setVisible(true);
