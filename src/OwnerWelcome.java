@@ -55,6 +55,10 @@ public class OwnerWelcome implements Initializable{
     @FXML
     public Button searchButton;
     @FXML
+    public Button logo_btn;
+    @FXML
+    public Label welO;
+    @FXML
     private Button welcomeOwnerAdd;
     @FXML
     public TextField searchField;
@@ -65,11 +69,12 @@ public class OwnerWelcome implements Initializable{
 
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> data;
-
+    public static userPropDetails  selectedOwnerProp = null;
     User user = User.getInstance();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        welO.setText("Welcome " + user.getUsername());
         loadDataFromDatabase();
         createMenu();
         filtering();
@@ -173,8 +178,17 @@ public class OwnerWelcome implements Initializable{
         table.setItems(filteredData);
     }
 
+    public static userPropDetails getSelectedOwnerProp() {
+        return selectedOwnerProp;
+    }
+
     public void openManage(ActionEvent actionEvent) {
         try {
+            if (table.getSelectionModel().getSelectedItem() == null) {
+                return;
+            }
+
+            selectedOwnerProp = (userPropDetails) table.getSelectionModel().getSelectedItem();
             Parent root = FXMLLoader.load(getClass().getResource("property_management.fxml"));
             Stage stage = (Stage) manageButton.getScene().getWindow();
             Scene scene = new Scene(root);
@@ -217,5 +231,18 @@ public class OwnerWelcome implements Initializable{
 
     public void pressAddProperty (ActionEvent actionEvent) throws IOException {
         sceneChanger(welcomeOwnerAdd, "add_new_property.fxml");
+    }
+
+    public void logOut(ActionEvent actionEvent) {
+        try {
+            sceneChanger(logo_btn, "page_login.fxml");
+            user.setType(null);
+            user.setUsername(null);
+            user.setEmail(null);
+
+        } catch(Exception e) {
+            System.out.println("something went wrong + " + e.getMessage());
+
+        }
     }
 }

@@ -140,7 +140,7 @@ public class VisitPropPage implements Initializable{
         Parent root = null;
         stage = (Stage) back.getScene().getWindow();
         try {
-            root = FXMLLoader.load(getClass().getResource("other_owner_properties.fxml"));
+            root = FXMLLoader.load(getClass().getResource("welcome_visitor.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }

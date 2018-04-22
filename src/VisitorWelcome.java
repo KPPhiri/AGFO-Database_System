@@ -57,6 +57,8 @@ public TableColumn colName;
     @FXML
     public Button log_btn;
     @FXML
+    public Label welV;
+    @FXML
     private Button viewProperty1;
     @FXML
     public TextField searchField;
@@ -74,6 +76,7 @@ public TableColumn colName;
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
+        welV.setText("Welcome " + user.getUsername());
         loadDataFromDatabase();
         createMenu();
         filtering();
