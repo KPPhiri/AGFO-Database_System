@@ -1,80 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d4d6581c-107b-44c6-b54a-c5026f601dec" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_46.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_46.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atlanta Gardens, Farms, and Orchards-Dabase_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Atlanta Gardens, Farms, and Orchards-Dabase_System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/AddNewProperty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/ApprovedCrops.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/Connect/SQLConnecter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/NewOwnerRegistration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/NewVisitorRegistration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/OtherOwnerProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/OwnerWelcome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops$4.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PendingCrops.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PropertyDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/PropertyManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/Start.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitDetails$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitDetails$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitPropPage$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitPropPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitPropPage2$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitPropPage2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory$2.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory$3.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorHistory.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorWelcome$1.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/VisitorWelcome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/add_new_property.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/approvedCropDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/approved_crops.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/new_owner_registration.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/new_visitor_registration.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/other_owner_properties.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/page_login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/pendingCropDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/pending_crops.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/property_details.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/property_management.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/userPropDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/visit_details.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/visit_prop_page2.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/visitorHitoryDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/visitor_history.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/AGFO-Database_System/welcome_owner.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/AddNewProperty.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/AddNewProperty.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Connect/SQLConnecter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Connect/SQLConnecter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewOwnerRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewOwnerRegistration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewVisitorRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewVisitorRegistration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OtherOwnerProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OtherOwnerProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyFarmManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/page_visitorProp.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_farm_management.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_visitor.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OwnerWelcome.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/OwnerWelcome.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PropertyFarmManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PropertyFarmManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/PropertyManagement.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/PropertyManagement.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/property_farm_management.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/property_farm_management.fxml" afterDir="false" />
-    </list>
+    <list default="true" id="d4d6581c-107b-44c6-b54a-c5026f601dec" name="Default" comment="" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -173,20 +100,20 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="VisitPropPage.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="VisitPropPage.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VisitPropPage.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
+            <state relative-caret-position="-120">
+              <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="OwnerWelcome.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="OwnerWelcome.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="183">
-              <caret line="504" lean-forward="true" selection-start-line="504" selection-end-line="504" />
+              <caret line="504" selection-start-line="504" selection-end-line="504" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -195,6 +122,9 @@
         </entry>
       </file>
     </leaf>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -323,7 +253,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="43000" />
+    <option name="totallyTimeSpent" value="496000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -738,20 +668,20 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VisitPropPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="79" column="1" selection-start-line="79" selection-start-column="1" selection-end-line="79" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="183">
-          <caret line="504" lean-forward="true" selection-start-line="504" selection-end-line="504" />
+          <caret line="504" selection-start-line="504" selection-end-line="504" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VisitPropPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-120">
+          <caret line="59" column="32" selection-start-line="59" selection-start-column="32" selection-end-line="59" selection-end-column="32" />
         </state>
       </provider>
     </entry>
