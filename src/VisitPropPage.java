@@ -184,6 +184,7 @@ public class VisitPropPage implements Initializable{
             String insert= "INSERT INTO VISITS (Username, P_id, Date, Rating) VALUES " + uname + " " + id + " " + id;
 
             server.createStatement().execute(insert);
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
 

@@ -163,6 +163,7 @@ public class ApprovedCrops implements Initializable {
 
                         server.createStatement().executeUpdate("INSERT INTO FARM_ITEM (Name, isApproved, Type) VALUES('" + CropName + "', 1, '" + Types + "')");
                         loadDataFromDatabase();
+                        server.close();
                     } catch(Exception e) {}
                 }
 
