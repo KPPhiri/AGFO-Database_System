@@ -69,7 +69,7 @@ public class OwnerWelcome implements Initializable{
 
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> data;
-
+    public static userPropDetails  selectedOwnerProp = null;
     User user = User.getInstance();
 
     @Override
@@ -178,8 +178,17 @@ public class OwnerWelcome implements Initializable{
         table.setItems(filteredData);
     }
 
+    public static userPropDetails getSelectedOwnerProp() {
+        return selectedOwnerProp;
+    }
+
     public void openManage(ActionEvent actionEvent) {
         try {
+            if (table.getSelectionModel().getSelectedItem() == null) {
+                return;
+            }
+
+            selectedOwnerProp = (userPropDetails) table.getSelectionModel().getSelectedItem();
             Parent root = FXMLLoader.load(getClass().getResource("property_management.fxml"));
             Stage stage = (Stage) manageButton.getScene().getWindow();
             Scene scene = new Scene(root);
