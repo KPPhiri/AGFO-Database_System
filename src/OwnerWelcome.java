@@ -62,7 +62,7 @@ public class OwnerWelcome implements Initializable{
 
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> data;
-
+    public static userPropDetails  selectedOwnerProp = null;
     User user = User.getInstance();
 
     @Override
@@ -80,8 +80,8 @@ public class OwnerWelcome implements Initializable{
             System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() +"'");
-            while (rs.next()) {
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + "orchardowner" +"'");
+            while (rs.next()) {                                                                                                                                                                //user.getUsername()
                int id = rs.getInt(9);
                 ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
                 int pid = 0;
@@ -170,8 +170,17 @@ public class OwnerWelcome implements Initializable{
         table.setItems(filteredData);
     }
 
+    public static userPropDetails getSelectedOwnerProp() {
+        return selectedOwnerProp;
+    }
+
     public void openManage(ActionEvent actionEvent) {
         try {
+            if (table.getSelectionModel().getSelectedItem() == null) {
+                return;
+            }
+
+            selectedOwnerProp = (userPropDetails) table.getSelectionModel().getSelectedItem();
             Parent root = FXMLLoader.load(getClass().getResource("property_management.fxml"));
             Stage stage = (Stage) manageButton.getScene().getWindow();
             Scene scene = new Scene(root);
