@@ -121,7 +121,7 @@ public class VisitPropPage2 implements Initializable{
             Connection server = Connect.SQLConnecter.connect();
 
             String crops = "";
-            ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type != 'ANIMAL'");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Item FROM HAS, FARM_ITEM WHERE Item=Name AND P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "'AND Type != 'ANIMAL' ");
             while (rs.next() && !crops.contains(rs.getString("Item"))) {
                 crops += rs.getString("Item") + ", ";
             }
@@ -137,7 +137,7 @@ public class VisitPropPage2 implements Initializable{
                 Connection server = Connect.SQLConnecter.connect();
 
                 String animals = "";
-                ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type = 'ANIMAL'");
+                ResultSet rs = server.createStatement().executeQuery("SELECT Item FROM HAS, FARM_ITEM WHERE Item=Name AND P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "'AND Type = 'ANIMAL' ");
                 while (rs.next() && !animals.contains(rs.getString("Item"))) {
                     animals += rs.getString("Item") + ", ";
                 }
@@ -145,7 +145,7 @@ public class VisitPropPage2 implements Initializable{
             } catch (Exception e) {
                 System.out.println("something went wrong + " + e.getMessage());
             }
-        }
+        } else {animal.setText("Animals: N/A");}
     }
 
     private void back() {

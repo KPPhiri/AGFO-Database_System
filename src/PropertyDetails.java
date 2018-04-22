@@ -63,14 +63,6 @@ public class PropertyDetails implements Initializable{
         getOwnerInfo();
         getCropAndAnimal();
         back.setOnAction(e -> back());
-
-//        logVisit_button.setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent event) {
-//                unlogVisit();
-//            }
-//
-//        });
     }
 
     private void loadPropertyDetails() {
@@ -111,7 +103,7 @@ public class PropertyDetails implements Initializable{
             Connection server = Connect.SQLConnecter.connect();
 
             String crops = "";
-            ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type != 'ANIMAL'");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Item FROM HAS, FARM_ITEM WHERE Item=Name AND P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "'AND Type != 'ANIMAL' ");
             while (rs.next() && !crops.contains(rs.getString("Item"))) {
                 crops += rs.getString("Item") + ", ";
             }
@@ -127,7 +119,7 @@ public class PropertyDetails implements Initializable{
                 Connection server = Connect.SQLConnecter.connect();
 
                 String animals = "";
-                ResultSet rs = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "' AND FARM_ITEM.Type = 'ANIMAL'");
+                ResultSet rs = server.createStatement().executeQuery("SELECT Item FROM HAS, FARM_ITEM WHERE Item=Name AND P_id = '" + OtherOwnerProperties.getSelectedUser().getId() + "'AND Type = 'ANIMAL' ");
                 while (rs.next() && !animals.contains(rs.getString("Item"))) {
                     animals += rs.getString("Item") + ", ";
                 }
@@ -135,6 +127,8 @@ public class PropertyDetails implements Initializable{
             } catch (Exception e) {
                 System.out.println("something went wrong + " + e.getMessage());
             }
+        } else {
+            animal.setText("Animals: N/A");
         }
     }
 

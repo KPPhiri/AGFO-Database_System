@@ -175,7 +175,7 @@ public class VisitDetails implements Initializable{
             //System.out.println("c" + ownerstring + "c");
 
             String crops = "";
-            ResultSet rd = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + VisitorHistory.pid + "' AND FARM_ITEM.Type != 'ANIMAL'");
+            ResultSet rd = server.createStatement().executeQuery("SELECT Item FROM HAS, FARM_ITEM WHERE Item=Name AND P_id = '" + VisitorHistory.pid + "'AND Type != 'ANIMAL' ");
             while (rd.next() && !crops.contains(rd.getString("Item"))) {
                 crops += rd.getString("Item") + ", ";
             }
@@ -190,13 +190,13 @@ public class VisitDetails implements Initializable{
             System.out.println(isFarm);
             if (isFarm.equals("FARM")) {
                 String animals = "";
-                ResultSet rf = server.createStatement().executeQuery("SELECT P_id, Item FROM HAS, FARM_ITEM WHERE P_id = '" + VisitorHistory.pid + "' AND FARM_ITEM.Type != 'ANIMAL'");
+                ResultSet rf = server.createStatement().executeQuery("SELECT Item FROM HAS, FARM_ITEM WHERE Item=Name AND P_id = '" + VisitorHistory.pid + "'AND Type = 'ANIMAL' ");
                 while (rf.next() && !animals.contains(rf.getString("Item"))) {
                     animals += rf.getString("Item") + ", ";
                 }
                 animalstring = animals;
                 //animal.setText("Animals: " + animals);
-            }
+            } else {animalstring = "N/A";}
 
 
 
