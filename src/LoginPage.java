@@ -1,4 +1,5 @@
 
+import Connect.SQLConnecter;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -10,23 +11,33 @@ import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 import java.net.URL;
 import java.security.MessageDigest;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.util.ResourceBundle;
+import java.util.regex.Pattern;
 
 public class LoginPage implements Initializable{
     @FXML
     public Label wrong;
     @FXML
-    private TextField email_TextField;
+    private TextField username_TextField;
 
     @FXML
     private PasswordField  password_PasswordField;
 
     @FXML
     private Button lgn_btn;
+
+    @FXML
+    private Button newOwnerRegistrationButton;
+    @FXML
+    private Button newVisitorRegistrationButton;
+    @FXML
+    private Label login_ErrorMessage;
 
     User user = User.getInstance();
 
@@ -39,80 +50,102 @@ public class LoginPage implements Initializable{
 
     @FXML
     private void checkLogin(ActionEvent event) {
-        String email = "farmerJoe@gmail.com";
-        String password = "d68fae04506bde7857ff4aa40ebad49c";
-        String u_type = "";
-        if(email_TextField.getText().length() < 1 || password_PasswordField.getText().length()< 1
-                || email_TextField.getText().length() > 50 || password_PasswordField.getText().length() > 30) {
-            wrong.setVisible(true);
+        boolean passed = false;
+        if (username_TextField.getText().length() == 0) {
+            login_ErrorMessage.setText("You must supply an Email.");
+            passed = true;
+        }
 
-        } else {
+        if (password_PasswordField.getText().length() == 0) {
+            login_ErrorMessage.setText(login_ErrorMessage.getText()
+                    + "\nYou must supply a Password.");
+            passed = true;
+        } else if (!(password_PasswordField.getText().length() > 7)) {
+            login_ErrorMessage.setText(login_ErrorMessage.getText()
+                    + "\nPassword must be 8 characters or longer.");
+            passed = true;
+        }
+
+//        String email = "farmerJoe@gmail.com";
+//        String password = "d68fae04506bde7857ff4aa40ebad49c";
+//        String u_type = "";
+        if (!passed) {
             try {
-                Connection server = Connect.SQLConnecter.connect();
-
+                Connection server = SQLConnecter.connect();
+                if (server.isClosed()) {
+                    login_ErrorMessage.setText("Server is Closed or not Connected to it.");
+                    return;
+                }
                 // This is the MD5 hash function for the inserted password.
                 // TODO: you need to replace the Select SQL statement's password variable in the WHERE portion to pass variable.
                 // TODO: This will be done when you can actually sign in.
-                    MessageDigest md = MessageDigest.getInstance("MD5");
-                    byte[] bytesOfPass = password_PasswordField.getText().getBytes("UTF-8");
-                    byte[] digest = md.digest(bytesOfPass);
-                    String pass;
-                    StringBuffer stringBuffer = new StringBuffer();
-                    for (int i = 0; i < digest.length; i++) {
-                        stringBuffer.append(Integer.toString((digest[i] & 0xff) + 0x100, 16)
-                                .substring(1));
-                    }
-                    pass = stringBuffer.toString();
+                MessageDigest md = MessageDigest.getInstance("MD5");
+                byte[] bytesOfPass = password_PasswordField.getText().getBytes("UTF-8");
+                byte[] digest = md.digest(bytesOfPass);
+                String pass;
+                StringBuffer stringBuffer = new StringBuffer();
+                for (int i = 0; i < digest.length; i++) {
+                    stringBuffer.append(Integer.toString((digest[i] & 0xff) + 0x100, 16)
+                            .substring(1));
+                }
+                pass = stringBuffer.toString();
 
-                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Email FROM USER WHERE Email = '" + email +  "' AND Password = '" + password + "'");
+                ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Password FROM USER WHERE Username = '"
+                        + username_TextField.getText() + "' AND Password = '" + pass + "'");
 
-                if(val.next()) {
-                    user.setUsername(val.getString(1));
-                    user.setType(val.getString(2));
-                    System.out.println(user.getType());
-                    user.setEmail(val.getString(3));
-                    if(user.getType().equals("OWNER")){
-                        Parent root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
-                        Stage stage = (Stage) lgn_btn.getScene().getWindow();
-                        Scene scene = new Scene(root);
+                if (val.next()) {
+                    if (val.getString(3).equals(pass)) {
+                        user.setUsername(val.getString(1));
+                        user.setType(val.getString(2));
+                        System.out.println(user.getType());
+                        if (user.getType().equals("OWNER")) {
+                            Parent root = FXMLLoader.load(getClass().getResource("welcome_owner.fxml"));
+                            Stage stage = (Stage) lgn_btn.getScene().getWindow();
+                            Scene scene = new Scene(root);
 
-                        stage.setScene(scene);
-                        stage.show();
+                            stage.setScene(scene);
+                            stage.show();
 
-                    }
-                    if(user.getType().equals("VISITOR")){
-                        Parent root = FXMLLoader.load(getClass().getResource("welcome_visitor.fxml"));
-                        Stage stage = (Stage) lgn_btn.getScene().getWindow();
-                        Scene scene = new Scene(root);
+                        }
+                        if (user.getType().equals("VISITOR")) {
+                            Parent root = FXMLLoader.load(getClass().getResource("welcome_visitor.fxml"));
+                            Stage stage = (Stage) lgn_btn.getScene().getWindow();
+                            Scene scene = new Scene(root);
 
-                        stage.setScene(scene);
-                        stage.show();
-
+                            stage.setScene(scene);
+                            stage.show();
+                        }
                     }
 
                 } else {
                     wrong.setVisible(true);
                 }
 
-            } catch(Exception e) {
+            } catch (Exception e) {
                 System.out.println("something went wrong + " + e.getMessage());
 
             }
-
         }
 
 
 
     }
 
-    public void pressOwnerRegistration(ActionEvent actionEvent) {
+    private void sceneChanger(Button button, String fxmlName) throws IOException {
+        Stage stage;
+        Parent root;
+        stage = (Stage) button.getScene().getWindow();
+        root = FXMLLoader.load(getClass().getResource(fxmlName));
+        Scene scene = new Scene(root);
+        stage.setScene(scene);
+        stage.show();
     }
 
-    public void pressVisitorRegistration(ActionEvent actionEvent) {
+    public void pressOwnerRegistration(ActionEvent actionEvent) throws IOException {
+        sceneChanger(newOwnerRegistrationButton, "new_owner_registration.fxml");
     }
 
-
-//    public void pressButton(ActionEvent actionEvent) {
-//        checkLogin();
-//    }
+    public void pressVisitorRegistration(ActionEvent actionEvent) throws IOException {
+        sceneChanger(newVisitorRegistrationButton, "new_visitor_registration.fxml");
+    }
 }

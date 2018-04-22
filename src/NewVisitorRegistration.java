@@ -57,9 +57,9 @@ public class NewVisitorRegistration implements Initializable {
     }
     public void pressRegisterVisitor(ActionEvent actionEvent) throws IOException {
         visitor_ErrorMessage.setText("");
-        Boolean registered = false;
-        Boolean passed = false;
-        Boolean matches = Pattern.matches("^[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z]{3,})$",
+        boolean registered = false;
+        boolean passed = false;
+        boolean matches = Pattern.matches("^[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z]{3,})$",
                 visitorRegistrationEmail.getText());
 
         if (visitorRegistrationEmail.getText().length() == 0) {
@@ -83,7 +83,7 @@ public class NewVisitorRegistration implements Initializable {
             passed = true;
         } else if (visitorRegistrationConfirmPassword.getText().length() == 0) {
             visitor_ErrorMessage.setText(visitor_ErrorMessage.getText()
-                    + "\nYou must supply an Username.");
+                    + "\nYou must Confirm the Password.");
             passed = true;
         } else if (!(visitorRegistrationPassword.getText().length() > 7)) {
             visitor_ErrorMessage.setText(visitor_ErrorMessage.getText()

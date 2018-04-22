@@ -204,9 +204,9 @@ public class NewOwnerRegistration implements Initializable {
 
     public void pressRegisterOwner(ActionEvent actionEvent) throws IOException {
         owner_ErrorMessage.setText("");
-        Boolean registered = false;
-        Boolean passed = false;
-        Boolean matches = Pattern.matches("^[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z]{3,})$",
+        boolean registered = false;
+        boolean passed = false;
+        boolean matches = Pattern.matches("^[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z]{3,})$",
                 ownerRegistrationEmail.getText());
 
         if (ownerRegistrationEmail.getText().length() == 0) {
@@ -230,7 +230,7 @@ public class NewOwnerRegistration implements Initializable {
             passed = true;
         } else if (ownerRegistrationConfirmPassword.getText().length() == 0) {
             owner_ErrorMessage.setText(owner_ErrorMessage.getText()
-                    + "\nYou must supply an Username.");
+                    + "\nYou must confirm the password.");
             passed = true;
         } else if (!(ownerRegistrationPassword.getText().length() > 7)) {
             owner_ErrorMessage.setText(owner_ErrorMessage.getText()

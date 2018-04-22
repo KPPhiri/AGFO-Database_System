@@ -2,28 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="794eb2bf-f191-4f63-8c35-db3ec5bbdff2" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_461.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/AddNewProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/add_new_property.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atlanta Gardens, Farms, and Orchards-Dabase_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Atlanta Gardens, Farms, and Orchards-Dabase_System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Connect/SQLConnecter.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Connect/SQLConnecter.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewOwnerRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewOwnerRegistration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewVisitorRegistration.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewVisitorRegistration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OtherOwnerProperties.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OtherOwnerProperties.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Start.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Start.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Test.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Test.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/VisitorWelcome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/userPropDetails.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/userPropDetails.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_visitor.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewOwnerRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewOwnerRegistration.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/NewVisitorRegistration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/NewVisitorRegistration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Test.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/Test.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/page_login.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -37,11 +20,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="Test.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="Test.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Test.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="187">
-                  <caret line="15" column="75" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="75" />
+                  <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
                 </state>
               </provider>
             </entry>
@@ -67,23 +50,11 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="340">
-                  <caret line="74" column="91" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="91" />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="NewVisitorRegistration.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret lean-forward="true" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="926">
+                  <caret line="115" column="41" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
                 </state>
               </provider>
             </entry>
@@ -102,18 +73,22 @@
               <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
             </entry>
           </file>
-          <file leaf-file-name="NewOwnerRegistration.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
+          <file leaf-file-name="NewVisitorRegistration.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state>
-                  <caret selection-end-column="28" />
+                <state relative-caret-position="226">
+                  <caret line="103" column="17" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="103" selection-end-column="17" />
                   <folding>
                     <element signature="imports" expanded="true" />
-                    <element signature="e#5485#5486#0" expanded="true" />
-                    <element signature="e#5513#5514#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="page_login.fxml" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
+              <provider editor-type-id="text-editor" />
+              <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
             </entry>
           </file>
         </leaf>
@@ -135,11 +110,13 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/property_management.fxml" />
-        <option value="$PROJECT_DIR$/src/NewOwnerRegistration.java" />
         <option value="$PROJECT_DIR$/src/add_new_property.fxml" />
-        <option value="$PROJECT_DIR$/src/NewVisitorRegistration.java" />
         <option value="$PROJECT_DIR$/src/AddNewProperty.java" />
         <option value="$PROJECT_DIR$/src/Test.java" />
+        <option value="$PROJECT_DIR$/src/NewVisitorRegistration.java" />
+        <option value="$PROJECT_DIR$/src/NewOwnerRegistration.java" />
+        <option value="$PROJECT_DIR$/src/page_login.fxml" />
+        <option value="$PROJECT_DIR$/src/LoginPage.java" />
       </list>
     </option>
   </component>
@@ -468,42 +445,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-column="28" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#5485#5486#0" expanded="true" />
-            <element signature="e#5513#5514#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="74" column="91" selection-start-line="74" selection-start-column="78" selection-end-line="74" selection-end-column="91" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret lean-forward="true" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/User.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="13" selection-start-column="13" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/AddNewProperty.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
@@ -517,7 +458,47 @@
     <entry file="file://$PROJECT_DIR$/src/Test.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="187">
-          <caret line="15" column="75" selection-start-line="15" selection-start-column="62" selection-end-line="15" selection-end-column="75" />
+          <caret line="15" column="72" selection-start-line="15" selection-start-column="72" selection-end-line="15" selection-end-column="72" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NewOwnerRegistration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="331">
+          <caret line="232" column="54" selection-start-line="232" selection-start-column="54" selection-end-line="232" selection-end-column="54" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#5485#5486#0" expanded="true" />
+            <element signature="e#5513#5514#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="226">
+          <caret line="103" column="17" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="103" selection-end-column="17" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/User.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="926">
+          <caret line="115" column="41" selection-start-line="115" selection-start-column="41" selection-end-line="115" selection-end-column="41" />
         </state>
       </provider>
     </entry>
