@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="794eb2bf-f191-4f63-8c35-db3ec5bbdff2" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/LoginPage.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/LoginPage.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/page_login.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/page_login.fxml" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -50,8 +50,8 @@
           <file leaf-file-name="LoginPage.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="561">
-                  <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+                <state relative-caret-position="323">
+                  <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
                 </state>
               </provider>
             </entry>
@@ -70,11 +70,11 @@
               <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
             </entry>
           </file>
-          <file leaf-file-name="NewVisitorRegistration.java" pinned="false" current-in-tab="false">
+          <file leaf-file-name="NewVisitorRegistration.java" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="226">
-                  <caret line="103" column="17" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="103" selection-end-column="17" />
+                <state relative-caret-position="192">
+                  <caret line="62" column="52" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="62" selection-end-column="52" />
                   <folding>
                     <element signature="imports" expanded="true" />
                   </folding>
@@ -82,7 +82,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="page_login.fxml" pinned="false" current-in-tab="true">
+          <file leaf-file-name="page_login.fxml" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
               <provider editor-type-id="text-editor" />
               <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
@@ -464,20 +464,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="226">
-          <caret line="103" column="17" lean-forward="true" selection-start-line="100" selection-start-column="16" selection-end-line="103" selection-end-column="17" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
-      <provider editor-type-id="text-editor" />
-      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/User.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -492,10 +478,28 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/welcome_owner.fxml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/page_login.fxml">
+      <provider editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="JavaFX-Scene-Builder" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/NewVisitorRegistration.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="192">
+          <caret line="62" column="52" lean-forward="true" selection-start-line="61" selection-start-column="7" selection-end-line="62" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/LoginPage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="67" column="8" selection-start-line="67" selection-start-column="8" selection-end-line="67" selection-end-column="8" />
+        <state relative-caret-position="323">
+          <caret line="59" column="57" selection-start-line="59" selection-start-column="57" selection-end-line="59" selection-end-column="57" />
         </state>
       </provider>
     </entry>

@@ -24,7 +24,7 @@ public class LoginPage implements Initializable{
     @FXML
     public Label wrong;
     @FXML
-    private TextField username_TextField;
+    private TextField email_TextField;
 
     @FXML
     private PasswordField  password_PasswordField;
@@ -51,8 +51,14 @@ public class LoginPage implements Initializable{
     @FXML
     private void checkLogin(ActionEvent event) {
         boolean passed = false;
-        if (username_TextField.getText().length() == 0) {
+        boolean matches = Pattern.matches("^[A-Za-z0-9]+@[A-Za-z0-9]+(\\.[A-Za-z]{3,})$",
+                email_TextField.getText());
+        if (email_TextField.getText().length() == 0) {
             login_ErrorMessage.setText("You must supply an Email.");
+            passed = true;
+        } else if (!matches) {
+            login_ErrorMessage.setText(login_ErrorMessage.getText()
+                    + "\nEmail is not valid.");
             passed = true;
         }
 
@@ -65,7 +71,7 @@ public class LoginPage implements Initializable{
                     + "\nPassword must be 8 characters or longer.");
             passed = true;
         }
-        
+
         if (!passed) {
             try {
                 Connection server = SQLConnecter.connect();
@@ -85,7 +91,7 @@ public class LoginPage implements Initializable{
                 pass = stringBuffer.toString();
 
                 ResultSet val = server.createStatement().executeQuery("SELECT Username, U_type, Password FROM USER WHERE Username = '"
-                        + username_TextField.getText() + "' AND Password = '" + pass + "'");
+                        + email_TextField.getText() + "' AND Password = '" + pass + "'");
 
                 if (val.next()) {
                     if (val.getString(3).equals(pass)) {
