@@ -57,6 +57,8 @@ public TableColumn colName;
     @FXML
     public Button log_btn;
     @FXML
+    public Button otherButton;
+    @FXML
     public Label welV;
     @FXML
     private Button viewProperty1;
@@ -72,7 +74,7 @@ public TableColumn colName;
     //Initialize observable list to hold out database data
     private ObservableList<userPropDetails> data;
 
-    User user = User.getInstance();
+    public static User user = User.getInstance();
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -80,6 +82,23 @@ public TableColumn colName;
         loadDataFromDatabase();
         createMenu();
         filtering();
+
+        otherButton.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                try {
+                    Stage stage;
+                    Parent root;
+                    stage = (Stage) otherButton.getScene().getWindow();
+                    root = FXMLLoader.load(getClass().getResource("visitor_history.fxml"));
+                    Scene scene = new Scene(root);
+                    stage.setScene(scene);
+                    stage.show();
+                } catch (Exception e) {
+                    System.out.println("wrong");
+                }
+            }
+        });
 
 
     }
@@ -197,20 +216,22 @@ public TableColumn colName;
 
     }
 
-    public void showOther(ActionEvent actionEvent) {
-        try {
-            Parent root = FXMLLoader.load(getClass().getResource("other_owner_properties.fxml"));
-            Stage stage = (Stage) manageButton.getScene().getWindow();
-            Scene scene = new Scene(root);
-
-            stage.setScene(scene);
-            stage.show();
-
-        } catch(Exception e) {
-            System.out.println("something went wrong + " + e.getMessage());
-
-        }
-    }
+//    public void showOther(ActionEvent actionEvent) {
+//        if (false) {
+//        } else {
+//            try {
+//                Stage stage;
+//                Parent root;
+//                stage = (Stage) otherButton.getScene().getWindow();
+//                root = FXMLLoader.load(getClass().getResource("visit_details.fxml"));
+//                Scene scene = new Scene(root);
+//                stage.setScene(scene);
+//                stage.show();
+//            } catch (Exception e) {
+//                System.out.println("wrong");
+//            }
+//        }
+//    }
 
     private void sceneChanger(Button button, String fxmlName) throws IOException {
         Stage stage;
@@ -245,11 +266,28 @@ public TableColumn colName;
         ab.selectedUser =  (userPropDetails) table.getSelectionModel().getSelectedItem();
         System.out.println(ab.selectedUser.getPropName());
         Stage stage;
+        int idbool = -1;
         Parent root = null;
         stage = (Stage) viewProperty1.getScene().getWindow();
         try {
-            root = FXMLLoader.load(getClass().getResource("page_visitorProp.fxml"));
-        } catch (IOException e) {
+            //int idbool;
+            Connection server = Connect.SQLConnecter.connect();
+            data = FXCollections.observableArrayList();
+            try {
+                ResultSet rs = server.createStatement().executeQuery("SELECT P_id FROM VISITS WHERE Username = '" + VisitorWelcome.user.getUsername() + "' AND P_id = '" + ab.selectedUser.getId() + "'");
+                if (rs.next()) {
+                    idbool = rs.getInt(1);
+                }
+            } catch (Exception e) {e.printStackTrace();}
+            if (idbool != -1) {
+                root = FXMLLoader.load(getClass().getResource("visit_prop_page2.fxml"));
+            }
+            else{
+                root = FXMLLoader.load(getClass().getResource("page_visitorProp.fxml"));
+        }
+        server.close();
+
+        } catch (Exception e) {
             e.printStackTrace();
         }
         Scene scene = new Scene(root);

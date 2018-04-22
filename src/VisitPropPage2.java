@@ -18,9 +18,10 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
-public class PropertyDetails implements Initializable{
+public class VisitPropPage2 implements Initializable{
     @FXML
     public Label title;
     @FXML
@@ -55,6 +56,12 @@ public class PropertyDetails implements Initializable{
     public Label animal;
     @FXML
     public Button back;
+    @FXML
+    public TextField textRating;
+    @FXML
+    public Button logVisit_button;
+
+    public static int propide = 0;
 
 
     @Override
@@ -64,16 +71,18 @@ public class PropertyDetails implements Initializable{
         getCropAndAnimal();
         back.setOnAction(e -> back());
 
-//        logVisit_button.setOnAction(new EventHandler<ActionEvent>() {
-//            @Override
-//            public void handle(ActionEvent event) {
-//                unlogVisit();
-//            }
-//
-//        });
+        //logVisit_button.setOnAction(new EventHandler<ActionEvent>() {
+        logVisit_button.setOnAction(new EventHandler<ActionEvent>() {
+                @Override
+                public void handle(ActionEvent event) {
+                    unlogVisit();
+                }
+
+            });
     }
 
     private void loadPropertyDetails() {
+
         userPropDetails temp = OtherOwnerProperties.getSelectedUser();
         title.setText(temp.getPropName() + " Details");
         name.setText("Name: " + temp.getPropName());
@@ -87,6 +96,7 @@ public class PropertyDetails implements Initializable{
         isPublic.setText("Public: " + temp.getIpublic());
         isCommercial.setText("Commercial: " + temp.getCommercial());
         id.setText("ID: " + temp.getId());
+        propide = (temp.getId());
     }
 
     public void getOwnerInfo() {
@@ -144,12 +154,61 @@ public class PropertyDetails implements Initializable{
         Parent root = null;
         stage = (Stage) back.getScene().getWindow();
         try {
-            root = FXMLLoader.load(getClass().getResource("other_owner_properties.fxml"));
+            root = FXMLLoader.load(getClass().getResource("welcome_visitor.fxml"));
         } catch (IOException e) {
             e.printStackTrace();
         }
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void unlogVisit() {
+
+        try {
+
+            Connection server = Connect.SQLConnecter.connect();
+
+            userPropDetails tempb = OtherOwnerProperties.getSelectedUser();
+
+            User tempa = User.getInstance();
+
+            String uname = tempa.getUsername();
+
+            //int id = tempb.getId();
+
+            server.createStatement().executeUpdate("DELETE FROM VISITS WHERE Username = '" + VisitorWelcome.user.getUsername() + "' AND P_id = '" + OtherOwnerProperties.getSelectedUser().getId()+ "'");
+            //loadDataFromDatabase();
+            //System.out.println(userst + "" + VisitorHistory.pid);
+
+
+            //server.createStatement().execute(insert);
+            Stage stage;
+            Parent root = null;
+            stage = (Stage) logVisit_button.getScene().getWindow();
+            try {
+                root = FXMLLoader.load(getClass().getResource("welcome_visitor.fxml"));
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            Scene scene = new Scene(root);
+            stage.setScene(scene);
+            stage.show();
+
+
+
+
+
+        } catch (Exception e) {
+
+            System.out.println("something went wrong + " + e.getMessage());
+            e.printStackTrace();
+
+
+
+        }
+
+
+
     }
 }

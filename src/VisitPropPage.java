@@ -3,6 +3,7 @@ import javafx.beans.value.ObservableValue;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.EventHandler;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -17,6 +18,7 @@ import java.net.URL;
 import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.Statement;
+import java.time.LocalDateTime;
 import java.util.ResourceBundle;
 
 public class VisitPropPage implements Initializable{
@@ -59,6 +61,8 @@ public class VisitPropPage implements Initializable{
     @FXML
     public Button logVisit_button;
 
+    public static int propide = 0;
+
 
     @Override
     public void initialize (URL location, ResourceBundle resources) {
@@ -66,6 +70,26 @@ public class VisitPropPage implements Initializable{
         getOwnerInfo();
         getCropAndAnimal();
         back.setOnAction(e -> back());
+
+        logVisit_button.setOnAction(new EventHandler<ActionEvent>() {
+            @Override
+            public void handle(ActionEvent event) {
+                if (textRating.getText().equals("1") || textRating.getText().equals("2") ||textRating.getText().equals("3") ||textRating.getText().equals("4") ||textRating.getText().equals("5")) {
+                    //data = FXCollections.observableArrayList();
+
+                    Connection server = Connect.SQLConnecter.connect();
+                    try { LocalDateTime ldt = LocalDateTime.now();
+                        System.out.println(ldt);
+
+                        int tem = Integer.parseInt(textRating.getText());
+                        server.createStatement().executeUpdate("INSERT INTO VISITS (Username, P_id, Rating) VALUES('" + VisitorWelcome.user.getUsername() + "', '" + VisitPropPage.propide + "','" +  tem + "')");
+                    } catch(Exception e) {e.printStackTrace();}
+                    //loadDataFromDatabase();
+                    back();
+                }
+            }
+
+        });
     }
 
     private void loadPropertyDetails() {
@@ -83,6 +107,7 @@ public class VisitPropPage implements Initializable{
         isPublic.setText("Public: " + temp.getIpublic());
         isCommercial.setText("Commercial: " + temp.getCommercial());
         id.setText("ID: " + temp.getId());
+        propide = (temp.getId());
     }
 
     public void getOwnerInfo() {
@@ -159,6 +184,7 @@ public class VisitPropPage implements Initializable{
             String insert= "INSERT INTO VISITS (Username, P_id, Date, Rating) VALUES " + uname + " " + id + " " + id;
 
             server.createStatement().execute(insert);
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
 

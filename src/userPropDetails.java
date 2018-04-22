@@ -1,5 +1,6 @@
 public class userPropDetails {
 
+
     private String propName;
     private String address;
     private String city;
