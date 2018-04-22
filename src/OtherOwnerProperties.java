@@ -140,8 +140,7 @@ public class OtherOwnerProperties implements Initializable {
                         rs.getString(6), rs.getBoolean(7), rs.getBoolean(8),
                         rs.getInt(9), visits, avgRating));
             }
-
-
+            server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
 
