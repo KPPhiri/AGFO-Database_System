@@ -27,7 +27,7 @@ public class Test extends Application {
 
     public void start(Stage stage) throws Exception {
 
-        Parent root = FXMLLoader.load(getClass().getResource("page_login.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("admin_welcome.fxml"));
 
 
 
