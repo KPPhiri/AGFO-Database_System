@@ -1,39 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="bbbb8d2c-c630-43cc-8b2b-e85173590b7b" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_461.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Atlanta Gardens, Farms, and Orchards-Dabase_System.iml" beforeDir="false" afterPath="$PROJECT_DIR$/Atlanta Gardens, Farms, and Orchards-Dabase_System.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/AddNewProperty.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Connect/SQLConnecter.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/LoginPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewOwnerRegistration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/NewVisitorRegistration.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OtherOwnerProperties.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/OwnerWelcome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyFarmManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/PropertyManagement.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Start.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/Test.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/User.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/VisitPropPage.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/VisitorWelcome.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/add_new_property.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/new_owner_registration.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/new_visitor_registration.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/other_owner_properties.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/page_login.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/page_visitorProp.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_details.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_farm_management.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/property_management.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/userPropDetails.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_owner.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/Atlanta Gardens, Farms, and Orchards-Dabase_System/welcome_visitor.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="bbbb8d2c-c630-43cc-8b2b-e85173590b7b" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/out/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -318,13 +286,6 @@
     <option name="LAST_COMMIT_MESSAGE" value="creating Visitor welcome" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/PropertyFarmManagement.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="196">
-          <caret line="175" column="38" lean-forward="true" selection-start-line="175" selection-start-column="38" selection-end-line="175" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/OwnerWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="267">
@@ -647,6 +608,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="119">
           <caret line="7" column="12" selection-start-line="7" selection-start-column="12" selection-end-line="7" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ownerPropDetails.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="13" selection-start-column="13" selection-end-column="13" />
         </state>
       </provider>
     </entry>
