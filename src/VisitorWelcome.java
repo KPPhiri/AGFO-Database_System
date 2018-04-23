@@ -82,9 +82,11 @@ public TableColumn colName;
     public void initialize(URL location, ResourceBundle resources) {
         welV.setText("Welcome " + user.getUsername());
         loadDataFromDatabase();
-        createMenu();
         filtering();
-        sort(new ActionEvent());
+        createMenu();
+
+
+
         otherButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
