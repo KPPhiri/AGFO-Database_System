@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VisitorOverview">
+   <children>
+      <Label fx:id="visitoverviewtag" layoutX="185.0" layoutY="14.0" text="All Visitors In System">
+         <font>
+            <Font size="25.0" />
+         </font>
+      </Label>
+      <TableView fx:id="visitortable" layoutX="28.0" layoutY="50.0" prefHeight="239.0" prefWidth="546.0">
+        <columns>
+          <TableColumn fx:id="usernamecol" prefWidth="180.00003051757812" text="Username" />
+          <TableColumn fx:id="emailcol" prefWidth="187.2000732421875" text="Email" />
+            <TableColumn fx:id="logviscol" prefWidth="177.5999755859375" text="Logged Visits" />
+        </columns>
+      </TableView>
+      <Button fx:id="deleteaccbut" layoutX="28.0" layoutY="298.0" mnemonicParsing="false" onAction="#delete" text="Delete Visitor Account" />
+      <Button fx:id="deletelogbut" layoutX="38.0" layoutY="330.0" mnemonicParsing="false" onAction="#deletelog" text="Delete Log History" />
+      <Button fx:id="backbut" layoutX="75.0" layoutY="362.0" mnemonicParsing="false" onAction="#gobacktoOwnerWelcome" text="Back" />
+      <TextField fx:id="searchbar" layoutX="427.0" layoutY="336.0" prefHeight="26.0" prefWidth="150.0" promptText="Search Term" />
+      <ComboBox fx:id="searchcombo" layoutX="427.0" layoutY="298.0" prefWidth="150.0" promptText="Search By..." />
+   </children>
+</AnchorPane>
