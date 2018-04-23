@@ -7,7 +7,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="496.0" prefWidth="659.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPage">
+<AnchorPane prefHeight="400.0" prefWidth="601.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="LoginPage">
    <children>
          <Button fx:id="newOwnerRegistrationButton" layoutX="75.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressOwnerRegistration" text="New Owner Registration" />
          <Button fx:id="newVisitorRegistrationButton" layoutX="384.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressVisitorRegistration" text="New Visitor Registration" />
@@ -19,6 +19,5 @@
          <Label layoutX="201.0" layoutY="57.0" text="ATL Gardens, Farms, and Orchards" />
       <Label fx:id="wrong" layoutX="216.0" layoutY="218.0" text="Incorrect email or password. Please try again." textFill="#dd2c2c" visible="false" />
       <ButtonBar prefHeight="40.0" prefWidth="200.0" />
-      <Label fx:id="login_ErrorMessage" alignment="TOP_CENTER" layoutX="25.0" layoutY="347.0" prefHeight="131.0" prefWidth="607.0" />
    </children>
 </AnchorPane>
