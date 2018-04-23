@@ -27,5 +27,6 @@
       <Button fx:id="backbut" layoutX="74.0" layoutY="333.0" mnemonicParsing="false" onAction="#gobacktoOwnerWelcome" text="Back" />
       <TextField fx:id="searchbar" layoutX="422.0" layoutY="332.0" prefHeight="26.0" prefWidth="150.0" promptText="Search Term" />
       <ComboBox fx:id="searchcombo" layoutX="422.0" layoutY="297.0" prefWidth="150.0" promptText="Search By..." />
+      <Button fx:id="sortbut" layoutX="245.0" layoutY="297.0" mnemonicParsing="false" onAction="#sort" text="Enable Sorting" />
    </children>
 </AnchorPane>

@@ -43,6 +43,8 @@ public class UnconfirmedProperties implements Initializable {
     @FXML
     private Button backbut;
     @FXML
+    private Button sortbut;
+    @FXML
     private Button managebut;
     @FXML
     private ComboBox searchcombo;
@@ -171,6 +173,10 @@ public class UnconfirmedProperties implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void sort(ActionEvent actionEvent) {
+        loadDataFromDatabase();
     }
 
 }

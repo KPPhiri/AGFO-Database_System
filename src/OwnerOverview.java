@@ -1,5 +1,6 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -25,6 +26,8 @@ public class OwnerOverview implements Initializable {
     private TableColumn numpropcol;
     @FXML
     private Button deletebut;
+    @FXML
+    private Button sortbut;
     @FXML
     private Button backbut;
     @FXML
@@ -130,6 +133,10 @@ public class OwnerOverview implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void sort(ActionEvent actionEvent) {
+        loadDataFromDatabase();
     }
 
 }

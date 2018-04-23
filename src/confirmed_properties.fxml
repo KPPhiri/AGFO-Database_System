@@ -31,7 +31,7 @@
             <TableColumn fx:id="avgcol" prefWidth="92.0001220703125" text="Avg. Rating" />
         </columns>
       </TableView>
-      <ComboBox fx:id="searchcombo" layoutX="14.0" layoutY="416.0" prefHeight="26.0" prefWidth="235.0" promptText="Search by..." />
+      <ComboBox fx:id="searchcombo" layoutX="14.0" layoutY="434.0" prefHeight="26.0" prefWidth="235.0" promptText="Search by..." />
       <TextField fx:id="searchbar" layoutX="14.0" layoutY="472.0" prefHeight="26.0" prefWidth="235.0" promptText="Search Term" />
       <Button fx:id="managebut" layoutX="297.0" layoutY="434.0" mnemonicParsing="false" onAction="#openManage" text="Manage Selected Property">
          <font>
@@ -43,5 +43,6 @@
             <Font size="24.0" />
          </font>
       </Button>
+      <Button fx:id="sortbut" layoutX="14.0" layoutY="396.0" mnemonicParsing="false" onAction="#sort" prefHeight="26.0" prefWidth="235.0" text="Enable Sorting" />
    </children>
 </AnchorPane>

@@ -1,6 +1,7 @@
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -29,6 +30,8 @@ public class VisitorOverview implements Initializable {
     private Button deletelogbut;
     @FXML
     private Button backbut;
+    @FXML
+    private Button sortbut;
     @FXML
     private ComboBox searchcombo;
     @FXML
@@ -146,6 +149,10 @@ public class VisitorOverview implements Initializable {
         Scene scene = new Scene(root);
         stage.setScene(scene);
         stage.show();
+    }
+
+    public void sort(ActionEvent actionEvent) {
+        loadDataFromDatabase();
     }
 
 
