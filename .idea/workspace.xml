@@ -1,17 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="079b0913-6acc-4f16-be83-36bf3e7950f7" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/ConfirmedProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/OwnerOverview.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/UnconfirmedProperties.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/VisitorOverview.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/confirmed_properties.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/owner_overview.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/unconfirmed_properties.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/visitor_overview.fxml" beforeDir="false" />
-    </list>
+    <list default="true" id="079b0913-6acc-4f16-be83-36bf3e7950f7" name="Default" comment="" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,8 +38,8 @@
       <file leaf-file-name="VisitorOverview.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/VisitorOverview.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="232">
-              <caret line="142" column="39" lean-forward="true" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+            <state relative-caret-position="136">
+              <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
             </state>
           </provider>
         </entry>
@@ -62,13 +52,13 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/ConfirmedProperties.java" />
         <option value="$PROJECT_DIR$/src/OtherOwnerProperties.java" />
         <option value="$PROJECT_DIR$/src/other_owner_properties.fxml" />
+        <option value="$PROJECT_DIR$/src/ConfirmedProperties.java" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="339" />
     <option name="y" value="48" />
     <option name="width" value="1440" />
@@ -209,12 +199,12 @@
       <window_info anchor="right" id="Capture Analysis" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" weight="0.3298969" />
       <window_info anchor="right" id="Maven Projects" order="4" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.28865978" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.28865978" />
       <window_info anchor="bottom" id="Version Control" order="8" weight="0.37534627" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -538,17 +528,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ConfirmedProperties.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="27" lean-forward="true" selection-start-line="12" selection-start-column="27" selection-end-line="12" selection-end-column="27" />
-          <folding>
-            <element signature="e#8124#8125#0" expanded="true" />
-            <element signature="e#8173#8174#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/VisitorWelcome.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="432">
@@ -610,10 +589,20 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/ConfirmedProperties.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-5668">
+          <caret line="97" selection-start-line="97" selection-end-line="97" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/VisitorOverview.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="232">
-          <caret line="142" column="39" lean-forward="true" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
+        <state relative-caret-position="136">
+          <caret line="25" column="34" lean-forward="true" selection-start-line="25" selection-start-column="34" selection-end-line="25" selection-end-column="34" />
         </state>
       </provider>
     </entry>
