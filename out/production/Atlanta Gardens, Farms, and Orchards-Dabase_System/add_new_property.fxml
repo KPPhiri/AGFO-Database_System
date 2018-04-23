@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="488.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="AddNewProperty">
+   <children>
+      <Label layoutX="251.0" layoutY="30.0" text="Add New Property" />
+      <Label layoutX="89.0" layoutY="69.0" text="Property Name*:" />
+      <Label layoutX="91.0" layoutY="105.0" text="Street Address*:" />
+      <Label layoutX="146.0" layoutY="137.0" text="City*:" />
+      <TextField fx:id="newPropCity" layoutX="181.0" layoutY="132.0" prefHeight="27.0" prefWidth="102.0" />
+      <Label layoutX="291.0" layoutY="137.0" text="Zip*:" />
+      <TextField fx:id="newPropZip" layoutX="325.0" layoutY="132.0" prefHeight="27.0" prefWidth="70.0" />
+      <Label layoutX="414.0" layoutY="137.0" text="Acres*:" />
+      <TextField fx:id="newPropAcres" layoutX="467.0" layoutY="132.0" prefHeight="27.0" prefWidth="56.0" />
+      <Label layoutX="92.0" layoutY="173.0" text="Property Type*:" />
+      <Label layoutX="287.0" layoutY="173.0" text="Crop*:" />
+      <ComboBox fx:id="newPropCrop" layoutX="333.0" layoutY="169.0" prefHeight="25.0" prefWidth="130.0" />
+      <Label layoutX="124.0" layoutY="211.0" text="Public?*:" />
+      <ComboBox fx:id="newPropPublic" layoutX="179.0" layoutY="207.0" prefHeight="25.0" prefWidth="102.0" />
+      <Label fx:id="newPropAnimalLabel" layoutX="285.0" layoutY="211.0" text="Animal*:" />
+      <ComboBox fx:id="newPropAnimal" layoutX="333.0" layoutY="207.0" prefHeight="25.0" prefWidth="130.0" />
+      <Label layoutX="95.0" layoutY="247.0" text="Commercial?*:" />
+      <ComboBox fx:id="newPropCommercial" layoutX="181.0" layoutY="243.0" prefHeight="25.0" prefWidth="102.0" />
+      <Button fx:id="newPropAddButton" layoutX="174.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressRegisterOwner" text="Add Property" />
+      <Button fx:id="newPropCancel" layoutX="382.0" layoutY="290.0" mnemonicParsing="false" onAction="#pressNewPropCancel" text="Cancel" />
+      <ComboBox fx:id="newPropType" layoutX="181.0" layoutY="169.0" onAction="#selectPropType" prefHeight="25.0" prefWidth="102.0" />
+      <TextField fx:id="newPropAddress" layoutX="181.0" layoutY="101.0" prefHeight="25.0" prefWidth="342.0" />
+      <TextField fx:id="newPropName" layoutX="181.0" layoutY="65.0" prefHeight="25.0" prefWidth="342.0" />
+      <Label fx:id="newProp_ErrorMessage" alignment="TOP_CENTER" layoutX="35.0" layoutY="327.0" prefHeight="140.0" prefWidth="529.0" />
+   </children>
+</AnchorPane>
