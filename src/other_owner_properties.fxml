@@ -33,5 +33,6 @@
       <Button fx:id="viewProperty" layoutX="419.0" layoutY="504.0" mnemonicParsing="false" text="View Property" />
       <Button fx:id="back" layoutX="418.0" layoutY="550.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="135.0" text="Back" />
       <ComboBox fx:id="searchBy" layoutX="8.0" layoutY="418.0" prefWidth="150.0" promptText="Search By" />
+      <Button fx:id="sort" layoutX="8.0" layoutY="511.0" mnemonicParsing="false" onAction="#sort" text="Enable Sort" />
    </children>
 </AnchorPane>
