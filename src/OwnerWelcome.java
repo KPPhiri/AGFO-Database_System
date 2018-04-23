@@ -500,12 +500,15 @@ public class OwnerWelcome implements Initializable{
     }
     public void sort(ActionEvent actionEvent) {
         try {
+
             Connection server = Connect.SQLConnecter.connect();
 
             data = FXCollections.observableArrayList();
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE IsPublic = 1");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() + "'");
+
             while (rs.next()) {
+
                 int id = rs.getInt(9);
 
                 ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
@@ -546,9 +549,6 @@ public class OwnerWelcome implements Initializable{
 
             }
 
-            table.setItems(data);
-
-
 
 
 
@@ -561,6 +561,42 @@ public class OwnerWelcome implements Initializable{
 
         }
 
+        //Set cell value factory to tableview.
+
+        //NB.PropertyValue Factory must be the same with the one set in model class.
+
+        colName.setCellValueFactory(new PropertyValueFactory<>("propName"));
+
+        colAddress.setCellValueFactory(new PropertyValueFactory<>("address"));
+
+        colCity.setCellValueFactory(new PropertyValueFactory<>("city"));
+
+        colZip.setCellValueFactory(new PropertyValueFactory<>("zip"));
+
+        colSize.setCellValueFactory(new PropertyValueFactory<>("size"));
+
+        colType.setCellValueFactory(new PropertyValueFactory<>("type"));
+
+        colPublic.setCellValueFactory(new PropertyValueFactory<>("ipublic"));
+
+        colCommercial.setCellValueFactory(new PropertyValueFactory<>("commercial"));
+
+        colID.setCellValueFactory(new PropertyValueFactory<>("id"));
+
+        colVisits.setCellValueFactory(new PropertyValueFactory<>("visits"));
+
+        colIsValid.setCellValueFactory(new PropertyValueFactory<>("valid"));
+
+        colRating.setCellValueFactory(new PropertyValueFactory<>("rating"));
+
+
+
+
+
+        table.setItems(null);
+
+
+        table.setItems(data);
     }
 
 
