@@ -76,13 +76,14 @@ public class ConfirmedProperties implements Initializable {
             selectedOwnerPropConfirmed = null;
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
-
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name,Address,City,Zip ,Acres, P_type, IsPublic, IsCommercial, ID, ApprovedBy, AVG(Rating) FROM PROPERTY JOIN VISITS WHERE ApprovedBy != '(null)' AND ID = P_ID GROUP BY P_ID");
+            System.out.println("jbakjaeljaerng");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip , Acres, P_type, IsPublic, IsCommercial, ID, ApprovedBy, AVG(Rating) FROM PROPERTY JOIN VISITS WHERE ID = P_ID");
 
             while (rs.next()) {
+                System.out.println("broke");
                 confirmedPropDetails a =  new confirmedPropDetails(rs.getString(1),rs.getString(2),rs.getString(3),
-                        rs.getString(4),rs.getDouble(5),rs.getString(6),rs.getBoolean(7),
-                        rs.getBoolean(8),Integer.toString(Integer.parseInt(rs.getString(9)) + 100000),rs.getString(10),rs.getDouble(11));
+                        rs.getString(4), rs.getDouble(5),rs.getString(6),rs.getBoolean(7),
+                        rs.getBoolean(8),(Integer.toString(rs.getInt(9) + 100000)).substring(1), rs.getString(10), rs.getDouble(11));
                 data.add(a);
             }
             server.close();
