@@ -166,6 +166,10 @@ public class OtherOwnerProperties implements Initializable {
         table.setItems(original_data);
     }
 
+    public void sort(ActionEvent actionEvent) {
+        loadDataFromDatabase();
+    }
+
     public void filtering() {
         FilteredList<userPropDetails> filteredData = new FilteredList<>(original_data, p -> true);
 
