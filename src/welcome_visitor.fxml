@@ -36,7 +36,6 @@
                 <ComboBox fx:id="searchMenu" layoutX="-18.0" layoutY="348.0" prefWidth="150.0" promptText="Search By.." />
                 <Label layoutX="-3.0" layoutY="68.0" text="Your Properties:" />
                 <Label fx:id="welV" layoutX="350.0" layoutY="40.0" text="Welcome Visitor " />
-            <Button fx:id="sortB" layoutX="-15.0" layoutY="310.0" mnemonicParsing="false" onAction="#sort" text="Sort" />
 
             </children></AnchorPane>
     </children>

@@ -84,6 +84,7 @@ public TableColumn colName;
         loadDataFromDatabase();
         createMenu();
         filtering();
+        sort(new ActionEvent());
         otherButton.setOnAction(new EventHandler<ActionEvent>() {
             @Override
             public void handle(ActionEvent event) {
@@ -302,9 +303,8 @@ public TableColumn colName;
 
             data = FXCollections.observableArrayList();
 
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE IsPublic = 1");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE IsPublic = 1 AND ApprovedBy != 'NULL'");
             while (rs.next()) {
-                System.out.println("GITTINFSLKJFDSLSJAFD");
 
                 int id = rs.getInt(9);
 
