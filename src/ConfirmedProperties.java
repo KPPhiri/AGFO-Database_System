@@ -76,6 +76,7 @@ public class ConfirmedProperties implements Initializable {
             selectedOwnerPropConfirmed = null;
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
+<<<<<<< HEAD
             System.out.println("jbakjaeljaerng");
             ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip , Acres, P_type, IsPublic, IsCommercial, ID, ApprovedBy, AVG(Rating) FROM PROPERTY JOIN VISITS WHERE ID = P_ID");
 
@@ -84,8 +85,35 @@ public class ConfirmedProperties implements Initializable {
                 confirmedPropDetails a =  new confirmedPropDetails(rs.getString(1),rs.getString(2),rs.getString(3),
                         rs.getString(4), rs.getDouble(5),rs.getString(6),rs.getBoolean(7),
                         rs.getBoolean(8),(Integer.toString(rs.getInt(9) + 100000)).substring(1), rs.getString(10), rs.getDouble(11));
+=======
+
+            //ResultSet rs = server.createStatement().executeQuery("SELECT Name,Address,City,Zip ,Acres, P_type, IsPublic, IsCommercial, ID, ApprovedBy, AVG(Rating) FROM PROPERTY JOIN VISITS WHERE ApprovedBy != '(null)' AND ID = P_ID GROUP BY P_ID");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name,Address,City,Zip ,Acres, P_type, IsPublic, IsCommercial, ID, ApprovedBy FROM PROPERTY WHERE ApprovedBy != '(null)'");
+            System.out.println("ABOUT TO ENTER LOOP");
+            while (rs.next()) {
+                int id = rs.getInt(9);
+                ResultSet rb = server.createStatement().executeQuery("SELECT avg(Rating) FROM VISITS WHERE P_id = " + id);
+                double avgRating = 0.0;
+                if(rb.next()) {
+                    avgRating = Math.round((rb.getDouble(1)) * 10.0) / 10.0;
+                }
+                System.out.println("Running in the LOOP");
+                confirmedPropDetails a =  new confirmedPropDetails(
+                        rs.getString(1),//Name
+                        rs.getString(2),//Address
+                        rs.getString(3),//City
+                        rs.getString(4),//Zip
+                        rs.getDouble(5),//Acres
+                        rs.getString(6),//P_type
+                        rs.getBoolean(7),//Ispublic
+                        rs.getBoolean(8),//iscommerical
+                        (Integer.toString(rs.getInt(9) + 100000)).substring(1),//ID
+                        rs.getString(10),//Approved By
+                        avgRating); //Avg.rating
+>>>>>>> 8cdec5b008a9ec5d0a5915494e67c138e1ade2cb
                 data.add(a);
             }
+
             server.close();
         } catch (Exception e) {
             System.out.println("something went wrong + " + e.getMessage());
@@ -106,6 +134,7 @@ public class ConfirmedProperties implements Initializable {
         confirmedtable.setItems(null);
         confirmedtable.setItems(data);
     }
+
 
     public void filtering() {
         FilteredList<confirmedPropDetails> filteredData = new FilteredList(data, p -> true);
