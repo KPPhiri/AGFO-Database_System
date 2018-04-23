@@ -108,10 +108,9 @@ public TableColumn colName;
     @FXML
     private void loadDataFromDatabase() {
         try {
-            System.out.println("WORKING");
             Connection server = Connect.SQLConnecter.connect();
             data = FXCollections.observableArrayList();
-            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE IsPublic = 1");
+            ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE IsPublic = 1 AND ApprovedBy != 'NULL'");
             while (rs.next()) {
                 int id = rs.getInt(9);
                 ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
