@@ -30,7 +30,7 @@
             <TableColumn fx:id="ownercol" prefWidth="75.0" text="Owner" />
         </columns>
       </TableView>
-      <ComboBox fx:id="searchcombo" layoutX="14.0" layoutY="427.0" prefHeight="26.0" prefWidth="192.0" promptText="Search By" />
+      <ComboBox fx:id="searchcombo" layoutX="14.0" layoutY="438.0" prefHeight="26.0" prefWidth="192.0" promptText="Search By" />
       <TextField fx:id="searchbar" layoutX="14.0" layoutY="478.0" prefHeight="26.0" prefWidth="192.0" promptText="Search Term" />
       <Button fx:id="managebut" layoutX="284.0" layoutY="417.0" mnemonicParsing="false" onAction="#openManage" text="Manage Selected&#10;       Property">
          <font>
@@ -42,5 +42,6 @@
             <Font size="24.0" />
          </font>
       </Button>
+      <Button fx:id="sortbut" layoutX="14.0" layoutY="404.0" mnemonicParsing="false" onAction="#sort" prefHeight="26.0" prefWidth="192.0" text="Enable Sorting" />
    </children>
 </AnchorPane>

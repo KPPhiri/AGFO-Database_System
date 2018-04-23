@@ -1,7 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="079b0913-6acc-4f16-be83-36bf3e7950f7" name="Default" comment="" />
+    <list default="true" id="079b0913-6acc-4f16-be83-36bf3e7950f7" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ConfirmedProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/OwnerOverview.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UnconfirmedProperties.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/VisitorOverview.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/confirmed_properties.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/owner_overview.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/unconfirmed_properties.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/visitor_overview.fxml" beforeDir="false" />
+    </list>
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,7 +32,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Start.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Start.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Start.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="347">
@@ -31,6 +41,15 @@
                 <element signature="e#579#580#0" expanded="true" />
                 <element signature="e#607#608#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="VisitorOverview.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/VisitorOverview.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="232">
+              <caret line="142" column="39" lean-forward="true" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
             </state>
           </provider>
         </entry>
@@ -84,9 +103,14 @@
   </component>
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="C:/Program Files/Java/jre1.8.0_161/lib/mysql-connector-java-5.1.46.jar!/" />
-    <property name="project.structure.last.edited" value="Libraries" />
+    <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.15" />
     <property name="project.structure.side.proportion" value="0.2" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Kevin\Desktop\Other\Dr.Java\GitHub\AGFO-Database_System\src" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -190,7 +214,8 @@
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="3" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24980484" />
+      <window_info anchor="bottom" id="Find" order="1" weight="0.3298969" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info id="UI Designer" order="4" />
@@ -221,7 +246,6 @@
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.50067115" side_tool="true" visible="true" weight="0.2881356" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info id="Favorites" order="5" side_tool="true" />
-      <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Messages" order="10" sideWeight="0.49395972" weight="0.3220339" />
       <window_info anchor="right" id="Maven Projects" order="6" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2637584" />
@@ -458,13 +482,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/VisitorOverview.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="419">
-          <caret line="153" lean-forward="true" selection-start-line="153" selection-end-line="153" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/visitorHitoryDetails.java">
       <provider selected="true" editor-type-id="text-editor">
         <state>
@@ -590,6 +607,13 @@
             <element signature="e#579#580#0" expanded="true" />
             <element signature="e#607#608#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/VisitorOverview.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="232">
+          <caret line="142" column="39" lean-forward="true" selection-start-line="142" selection-start-column="39" selection-end-line="142" selection-end-column="39" />
         </state>
       </provider>
     </entry>

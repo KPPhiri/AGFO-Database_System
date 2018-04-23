@@ -95,12 +95,10 @@ public class ConfirmedProperties implements Initializable {
     private Button backbut;
 
     @FXML
-<<<<<<< HEAD
+
     private Button sortbut;
     @FXML
-=======
 
->>>>>>> db162862428d1af0ad5d3519a49d63d39c9c90fd
     private Button managebut;
 
     @FXML
