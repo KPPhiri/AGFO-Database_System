@@ -65,6 +65,8 @@
                 <Label layoutX="-3.0" layoutY="68.0" text="Your Properties:" />
 
                 <Label fx:id="welO" layoutX="350.0" layoutY="40.0" text="Welcome Owner " />
+                <Button fx:id="sortB" layoutX="-15.0" layoutY="454.0" mnemonicParsing="false" onAction="#sort" text="Enable Sorting" />
+
 
             </children></AnchorPane>
 

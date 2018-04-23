@@ -158,7 +158,6 @@ public class OwnerWelcome implements Initializable{
         createMenu();
 
         filtering();
-        sort(new ActionEvent());
     }
 
 
