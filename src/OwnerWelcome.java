@@ -120,6 +120,9 @@ public class OwnerWelcome implements Initializable{
     public Label welO;
 
     @FXML
+    public ComboBox sortMenu;
+
+    @FXML
 
     private Button welcomeOwnerAdd;
 
@@ -159,6 +162,8 @@ public class OwnerWelcome implements Initializable{
 
         filtering();
 
+        sortMenu.getItems().addAll("ID", "City", "P_type", "Visits", "Rating");
+
 
 
 
@@ -172,8 +177,6 @@ public class OwnerWelcome implements Initializable{
     private void loadDataFromDatabase() {
 
         try {
-
-            System.out.println("WORKING");
 
             Connection server = Connect.SQLConnecter.connect();
 
@@ -509,4 +512,68 @@ public class OwnerWelcome implements Initializable{
 
     }
 
+    public void sort(ActionEvent actionEvent) {
+        String colN = sortMenu.getValue().toString();
+        try {
+        Connection server = Connect.SQLConnecter.connect();
+
+        data = FXCollections.observableArrayList();
+
+        ResultSet rs = server.createStatement().executeQuery("SELECT Name, Address, City, Zip, Acres, P_type, IsPublic, IsCommercial , ID, ApprovedBy FROM PROPERTY WHERE Owner = '" + user.getUsername() + "' ORDER BY " + colN + " ASC");
+
+        while (rs.next()) {
+
+            int id = rs.getInt(9);
+
+            ResultSet ra = server.createStatement().executeQuery("SELECT COUNT(P_id) FROM VISITS WHERE P_id = " + id);
+
+            int pid = 0;
+
+            if (ra.next()) {
+
+                pid = ra.getInt(1);
+
+            }
+
+
+
+            ResultSet rb = server.createStatement().executeQuery("SELECT avg(Rating) FROM VISITS WHERE P_id = " + id);
+
+            double avgRating = 0.0;
+
+            if (rb.next()) {
+
+                avgRating = Math.round((rb.getDouble(1)) * 10.0) / 10.0;
+
+            }
+
+
+
+            boolean isValid = true;
+
+            if (rs.getString("ApprovedBy") == null) {
+
+                isValid = false;
+
+            }
+
+            data.add(new userPropDetails(rs.getString(1), rs.getString(2), rs.getString(3),
+
+                    rs.getString(4), rs.getString(5), rs.getString(6),rs.getBoolean(7), rs.getBoolean(8),Integer.toString(rs.getInt(9) + 100000).substring(1),isValid, pid,  avgRating));
+
+        }
+
+
+
+
+        server.close();
+    } catch(Exception e) {
+
+        System.out.println("something went wrong + " + e.getMessage());
+
+
+
+    }
+
+    }
 }

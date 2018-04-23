@@ -8,7 +8,7 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VisitorWelcome">
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.121" xmlns:fx="http://javafx.com/fxml/1" fx:controller="VisitorWelcome">
 
     <children>
         <AnchorPane layoutX="41.0" layoutY="-12.0" prefHeight="495.0" prefWidth="784.0">
@@ -32,10 +32,12 @@
                 <Button fx:id="viewProperty1" layoutX="352.0" layoutY="348.0" mnemonicParsing="false" onAction="#viewProp" text="View Property" />
                 <Button fx:id="otherButton" layoutX="342.0" layoutY="388.0" mnemonicParsing="false" text="View Visit History" />
                 <Button fx:id="log_btn" layoutX="705.0" layoutY="427.0" mnemonicParsing="false" onAction="#logOut" text="Log Out" />
-                <TextField fx:id="searchField" layoutX="-27.0" layoutY="361.0" />
-                <ComboBox fx:id="searchMenu" layoutX="-19.0" layoutY="321.0" prefWidth="150.0" promptText="Search By.." />
+                <TextField fx:id="searchField" layoutX="-18.0" layoutY="388.0" />
+                <ComboBox fx:id="searchMenu" layoutX="-18.0" layoutY="348.0" prefWidth="150.0" promptText="Search By.." />
                 <Label layoutX="-3.0" layoutY="68.0" text="Your Properties:" />
                 <Label fx:id="welV" layoutX="350.0" layoutY="40.0" text="Welcome Visitor " />
+            <Button fx:id="sortB" layoutX="-15.0" layoutY="310.0" mnemonicParsing="false" onAction="#sort" text="Sort" />
+
             </children></AnchorPane>
     </children>
 </AnchorPane>
