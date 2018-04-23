@@ -184,5 +184,18 @@ public class PendingCrops implements Initializable {
 
     }
 
+    public void sort(ActionEvent actionEvent) {
+        try {
+            loadDataFromDatabase();
+        } catch(Exception e) {
+
+            System.out.println("something went wrong + " + e.getMessage());
+
+
+
+        }
+
+    }
+
 
 }

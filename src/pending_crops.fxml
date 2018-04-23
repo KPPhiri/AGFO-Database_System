@@ -10,6 +10,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PendingCrops">
    <children>
       <Button fx:id="Back_Button" layoutX="274.0" layoutY="350.0" mnemonicParsing="false" text="Back" />
+       <Button fx:id="sortB" layoutX="14.0" layoutY="433.0" mnemonicParsing="false" onAction="#sort" text="Enable Sorting" />
       <Button fx:id="Delete_Button" layoutX="249.0" layoutY="317.0" mnemonicParsing="false" text="Delete Selection" />
       <Button fx:id="Approve_Button" layoutX="242.0" layoutY="282.0" mnemonicParsing="false" text=" Approve Selection" />
       <Label layoutX="175.0" layoutY="14.0" text="Pending Approval Animals/Crops">

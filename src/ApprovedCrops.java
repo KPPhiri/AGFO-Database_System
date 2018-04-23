@@ -279,6 +279,19 @@ public class ApprovedCrops implements Initializable {
         CropTable.setItems(filteredData);
     }
 
+    public void sort(ActionEvent actionEvent) {
+        try {
+            loadDataFromDatabase();
+        } catch(Exception e) {
+
+            System.out.println("something went wrong + " + e.getMessage());
+
+
+
+        }
+
+    }
+
 
 //    public void pressButton(ActionEvent actionEvent) {
 //        try {

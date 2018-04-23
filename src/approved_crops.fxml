@@ -11,6 +11,7 @@
 <AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/9.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApprovedCrops">
    <children>
       <Label layoutX="236.0" layoutY="14.0" text="Appoved Animals/Crops" />
+       <Button fx:id="sortB" layoutX="14.0" layoutY="433.0" mnemonicParsing="false" onAction="#sort" text="Enable Sorting" />
       <Button fx:id="Back_Button" layoutX="280.0" layoutY="344.0" mnemonicParsing="false" text="Back" />
       <Button fx:id="Delete_Selection" layoutX="249.0" layoutY="306.0" mnemonicParsing="false" text="Delete Selection" />
       <Button fx:id="Add_Button" layoutX="43.0" layoutY="280.0" mnemonicParsing="false" text="Add to Appproved List" />

@@ -13,6 +13,7 @@
          <children>
             <Button fx:id="Back_Button" layoutX="273.0" layoutY="339.0" mnemonicParsing="false" text="Back" />
             <Button fx:id="Property_Details" layoutX="239.0" layoutY="304.0" mnemonicParsing="false" text="ViewPropertyDetails" />
+             <Button fx:id="sortB" layoutX="14.0" layoutY="433.0" mnemonicParsing="false" onAction="#sort" text="Enable Sorting" />
             <Label fx:id="History" layoutX="219.0" layoutY="21.0" prefHeight="39.0" prefWidth="161.0" text="Your Visit History">
                <font>
                   <Font size="21.0" />
