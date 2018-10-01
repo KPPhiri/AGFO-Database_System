@@ -1,6 +1,6 @@
 # AGFO-Database_System #
 Database application that stores locations, property usage, and ownership information on gardens, farms, and orchards in the Atlanta area.
-## Information flow diagram ##
+## Information Flow Diagram ##
 <img alt="IFD" src="imgs/IFD.png">
 
 ## Enhanced Entity Relationship Diagram ##
